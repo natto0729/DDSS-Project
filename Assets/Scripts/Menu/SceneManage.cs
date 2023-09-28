@@ -22,4 +22,9 @@ public class SceneManage : MonoBehaviour
     public void MainMenu(){
         SceneManager.LoadScene("Title Scene");
     }
+
+    public void Lobby()
+    {
+        SceneManager.LoadScene("Player Lobby");
+    }
 }
