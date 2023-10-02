@@ -4,6 +4,7 @@ using StarterAssets;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using UnityEngine.XR;
 
 public class UIPlayer : MonoBehaviour
 {
@@ -13,14 +14,22 @@ public class UIPlayer : MonoBehaviour
     GameObject player;
 
     private void Update(){
-        if(!player)
+        if(!XRSettings.enabled)
         {
-            FindPlayer();
+            if(!player)
+            {
+                FindPlayer();
+            }
+
+            else if(player && player.GetComponent<PhotonView>().IsMine)
+            {
+                StaminaUI();
+                BatteryUI();
+            }
         }
-        else if(player && player.GetComponent<PhotonView>().IsMine)
+        else if(XRSettings.enabled)
         {
-            StaminaUI();
-            BatteryUI();
+            gameObject.GetComponent<Canvas>().enabled = false;
         }
     }
 

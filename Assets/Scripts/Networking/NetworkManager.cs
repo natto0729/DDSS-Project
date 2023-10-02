@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.XR;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
@@ -53,6 +54,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         networkStatus = "Room Joined";
-        PhotonNetwork.Instantiate("PlayerArmature", Vector3.zero, Quaternion.identity);
+        if(!XRSettings.enabled)
+        {
+            PhotonNetwork.Instantiate("PlayerArmature", Vector3.zero, Quaternion.identity);
+        }
+        else if(XRSettings.enabled)
+        {
+            PhotonNetwork.Instantiate("OVRPlayerController Variant", Vector3.zero, Quaternion.identity);
+        }
     }
 }

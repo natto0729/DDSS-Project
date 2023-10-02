@@ -14,6 +14,7 @@ public class PlayerNetwork : MonoBehaviour
         if (photonView.IsMine)
         {
             //Belongs to the player
+            gameObject.transform.GetChild(5).gameObject.SetActive(true);
         }
         else
         {
