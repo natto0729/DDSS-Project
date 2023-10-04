@@ -3,6 +3,7 @@
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.XR;
+using Oculus.Interaction;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
@@ -57,6 +58,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if(!XRSettings.enabled)
         {
             PhotonNetwork.Instantiate("PlayerArmature", Vector3.zero, Quaternion.identity);
+
         }
         else if(XRSettings.enabled)
         {

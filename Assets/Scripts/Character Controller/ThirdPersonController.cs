@@ -211,6 +211,8 @@ namespace StarterAssets
 
         private void Start()
         {
+                        GameObject.Find("Interactables").GetComponent<Computers>().AddRenderingComputer();
+
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
             currentStamina = maxStamina;
