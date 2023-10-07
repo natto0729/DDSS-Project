@@ -236,6 +236,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &164738088
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +354,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &172360516
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +472,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &202244354
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +590,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &542508511
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +773,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &627386307
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +891,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &730833292
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +1009,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1001 &746329221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1155,6 +1211,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &874605735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,6 +1641,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &956434445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,6 +1759,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1026535289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,6 +1877,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,6 +2060,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1102115178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,6 +2178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1137942543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,6 +2296,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
+--- !u!1 &1246739908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1817664856046942305, guid: eb63399453e5bd44998b786eb97ebb05,
+    type: 3}
+  m_PrefabInstance: {fileID: 2067532581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1265435304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,6 +2420,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1277605988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,6 +2538,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1293641129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,6 +2656,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1334107273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,6 +2774,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1370753386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,6 +2892,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1459731178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,6 +3010,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1644147182
 GameObject:
   m_ObjectHideFlags: 0
@@ -2962,6 +3128,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1764214107
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,6 +3270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510f64a7e6b3f7459a080c3c3edd490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  renderComputers: []
 --- !u!1 &1849710304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,6 +3381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1921111922
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,6 +3499,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &1935302867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3426,6 +3617,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1001 &1979352518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3669,6 +3868,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6f5d864b594c4dbbf2e792c857571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractablesParent: {fileID: 1825154643}
+  startRenderingDelay: 1
+  renderTimeIncrement: 2
+  renderValueIncrement: 2
+  currentRender: 0
+  maxRender: 100
+  canRender: 0
+  isRendering: 0
 --- !u!1 &2020055373
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,6 +4000,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2067532585, guid: eb63399453e5bd44998b786eb97ebb05, type: 3}
+      propertyPath: RenderPercentage
+      value: 
+      objectReference: {fileID: 1246739908}
+    - target: {fileID: 2067532585, guid: eb63399453e5bd44998b786eb97ebb05, type: 3}
+      propertyPath: InteractablesParent
+      value: 
+      objectReference: {fileID: 1825154643}
     - target: {fileID: 1817664855172519061, guid: eb63399453e5bd44998b786eb97ebb05,
         type: 3}
       propertyPath: m_Enabled

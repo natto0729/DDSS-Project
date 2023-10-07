@@ -5,15 +5,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using UnityEngine.XR;
+using TMPro;
 
 public class UIPlayer : MonoBehaviour
 {
     public GameObject StaminaSlider;
     public GameObject BatterySlider;
+    public GameObject RenderPercentage;
+    public Computers InteractablesParent;
+
+    private int renderTotal;
+    private int index;
 
     GameObject player;
 
-    private void Update(){
+    private void Update()
+    {
         if(!XRSettings.enabled)
         {
             if(!player)
@@ -25,6 +32,7 @@ public class UIPlayer : MonoBehaviour
             {
                 StaminaUI();
                 BatteryUI();
+                RenderingUI();
             }
         }
         else if(XRSettings.enabled)
@@ -33,16 +41,39 @@ public class UIPlayer : MonoBehaviour
         }
     }
 
-    private void FindPlayer(){
+    private void FindPlayer()
+    {
         player = GameObject.Find("PlayerArmature(Clone)");
     }
 
-    private void StaminaUI(){
+    private void StaminaUI()
+    {
         StaminaSlider.transform.GetChild(0).GetComponent<Image>().fillAmount = player.GetComponent<ThirdPersonController>().currentStamina / 100;
     }
 
-        private void BatteryUI(){
+    private void BatteryUI()
+    {
         BatterySlider.transform.GetChild(1).GetComponent<Image>().fillAmount = player.GetComponent<ThirdPersonController>().currentBattery / 100;
+    }
+
+    private void RenderingUI()
+    {
+        renderTotal = 0;
+        foreach(Transform computer in InteractablesParent.renderComputers)
+        {
+            renderTotal += (int) InteractablesParent.renderComputers[index].GetComponent<Rendering>().currentRender;
+
+            index++;
+        }
+
+        if(InteractablesParent.renderComputers.Count > 1)
+        {
+            renderTotal = renderTotal/InteractablesParent.renderComputers.Count;
+        }
+
+        RenderPercentage.GetComponent<TextMeshProUGUI>().text = renderTotal.ToString() + "%";
+
+        index = 0;
     }
 
 }

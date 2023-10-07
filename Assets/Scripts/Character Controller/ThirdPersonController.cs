@@ -211,7 +211,7 @@ namespace StarterAssets
 
         private void Start()
         {
-                        GameObject.Find("Interactables").GetComponent<Computers>().AddRenderingComputer();
+            GameObject.Find("Interactables").GetComponent<Computers>().AddRenderingComputer();
 
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
@@ -617,7 +617,7 @@ namespace StarterAssets
             yield return new WaitForSeconds(regenBatteryTime);
             WaitForSeconds timeToWait = new WaitForSeconds(batteryTimeIncrement);
 
-            while(currentBattery < maxStamina)
+            while(currentBattery < maxBattery)
             {
                 if(currentBattery > 0)
                 {
