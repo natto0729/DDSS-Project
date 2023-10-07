@@ -12,6 +12,7 @@ public class UIPlayer : MonoBehaviour
     public GameObject StaminaSlider;
     public GameObject BatterySlider;
     public GameObject RenderPercentage;
+    public GameObject RenderStatus;
     public Computers InteractablesParent;
 
     private int renderTotal;
@@ -72,6 +73,14 @@ public class UIPlayer : MonoBehaviour
         }
 
         RenderPercentage.GetComponent<TextMeshProUGUI>().text = renderTotal.ToString() + "%";
+        if(renderTotal == 100)
+        {
+            RenderStatus.GetComponent<TextMeshProUGUI>().text = "Rendering Completed";
+        }
+        else
+        {
+            RenderStatus.GetComponent<TextMeshProUGUI>().text = "Rendering In Progres";
+        }
 
         index = 0;
     }

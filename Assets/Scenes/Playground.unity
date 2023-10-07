@@ -3993,6 +3993,12 @@ MonoBehaviour:
   AutoConnectAndJoin: 1
   usePunAppSettings: 1
   usePunAuthValues: 1
+--- !u!1 &2032944692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1817664856420499422, guid: eb63399453e5bd44998b786eb97ebb05,
+    type: 3}
+  m_PrefabInstance: {fileID: 2067532581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2067532581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4000,6 +4006,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2067532585, guid: eb63399453e5bd44998b786eb97ebb05, type: 3}
+      propertyPath: RenderStatus
+      value: 
+      objectReference: {fileID: 2032944692}
     - target: {fileID: 2067532585, guid: eb63399453e5bd44998b786eb97ebb05, type: 3}
       propertyPath: RenderPercentage
       value: 
@@ -4237,6 +4247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817664856420499420, guid: eb63399453e5bd44998b786eb97ebb05,
+        type: 3}
+      propertyPath: m_text
+      value: Rendering In Progress
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb63399453e5bd44998b786eb97ebb05, type: 3}
