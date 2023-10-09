@@ -11,44 +11,15 @@ public class Rendering : MonoBehaviour
     public float renderValueIncrement;
     public float currentRender;
     public float maxRender;
-    private int index = 0;
-    public bool canRender = false;
-    public bool isRendering = false;
 
-    private void Update()
-    {
-        if(!canRender && !isRendering)
-        {
-            StopCoroutine(RenderingProgress());
-            foreach(Transform computers in InteractablesParent.renderComputers)
-            {
-                if(InteractablesParent.renderComputers[index].GetComponent<Rendering>().currentRender != 0)
-                {
-                    canRender = false;
-                    index = 0;
-                }
-                else
-                {
-                    if(index + 1 == InteractablesParent.renderComputers.Count)
-                    {
-                        canRender = true;
-                    }
-                    else
-                    {
-                        index ++;
-                    }
-                }
-            }
-        }
-        else if(canRender && !isRendering)
-        {
-            StartCoroutine(RenderingProgress());
-        }
-    }
+    public Coroutine progress;
 
-    private IEnumerator RenderingProgress()
+    public IEnumerator RenderingProgress()
     {
-        isRendering = true;
+        while(!InteractablesParent.canRender)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
         yield return new WaitForSeconds(startRenderingDelay);
         WaitForSeconds timeToWait = new WaitForSeconds(renderTimeIncrement);
 

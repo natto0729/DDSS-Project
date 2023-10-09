@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using Photon.Pun;
 #if ENABLE_INPUT_SYSTEM 
@@ -137,6 +138,13 @@ namespace StarterAssets
         [Tooltip("Object that the character aim will follow")]
         public GameObject aimTarget;
 
+        [Header("Interaction Actions")]
+        public TextMeshPro useText;
+        public float maxUseDistance = 5f;
+        public LayerMask useLayers;
+
+        public bool hasKey;
+
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -212,7 +220,7 @@ namespace StarterAssets
         private void Start()
         {
             GameObject.Find("Interactables").GetComponent<Computers>().AddRenderingComputer();
-
+            
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
             currentStamina = maxStamina;
@@ -247,6 +255,7 @@ namespace StarterAssets
             GroundedCheck();
             Stamina();
             Move();
+            DoorPrompt();
         }
 
         private void LateUpdate()
@@ -530,6 +539,75 @@ namespace StarterAssets
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
+            }
+        }
+
+        public void OnInteract()
+        {
+            if(Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out RaycastHit hit, maxUseDistance, useLayers))
+            {
+                if(hit.collider.TryGetComponent<Door>(out Door door) && door.needsKey && !door.isFinalDoor)
+                {
+                    if(door.isOpen && hasKey)
+                    {
+                        door.GetComponent<PhotonView>().RPC ("CloseNetwork",RpcTarget.AllBuffered, null);
+                    }
+                    else if(!door.isOpen && hasKey)
+                    {
+                        door.GetComponent<PhotonView>().RPC ("OpenNetwork",RpcTarget.AllBuffered, transform.position);
+                    }
+                }
+                else if(hit.collider.TryGetComponent<Door>(out door) && !door.needsKey && !door.isFinalDoor)
+                {
+                    if(door.isOpen)
+                    {
+                        door.GetComponent<PhotonView>().RPC ("CloseNetwork",RpcTarget.AllBuffered, null);
+                    }
+                    else
+                    {
+                        door.GetComponent<PhotonView>().RPC ("OpenNetwork",RpcTarget.AllBuffered, transform.position);
+                    }
+                }
+            }
+        }
+
+        private void DoorPrompt()
+        {
+            if(Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out RaycastHit hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Door>(out Door door) && !door.needsKey && !door.isFinalDoor)
+            {
+                if(door.isOpen)
+                {
+                    useText.SetText("Close \"E\"");
+                }
+                else
+                {
+                    useText.SetText("Open \"E\"");
+                }
+                useText.gameObject.SetActive(true);
+                useText.transform.position = hit.point - (hit.point - _mainCamera.transform.position).normalized * 1f;
+                useText.transform.rotation = Quaternion.LookRotation((hit.point - _mainCamera.transform.position).normalized);
+            }
+            else if(Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Door>(out door) && door.needsKey && !door.isFinalDoor)
+            {
+                if(!hasKey)
+                {
+                    useText.SetText("Access Card Needed");
+                }
+                else if(door.isOpen)
+                {
+                    useText.SetText("Close \"E\"");
+                }
+                else
+                {
+                    useText.SetText("Open \"E\"");
+                }
+                useText.gameObject.SetActive(true);
+                useText.transform.position = hit.point - (hit.point - _mainCamera.transform.position).normalized * 1f;
+                useText.transform.rotation = Quaternion.LookRotation((hit.point - _mainCamera.transform.position).normalized);
+            }
+            else
+            {
+                useText.gameObject.SetActive(false);
             }
         }
 

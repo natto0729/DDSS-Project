@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Computers : MonoBehaviour
 {
-    private int index = 0;
+    public int index = 0;
     private int extraIndex = 0;
 
+    public bool canRender = true;
+
     private Transform[] computers;
+
+    private Transform rand;
 
     public List<Transform> renderComputers = new List<Transform>();
 
@@ -17,16 +21,33 @@ public class Computers : MonoBehaviour
     }
 
     public void AddRenderingComputer()
-    {
-        foreach(Transform computer in renderComputers)
+    {  
+        canRender = false;      
+        rand = computers[Random.Range(1,computers.Length)];
+        while(renderComputers.Contains(rand))
         {
-            renderComputers[extraIndex].GetComponent<Rendering>().currentRender = 0;
-            renderComputers[extraIndex].GetComponent<Rendering>().isRendering = false;
-            renderComputers[extraIndex].GetComponent<Rendering>().canRender = false;
-            extraIndex ++;
+            rand = computers[Random.Range(1,computers.Length)];
         }
-        renderComputers.Add(computers[Random.Range(1,computers.Length)]);
+        renderComputers.Add(rand);
         renderComputers[index].GetComponent<Rendering>().enabled = true;
         index ++;
+
+        foreach(Transform computer in renderComputers)
+        {
+            if(renderComputers[extraIndex].GetComponent<Rendering>().progress != null)
+            {
+                StopCoroutine(renderComputers[extraIndex].GetComponent<Rendering>().progress);
+                renderComputers[extraIndex].GetComponent<Rendering>().progress = null;
+            }
+            renderComputers[extraIndex].GetComponent<Rendering>().currentRender = 0;
+            if(renderComputers[extraIndex].GetComponent<Rendering>().progress == null)
+            {
+                renderComputers[extraIndex].GetComponent<Rendering>().progress = StartCoroutine(renderComputers[extraIndex].GetComponent<Rendering>().RenderingProgress());
+            }
+            extraIndex ++;
+        }
+        
+        canRender = true;
+        extraIndex = 0;
     }
 }

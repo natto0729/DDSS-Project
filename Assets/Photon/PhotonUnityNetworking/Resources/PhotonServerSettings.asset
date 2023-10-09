@@ -43,6 +43,8 @@ MonoBehaviour:
   - Fire
   - LightNetwork
   - RespawnSpaceship
+  - CloseNetwork
+  - OpenNetwork
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

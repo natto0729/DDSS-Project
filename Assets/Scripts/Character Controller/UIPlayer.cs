@@ -12,11 +12,8 @@ public class UIPlayer : MonoBehaviour
     public GameObject StaminaSlider;
     public GameObject BatterySlider;
     public GameObject RenderPercentage;
+    public GameManager gameManager;
     public GameObject RenderStatus;
-    public Computers InteractablesParent;
-
-    private int renderTotal;
-    private int index;
 
     GameObject player;
 
@@ -59,21 +56,8 @@ public class UIPlayer : MonoBehaviour
 
     private void RenderingUI()
     {
-        renderTotal = 0;
-        foreach(Transform computer in InteractablesParent.renderComputers)
-        {
-            renderTotal += (int) InteractablesParent.renderComputers[index].GetComponent<Rendering>().currentRender;
-
-            index++;
-        }
-
-        if(InteractablesParent.renderComputers.Count > 1)
-        {
-            renderTotal = renderTotal/InteractablesParent.renderComputers.Count;
-        }
-
-        RenderPercentage.GetComponent<TextMeshProUGUI>().text = renderTotal.ToString() + "%";
-        if(renderTotal == 100)
+        RenderPercentage.GetComponent<TextMeshProUGUI>().text = gameManager.renderTotal.ToString() + "%";
+        if(gameManager.renderTotal == 100)
         {
             RenderStatus.GetComponent<TextMeshProUGUI>().text = "Rendering Completed";
         }
@@ -82,7 +66,6 @@ public class UIPlayer : MonoBehaviour
             RenderStatus.GetComponent<TextMeshProUGUI>().text = "Rendering In Progres";
         }
 
-        index = 0;
     }
 
 }
