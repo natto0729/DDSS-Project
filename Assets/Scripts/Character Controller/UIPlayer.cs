@@ -41,7 +41,7 @@ public class UIPlayer : MonoBehaviour
 
     private void FindPlayer()
     {
-        player = GameObject.Find("PlayerArmature(Clone)");
+        player = GameObject.Find("GyaruPrefab(Clone)");
     }
 
     private void StaminaUI()

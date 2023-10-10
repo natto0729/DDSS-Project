@@ -57,7 +57,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         networkStatus = "Room Joined";
         if(!XRSettings.enabled)
         {
-            PhotonNetwork.Instantiate("PlayerArmature", Vector3.zero, Quaternion.identity);
+            PhotonNetwork.Instantiate("GyaruPrefab", Vector3.zero, Quaternion.identity);
 
         }
         else if(XRSettings.enabled)

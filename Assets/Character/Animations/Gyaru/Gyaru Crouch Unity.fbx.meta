@@ -1,0 +1,1312 @@
+fileFormatVersion: 2
+guid: edf37388ff11ff34f84da441a92178d3
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Trimmed_Girl_Crouch_1
+      takeName: Trimmed_Girl_Crouch_1
+      internalID: 6644758440123851981
+      firstFrame: 168
+      lastFrame: 413
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: -3.92
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: QuickRigCharacter_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Gyaru Crouch Unity(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Gyaru
+      parentName: Gyaru Crouch Unity(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 6.07, y: 6.07, z: 6.07}
+    - name: HAIR_TIP_NEW
+      parentName: Gyaru
+      position: {x: -0, y: 0.1912786, z: -0.0065003955}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube20
+      parentName: HAIR_TIP_NEW
+      position: {x: 0.009624993, y: -0.0005545044, z: 0.0036922514}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.38947973, y: 0.38947973, z: 0.38947973}
+    - name: pCube21
+      parentName: HAIR_TIP_NEW
+      position: {x: 0.008650405, y: 0.00158638, z: 0.0026064743}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.3575812, y: 0.3575812, z: 0.3575812}
+    - name: pCube31
+      parentName: HAIR_TIP_NEW
+      position: {x: 0.006150169, y: 0.0027134132, z: -0.001420219}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.32514474, y: 0.32514474, z: 0.32514474}
+    - name: pCube22
+      parentName: HAIR_TIP_NEW
+      position: {x: 0.006690695, y: 0.0027134132, z: 0.00066819426}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.32514474, y: 0.32514474, z: 0.32514474}
+    - name: pCube29
+      parentName: HAIR_TIP_NEW
+      position: {x: 0.005034807, y: 0.0009949303, z: -0.0028647892}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.32514474, y: 0.32514474, z: 0.32514474}
+    - name: pCube30
+      parentName: HAIR_TIP_NEW
+      position: {x: 0.0052134185, y: -0.0009876442, z: -0.004461813}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.32514474, y: 0.32514474, z: 0.32514474}
+    - name: pCube27
+      parentName: HAIR_TIP_NEW
+      position: {x: -0.0053719655, y: -0.0009876442, z: -0.004461813}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.32514474, y: 0.32514474, z: 0.32514474}
+    - name: pCube26
+      parentName: HAIR_TIP_NEW
+      position: {x: -0.0050008222, y: 0.0009949303, z: -0.0028647892}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.32514474, y: 0.32514474, z: 0.32514474}
+    - name: pCube28
+      parentName: HAIR_TIP_NEW
+      position: {x: -0.0057414663, y: 0.0027134132, z: -0.001420219}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.32514474, y: 0.32514474, z: 0.32514474}
+    - name: pCube23
+      parentName: HAIR_TIP_NEW
+      position: {x: -0.00732315, y: 0.0027134132, z: 0.00066819426}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.32514474, y: 0.32514474, z: 0.32514474}
+    - name: pCube24
+      parentName: HAIR_TIP_NEW
+      position: {x: -0.0081119, y: 0.00158638, z: 0.0026064743}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.3575812, y: 0.3575812, z: 0.3575812}
+    - name: pCube25
+      parentName: HAIR_TIP_NEW
+      position: {x: -0.009964924, y: -0.0005545044, z: 0.0036922514}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.38947973, y: 0.38947973, z: 0.38947973}
+    - name: hair_tip
+      parentName: HAIR_TIP_NEW
+      position: {x: 0.0006132862, y: 0.0077379416, z: 0.0065003955}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.14181195, y: 0.74960524, z: 0.67622256}
+    - name: CLIPS
+      parentName: HAIR_TIP_NEW
+      position: {x: 0.009937965, y: -0.009674517, z: 0.0119287}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: clip
+      parentName: CLIPS
+      position: {x: -0.00007647872, y: 0.0017495346, z: 0.0012647032}
+      rotation: {x: 0.73656577, y: 0.3783843, z: -0.0793391, w: 0.55497897}
+      scale: {x: 0.56180525, y: 3.4542603, z: 0.17452574}
+    - name: clip6
+      parentName: CLIPS
+      position: {x: -0.000997296, y: 0.0018036461, z: 0.0016440618}
+      rotation: {x: 0.33416688, y: 0.6731172, z: 0.64228654, w: -0.15071078}
+      scale: {x: 0.56180525, y: 3.4542603, z: 0.17452574}
+    - name: clip2
+      parentName: CLIPS
+      position: {x: 0.000039190054, y: -0.0009870529, z: 0.00047634123}
+      rotation: {x: 0.72544897, y: 0.30745575, z: -0.17051694, w: 0.5917083}
+      scale: {x: 0.56180525, y: 3.4542603, z: 0.17452574}
+    - name: right_tail
+      parentName: Gyaru
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_tail
+      parentName: Gyaru
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HAIR_HEAD
+      parentName: Gyaru
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hair_STRANDS
+      parentName: Gyaru
+      position: {x: -0, y: 0.18178402, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube7
+      parentName: Hair_STRANDS
+      position: {x: -0, y: -0.18178402, z: 0.0005738854}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube5
+      parentName: Hair_STRANDS
+      position: {x: -0, y: -0.18178402, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube3
+      parentName: Hair_STRANDS
+      position: {x: -0, y: -0.18178402, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: Gyaru
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHOKER
+      parentName: Gyaru
+      position: {x: -0, y: 0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone1
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone2
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone5
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone7
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone3
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone4
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone6
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone9
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone12
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone10
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone11
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pCone8
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__Body
+      parentName: CHOKER
+      position: {x: -0, y: -0.16548193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Clothes
+      parentName: Gyaru
+      position: {x: -0.00035772784, y: 0.14321873, z: -0.000067075925}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 2.3029685, y: 3.5312185, z: 2.3029685}
+    - name: Body
+      parentName: Gyaru
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.9962712, y: 0.9962712, z: 0.9962712}
+    - name: SKIRT_BELT
+      parentName: Gyaru
+      position: {x: -0, y: 0.11067155, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SKIRT
+      parentName: SKIRT_BELT
+      position: {x: -0, y: 0.0042517683, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Button
+      parentName: SKIRT
+      position: {x: -0, y: -0.11492332, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt
+      parentName: SKIRT
+      position: {x: -0, y: -0.11492332, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface22
+      parentName: Skirt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BELT
+      parentName: SKIRT_BELT
+      position: {x: -0, y: -0.11067155, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: belt_hang
+      parentName: BELT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: belt_loop1
+      parentName: BELT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Belt
+      parentName: BELT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: belt_loop12
+      parentName: BELT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: belt_loop13
+      parentName: BELT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: belt_loop14
+      parentName: BELT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: belt_loop15
+      parentName: BELT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: belt_loop16
+      parentName: BELT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Foot_warmer__star
+      parentName: Gyaru
+      position: {x: -0, y: 0.037880685, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface3
+      parentName: Foot_warmer__star
+      position: {x: -0, y: -0.037880685, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: star
+      parentName: Foot_warmer__star
+      position: {x: -0, y: -0.037880685, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: star4
+      parentName: Foot_warmer__star
+      position: {x: -0, y: -0.037880685, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SHOES
+      parentName: Gyaru
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoe
+      parentName: SHOES
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoe5
+      parentName: SHOES
+      position: {x: -0.00032583837, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Strap4
+      parentName: SHOES
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Strap1
+      parentName: SHOES
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Outline
+      parentName: Gyaru
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:optical
+      parentName: Gyaru Crouch Unity(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:Head_Asym
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LFrontHead
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LBackHead
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RFrontHead
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RBackHead
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:TopSpine
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:TChest
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LSternum
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:BChest
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RSternum
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RShoulder
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RBicep
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RElbow
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RForearm
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RWristInner
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RWristOuter
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:R_Thumb_hand
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:R_Palm_hand
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:R_Pinky_hand
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LShoulder
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LBicep
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LElbow
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LForearm
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LWristInner
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LWristOuter
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:L_Thumb_hand
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:L_Palm_hand
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:L_Pinky_hand
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:MiddleBack
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LowerBack
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:Root
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:Offset
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LFrontWaist
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LMiddleWaist
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LBackWaist
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RFrontWaist
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RMiddleWaist
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RBackWaist
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RThigh
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RKnee
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RTibia
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RAnkle
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RHeel
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:ROuterMeta
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RTip
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:RToe
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LThigh
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LKnee
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LTibia
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LAnkle
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LHeel
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LOuterMeta
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LTip
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC:LToe
+      parentName: TRC:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:optical
+      parentName: Gyaru Crouch Unity(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:Head_Asym
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LFrontHead
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LBackHead
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RFrontHead
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RBackHead
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:TopSpine
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:TChest
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LSternum
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:BChest
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RSternum
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RShoulder
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RBicep
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RElbow
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RForearm
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RWristInner
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RWristOuter
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:R_Thumb_hand
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:R_Palm_hand
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:R_Pinky_hand
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LShoulder
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LBicep
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LElbow
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LForearm
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LWristInner
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LWristOuter
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:L_Thumb_hand
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:L_Palm_hand
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:L_Pinky_hand
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:MiddleBack
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LowerBack
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:Root
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:Offset
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LFrontWaist
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LMiddleWaist
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LBackWaist
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RFrontWaist
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RMiddleWaist
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RBackWaist
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RThigh
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RKnee
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RTibia
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RAnkle
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RHeel
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:ROuterMeta
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RTip
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:RToe
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LThigh
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LKnee
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LTibia
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LAnkle
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LHeel
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LOuterMeta
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LTip
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRC 1:LToe
+      parentName: TRC 1:optical
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: QuickRigCharacter_Hips
+      parentName: Gyaru Crouch Unity(Clone)
+      position: {x: 0.00022671919, y: 0.11229999, z: -0.000715177}
+      rotation: {x: 0.49721667, y: -0.502768, z: -0.49721667, w: 0.502768}
+      scale: {x: 1.0000032, y: 1.0000032, z: 1.0000031}
+    - name: QuickRigCharacter_LeftUpLeg
+      parentName: QuickRigCharacter_Hips
+      position: {x: 0.0033559795, y: 0.00004319556, z: 0.009080944}
+      rotation: {x: -0.020703582, y: -0.0033087428, z: 0.9995945, w: 0.019265754}
+      scale: {x: 1.0000017, y: 1.0000002, z: 1.0000029}
+    - name: QuickRigCharacter_LeftLeg
+      parentName: QuickRigCharacter_LeftUpLeg
+      position: {x: -0.04866377, y: -0.0000012488716, z: 0.000000067097574}
+      rotation: {x: 0.0015740171, y: -0.00003780491, z: -0.04030065, w: 0.99918634}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: QuickRigCharacter_LeftFoot
+      parentName: QuickRigCharacter_LeftLeg
+      position: {x: -0.041233897, y: 0.00000026966666, z: 3.957811e-10}
+      rotation: {x: 0.008161458, y: 0.017725771, z: -0.5138289, w: -0.8576708}
+      scale: {x: 1.0000011, y: 1.0000031, z: 1.0000006}
+    - name: QuickRigCharacter_LeftToeBase
+      parentName: QuickRigCharacter_LeftFoot
+      position: {x: -0.028733207, y: -0.000000004884793, z: 0.000000017737165}
+      rotation: {x: -0.0000000032596286, y: -0.0000000074505797, z: -0.000000037529386,
+        w: 1}
+      scale: {x: 1.0000006, y: 1.0000017, z: 1.0000013}
+    - name: QuickRigCharacter_RightUpLeg
+      parentName: QuickRigCharacter_Hips
+      position: {x: 0.0033559795, y: 0.00004319556, z: -0.009080944}
+      rotation: {x: -0.003306508, y: 0.020705178, z: -0.019273281, w: 0.99959445}
+      scale: {x: 1.0000029, y: 1.0000038, z: 1.0000025}
+    - name: QuickRigCharacter_RightLeg
+      parentName: QuickRigCharacter_RightUpLeg
+      position: {x: 0.048663776, y: 0.0000013760371, z: -0.000000084586844}
+      rotation: {x: 0.0015910958, y: -0.00004247203, z: -0.040285554, w: 0.99918693}
+      scale: {x: 1.0000015, y: 1.0000033, z: 1.000003}
+    - name: QuickRigCharacter_RightFoot
+      parentName: QuickRigCharacter_RightLeg
+      position: {x: 0.04123387, y: -0.00000028152652, z: 0.000000006703492}
+      rotation: {x: -0.008177328, y: -0.017713577, z: 0.51382333, w: 0.8576741}
+      scale: {x: 1.0000005, y: 1.0000017, z: 1}
+    - name: QuickRigCharacter_RightToeBase
+      parentName: QuickRigCharacter_RightFoot
+      position: {x: 0.02873319, y: -0.000000009767804, z: 4.810506e-10}
+      rotation: {x: 0.000025443263, y: -0.000000115483985, z: 0.00000003603054, w: 1}
+      scale: {x: 1.000001, y: 0.99999994, z: 1.0000015}
+    - name: QuickRigCharacter_Spine
+      parentName: QuickRigCharacter_Hips
+      position: {x: -0.009362569, y: -5.6854157e-11, z: 0}
+      rotation: {x: -0, y: -0, z: 0.037856817, w: 0.9992832}
+      scale: {x: 1.0000026, y: 1.0000023, z: 1.0000012}
+    - name: QuickRigCharacter_Spine1
+      parentName: QuickRigCharacter_Spine
+      position: {x: -0.0062540798, y: 3.4537928e-10, z: -3.2030855e-18}
+      rotation: {x: -0, y: -0, z: -0.007846677, w: 0.99996924}
+      scale: {x: 1.0000066, y: 1.0000067, z: 1.0000062}
+    - name: QuickRigCharacter_Spine2
+      parentName: QuickRigCharacter_Spine1
+      position: {x: -0.007630566, y: 6.1559413e-10, z: -6.4580683e-18}
+      rotation: {x: -0.000000028894393, y: 0.0000000306834, z: -0.010530421, w: 0.9999446}
+      scale: {x: 1.0000038, y: 1.0000042, z: 1.0000055}
+    - name: QuickRigCharacter_LeftShoulder
+      parentName: QuickRigCharacter_Spine2
+      position: {x: -0.024238616, y: -0.00088163756, z: 0.0077416115}
+      rotation: {x: -0.39833274, y: 0.5842355, z: 0.5635627, w: 0.42707956}
+      scale: {x: 0.99999875, y: 1.0000011, z: 0.99999994}
+    - name: QuickRigCharacter_LeftArm
+      parentName: QuickRigCharacter_LeftShoulder
+      position: {x: -0.0076181637, y: -0.0000000056500737, z: -8.3266725e-19}
+      rotation: {x: 0.6896944, y: -0.1518727, z: -0.12582417, w: 0.6967242}
+      scale: {x: 0.9999983, y: 1.0000025, z: 1.0000013}
+    - name: QuickRigCharacter_LeftForeArm
+      parentName: QuickRigCharacter_LeftArm
+      position: {x: -0.023363175, y: 0.0000011354433, z: 0.0000004859989}
+      rotation: {x: -0.00013226268, y: 0.000222817, z: -0.03372047, w: 0.9994313}
+      scale: {x: 1.0000004, y: 1.0000018, z: 1.0000014}
+    - name: QuickRigCharacter_LeftHand
+      parentName: QuickRigCharacter_LeftForeArm
+      position: {x: -0.03068768, y: -0.00000010141954, z: 0.000000008411991}
+      rotation: {x: 0.000000012019879, y: -0.00000057046407, z: 0.00003243943, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1.0000001}
+    - name: QuickRigCharacter_RightShoulder
+      parentName: QuickRigCharacter_Spine2
+      position: {x: -0.024238616, y: -0.00088163756, z: -0.0077416115}
+      rotation: {x: 0.5842358, y: 0.39833233, z: -0.4270791, w: 0.56356305}
+      scale: {x: 0.99999946, y: 1.0000011, z: 1.0000024}
+    - name: QuickRigCharacter_RightArm
+      parentName: QuickRigCharacter_RightShoulder
+      position: {x: 0.0076181637, y: 0.0000000056500737, z: 0}
+      rotation: {x: -0.68969387, y: 0.15187347, z: 0.12582882, w: -0.69672376}
+      scale: {x: 0.99999803, y: 0.99999946, z: 1.0000021}
+    - name: QuickRigCharacter_RightForeArm
+      parentName: QuickRigCharacter_RightArm
+      position: {x: 0.023363166, y: -0.0000011770488, z: -0.00000052358286}
+      rotation: {x: -0.00013092156, y: 0.00022348756, z: -0.033707615, w: 0.9994318}
+      scale: {x: 1, y: 1.0000012, z: 1.0000014}
+    - name: QuickRigCharacter_RightHand
+      parentName: QuickRigCharacter_RightForeArm
+      position: {x: 0.03068771, y: 0.0000001040463, z: -0.000000010621446}
+      rotation: {x: -0.00000004027969, y: 0.00000009126959, z: 0.000032875152, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: QuickRigCharacter_Neck
+      parentName: QuickRigCharacter_Spine2
+      position: {x: -0.032794755, y: 0.000000011980875, z: -2.7637094e-17}
+      rotation: {x: 0.000000015824067, y: 0.000000040440504, z: 0.06647609, w: -0.9977881}
+      scale: {x: 1.000004, y: 1.0000032, z: 1.0000012}
+    - name: QuickRigCharacter_Head
+      parentName: QuickRigCharacter_Neck
+      position: {x: -0.007889364, y: -0.0000000140502445, z: -6.4016633e-18}
+      rotation: {x: -1.4210851e-14, y: -0, z: -0.00000011175868, w: 1}
+      scale: {x: 1.0000083, y: 1.0000094, z: 1.0000044}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
