@@ -9582,110 +9582,6 @@ MonoBehaviour:
   sceneViewId: 3
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!1001 &1719771233
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 50.992374
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 50.992374
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 50.992374
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2848
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 34.327
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6816171032251411057, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 27e458282cf6727469520f0c42c6ff55, type: 2}
-    - target: {fileID: 874938706405944887, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 27e458282cf6727469520f0c42c6ff55, type: 2}
-    - target: {fileID: 919132149155446097, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_Name
-      value: Cell Phones_Assets_DECORATED
-      objectReference: {fileID: 0}
-    - target: {fileID: 5716841016775820327, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 27e458282cf6727469520f0c42c6ff55, type: 2}
-    - target: {fileID: 6417705654415916076, guid: 0afdbf37f99942c44a6c77b4e8398958,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 27e458282cf6727469520f0c42c6ff55, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0afdbf37f99942c44a6c77b4e8398958, type: 3}
 --- !u!1 &1752552355
 GameObject:
   m_ObjectHideFlags: 0
@@ -12606,6 +12502,37 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!4 &543450651980253066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147519626544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2848, y: 0.13, z: 34.327}
+  m_LocalScale: {x: 50.992374, y: 50.992374, z: 50.992374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &919132147519626544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543450651980253066}
+  m_Layer: 0
+  m_Name: Cell Phones_Assets_DECORATED
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &2114283753834967212
 GameObject:
   m_ObjectHideFlags: 0
