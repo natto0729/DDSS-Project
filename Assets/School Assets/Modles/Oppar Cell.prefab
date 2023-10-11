@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 5597952176372067168}
   - component: {fileID: 1247291315286939418}
   - component: {fileID: 2407458820705731426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Oppar Cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}

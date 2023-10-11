@@ -139,7 +139,7 @@ MonoBehaviour:
         weight: 0
     m_Offset: {x: -90, y: -20, z: 90}
     m_MinLimit: -60
-    m_MaxLimit: 60
+    m_MaxLimit: 40
     m_AimAxis: 2
     m_UpAxis: 5
     m_WorldUpType: 0
@@ -456,7 +456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3521530964160329403}
   - component: {fileID: 3945089024693374380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9116895065370599246}
   - component: {fileID: 1814560191694801486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1215,7 +1215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1748596365687353866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Oppar_rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1500,7 +1500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4648951691332365052}
   - component: {fileID: 4334306844406902791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: upperBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1667,7 +1667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2957070546233923432}
   - component: {fileID: 9054782430413893057}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: jacket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2962,7 +2962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6419178198689005297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MainBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3661,7 +3661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6561519544069829338}
   - component: {fileID: 1970920795779178514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shoe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3817,7 +3817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2344091964946612606}
   - component: {fileID: 7741572783709346191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: headphone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4285,6 +4285,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 703100137224957334}
     m_Modifications:
+    - target: {fileID: 1247291315286939418, guid: 63431b1166ff40341ba613981fff83d6,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2266764278948048090, guid: 63431b1166ff40341ba613981fff83d6,
         type: 3}
       propertyPath: m_RootOrder
@@ -4344,6 +4349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Oppar Cell
+      objectReference: {fileID: 0}
+    - target: {fileID: 8537145934901757538, guid: 63431b1166ff40341ba613981fff83d6,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63431b1166ff40341ba613981fff83d6, type: 3}
