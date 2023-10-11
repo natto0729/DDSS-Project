@@ -220,7 +220,7 @@ MonoBehaviour:
   isRotatingDoor: 1
   speed: 1
   rotationAmount: 90
-  forwardDirection: -1.5
+  forwardDirection: 1.5
 --- !u!65 &36361400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8271,7 +8271,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 1468907443}
   sceneViewId: 8
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -8343,7 +8344,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 1470860544}
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -11393,7 +11395,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 1958183094}
   sceneViewId: 9
   InstantiationId: 0
   isRuntimeInstantiated: 0
