@@ -57,7 +57,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         networkStatus = "Room Joined";
         if(!XRSettings.enabled)
         {
-            PhotonNetwork.Instantiate("NerdPrefab", Vector3.zero, Quaternion.identity);
+            PhotonNetwork.Instantiate("OpparPrefab", Vector3.zero, Quaternion.identity);
 
         }
         else if(XRSettings.enabled)
