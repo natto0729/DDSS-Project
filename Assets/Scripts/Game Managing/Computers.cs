@@ -31,6 +31,7 @@ public class Computers : MonoBehaviour
         renderComputers.Add(rand);
         renderComputers[index].GetComponent<Rendering>().enabled = true;
         renderComputers[index].GetChild(0).gameObject.SetActive(true);
+        renderComputers[index].GetChild(1).gameObject.SetActive(true);
         index ++;
 
         foreach(Transform computer in renderComputers)

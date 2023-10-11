@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.XR;
 
 public class Rendering : MonoBehaviour
 {
@@ -13,6 +15,31 @@ public class Rendering : MonoBehaviour
     public float maxRender;
 
     public Coroutine progress;
+
+    private Transform renderingPopUp;
+
+    private void Start()
+    {
+        renderingPopUp = gameObject.transform.GetChild(1);
+    }
+
+    public void Update()
+    {
+        RenderText();
+    }
+
+    public void RenderText()
+    {
+        renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering:" + currentRender + "%");
+        if(XRSettings.enabled)
+        {
+            renderingPopUp.LookAt(GameObject.Find("CenterEyeAnchor").transform);
+        }
+        else
+        {
+            renderingPopUp.LookAt(GameObject.Find("MainCamera Variant").transform);
+        }
+    }
 
     public IEnumerator RenderingProgress()
     {

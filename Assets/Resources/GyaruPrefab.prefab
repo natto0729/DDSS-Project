@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 117703711}
   - component: {fileID: 117703714}
   - component: {fileID: 117703713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8740012061849589125}
   - component: {fileID: 379451066339275158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2478651553676131235}
   - component: {fileID: 9014912227899536114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4810236751111086863}
   - component: {fileID: 6639455538352568482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1384727916168788391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BELT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -864,7 +864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5968897270232636376}
   - component: {fileID: 4501901582987918123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,7 +1018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8815606866417981885}
   - component: {fileID: 7223396832618957272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: belt_loop15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,7 +1202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8061405436979046338}
   - component: {fileID: 1514664049789896482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1355,7 +1355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8466243489598753754}
   - component: {fileID: 8819878710603538308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1445,7 +1445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3635293085841649372}
   - component: {fileID: 3353904907201726393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1598,7 +1598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4710532002373154908}
   - component: {fileID: 3164736426568532341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1721,7 +1721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2959134863704968150}
   - component: {fileID: 658999468517999888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1812,7 +1812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8163767060442083890}
   - component: {fileID: 7054207134120860901}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1905,7 +1905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8354744449656008003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gyaru
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1950,7 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3496601265515692077}
   - component: {fileID: 224174028933698997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2040,7 +2040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8633413313880257849}
   - component: {fileID: 5751909266653648647}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: belt_loop12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2131,7 +2131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4623855476610245482}
   - component: {fileID: 2901378663033090150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2470,7 +2470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4207302242003714174}
   - component: {fileID: 3120917760118536635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2654,7 +2654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5046973223801788301}
   - component: {fileID: 5332422606082989043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: star4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2745,7 +2745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5684075457548433756}
   - component: {fileID: 3954956247339646336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Strap1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2899,7 +2899,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3176476416856710804}
   - component: {fileID: 4906519245291414870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: left_tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2992,7 +2992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4295641324057626221}
   - component: {fileID: 239867365503965448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Strap4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3114,7 +3114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1337491233660384266}
   - component: {fileID: 2830693634090304804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3267,7 +3267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7423794157372436496}
   - component: {fileID: 3365720465457693297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3358,7 +3358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 398883746767201617}
   - component: {fileID: 6846408855910948846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3564,7 +3564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2297185658896769976}
   - component: {fileID: 7977323558754105126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3671,7 +3671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987954935981216275}
   - component: {fileID: 6086756588897797762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3889,7 +3889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648507954425699120}
   - component: {fileID: 1505213415699717687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4473,7 +4473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5930004711176598910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hair_STRANDS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4508,7 +4508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4354105233370936205}
   - component: {fileID: 3858020680987305697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4600,7 +4600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7707513128968659297}
   - component: {fileID: 9162038769434240248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: clip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4752,7 +4752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573875710141655002}
   - component: {fileID: 6247537957628430542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shoe5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4843,7 +4843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 448035748553390883}
   - component: {fileID: 8161583356245471092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4996,7 +4996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8875444147431350877}
   - component: {fileID: 8666112169578497683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: belt_loop1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5119,7 +5119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7332368506811829247}
   - component: {fileID: 2210230556435703902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: belt_hang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5210,7 +5210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1310924221824275849}
   - component: {fileID: 8722146268097187775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5302,7 +5302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1865507115969440947}
   - component: {fileID: 2357621333761916603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5454,7 +5454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 318308853544820820}
   - component: {fileID: 540243678344047929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5575,7 +5575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5220855224852799758}
   - component: {fileID: 3565847565900196990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5665,7 +5665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7435370865639138778}
   - component: {fileID: 6831517653895985892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5756,7 +5756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7195235661928007162}
   - component: {fileID: 9079932816061316420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5878,7 +5878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2944124791698540830}
   - component: {fileID: 4656402133343769008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: belt_loop16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5969,7 +5969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7338542732518410948}
   - component: {fileID: 8283753137946708398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: clip6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6063,7 +6063,7 @@ GameObject:
   - component: {fileID: 8620790886209776410}
   - component: {fileID: 8537145934901757538}
   - component: {fileID: 4523300665006166401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6248,7 +6248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 621680104603575881}
   - component: {fileID: 4859896236391421997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6339,7 +6339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4262469904511412475}
   - component: {fileID: 7387984986121982457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6492,7 +6492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3288889291506856267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foot_warmer__star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6713,7 +6713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977930747409161189}
   - component: {fileID: 4829348159906403206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6802,7 +6802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2957221819527455608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HAIR_TIP_NEW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6961,7 +6961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9140380255156182167}
   - component: {fileID: 5280407890454336836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HAIR_HEAD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7053,7 +7053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 306801384506083718}
   - component: {fileID: 1326559709948346460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7210,7 +7210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1079978367594067394}
   - component: {fileID: 8100081765010891444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7301,7 +7301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7452368782314229348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SHOES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7337,7 +7337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5972399278873691378}
   - component: {fileID: 4447533962414070533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: belt_loop14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7458,7 +7458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8179797850435638169}
   - component: {fileID: 5892194262999636217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: belt_loop13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7548,7 +7548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7495764066262251281}
   - component: {fileID: 6961846244056175104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7701,7 +7701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4196808861388257980}
   - component: {fileID: 6024816948227078822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pasted__pasted__pCone5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7931,7 +7931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6926908204271257552}
   - component: {fileID: 9039946175179858362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8025,7 +8025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2206161400174505080}
   - component: {fileID: 5986675609007504836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Clothes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8124,7 +8124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4554748963265311893}
   - component: {fileID: 1728469193626446598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: right_tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8216,7 +8216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7609879535124188471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SKIRT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8311,7 +8311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5424393483619298487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CLIPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8439,7 +8439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8776975797564573044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8471,7 +8471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403552171697039225}
   - component: {fileID: 1984245876751044470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8561,7 +8561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1524101550253688944}
   - component: {fileID: 3214285199272261439}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hair_tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8745,7 +8745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2292666677461261176}
   - component: {fileID: 6560952819929785462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: clip2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8865,7 +8865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5720204383837414049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CHOKER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9118,7 +9118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 947577444313754255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SKIRT_BELT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9214,7 +9214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5739089941816554336}
   - component: {fileID: 5918811665607354553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9325,6 +9325,81 @@ Transform:
   m_Father: {fileID: 984435817109232247}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9152055585735214887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7952118309413288503}
+  - component: {fileID: 1012543057307410898}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7952118309413288503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9152055585735214887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3334431262546482669}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1012543057307410898
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9152055585735214887}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0.972549, g: 0.95686275, b: 0.92941177, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.2
+  far clip plane: 500
+  field of view: 40
+  orthographic: 0
+  orthographic size: 10
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 1088
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &9171393193769670982
 GameObject:
   m_ObjectHideFlags: 0
@@ -9377,6 +9452,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811968272588936683, guid: 8f15a73431c65b9489533b677c8def93,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1811968272588936684, guid: 8f15a73431c65b9489533b677c8def93,
         type: 3}
