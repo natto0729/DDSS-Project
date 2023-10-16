@@ -18,6 +18,7 @@ public class VRInputs : MonoBehaviour
         controls = new Controls();
         controls.VR.LeftTrigger.performed += LeftPressed;
         controls.VR.RightTrigger.performed += RightPressed;
+
         controls.Enable();
     }
 
