@@ -1,5 +1,6 @@
 //12.09.2023 - v0.0
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.XR;
@@ -10,6 +11,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public string gameVersion;
     string networkStatus;
+
+    public GameObject[] characters;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +60,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         networkStatus = "Room Joined";
         if(!XRSettings.enabled)
         {
-            PhotonNetwork.Instantiate("OpparPrefab", Vector3.zero, Quaternion.identity);
+            PhotonNetwork.Instantiate(characters[PlayerPrefs.GetInt("selectedCharacter")].name, Vector3.zero, Quaternion.identity);
 
         }
         else if(XRSettings.enabled)

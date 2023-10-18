@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage : MonoBehaviour
 {
+    public CharacterSelect characterSelect;
     public void Mode()
     {
         SceneManager.LoadScene("Mode");
@@ -25,6 +26,6 @@ public class SceneManage : MonoBehaviour
 
     public void Lobby()
     {
-        SceneManager.LoadScene("Player Lobby");
+        characterSelect.StartGame();
     }
 }

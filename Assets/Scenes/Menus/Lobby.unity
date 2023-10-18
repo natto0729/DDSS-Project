@@ -2040,17 +2040,17 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.89199996
+      value: 22.196007
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.44
+      value: 1.4399996
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.14
+      value: -8.229454
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -3735,6 +3735,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameVersion: 0.0
+  characters:
+  - {fileID: 4416926081852918481, guid: 87d2b4bc0d0803f42b26c7824ff194e4, type: 3}
+  - {fileID: 4416926081852918481, guid: 8482ab14a1fcfe54781d316322620e8b, type: 3}
+  - {fileID: 4416926081852918481, guid: 455476d55606e2a4cb882beffd0b8b1c, type: 3}
 --- !u!1 &2114283753834967212
 GameObject:
   m_ObjectHideFlags: 0

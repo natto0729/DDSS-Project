@@ -59,7 +59,7 @@ public class Connector : MonoBehaviourPunCallbacks
         room.SetCustomProperties(ht);
         if (timer <= 0)
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("Playground");
         }
     }
 
