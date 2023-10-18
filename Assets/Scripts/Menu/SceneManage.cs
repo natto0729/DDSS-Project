@@ -13,7 +13,7 @@ public class SceneManage : MonoBehaviour
 
     public void Exit()
     {
-
+        Application.Quit();
     }
 
     public void CharacterSelect()    {
