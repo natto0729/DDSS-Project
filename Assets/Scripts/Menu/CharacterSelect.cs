@@ -1,7 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using ExitGames.Client.Photon;
 using TMPro;
 using System;
 
@@ -59,6 +59,8 @@ public class CharacterSelect : MonoBehaviour
             }
             else
             {
+                Hashtable selected = new Hashtable() {{"selected" , selectedCharacter}};
+                PhotonNetwork.LocalPlayer.SetCustomProperties(selected);
                 PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
                 photonView.RPC ("AddToListNet",RpcTarget.AllBuffered, characters[selectedCharacter].name);
                 startButton.SetActive(false);
@@ -66,6 +68,7 @@ public class CharacterSelect : MonoBehaviour
                 rightButton.SetActive(false);
                 GameObject.Find("Game Manager").GetComponent<PhotonView>().RPC ("ChosenPlayersNet", RpcTarget.AllBuffered, null);
                 timerText.GetComponent<TextMeshProUGUI>().text = "Waiting For Other Players...";
+                Debug.Log(PlayerPrefs.GetInt("selectedCharacter"));
             }
         }
     }

@@ -8,12 +8,12 @@ using TMPro;
 public class Connector : MonoBehaviourPunCallbacks
 {
     public int characterChosen;
-    float timeLimit;
+    public GameObject timerText;
     public float timer;
+    float timeLimit;
     int timerInt;
     bool playersYes = false;
     bool canCount = false;
-    public GameObject timerText;
     Room room;
     bool timerStarted;
     PhotonView photonViews;
@@ -30,8 +30,26 @@ public class Connector : MonoBehaviourPunCallbacks
         SceneManager.LoadScene("Playground");
     }
 
+    [PunRPC]
+    public void StartCountdown()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            timer = timeLimit;
+            Hashtable ht = new Hashtable() { { "Time", timer } };
+            room.SetCustomProperties(ht);
+            timerStarted = true;
+        }
+        else
+        {
+            timer = (float)room.CustomProperties["Time"];
+            timerStarted = true;
+        }
+    }
+
     private void Start()
     {
+        PhotonNetwork.AutomaticallySyncScene = false;
         photonViews = GetComponent<PhotonView>();
     }
 
@@ -63,39 +81,17 @@ public class Connector : MonoBehaviourPunCallbacks
         {
             UpdateTimer();
         }
-
-        timerInt = (int) timer;
-
-        if(canCount == true)
-        {
-            timerText.GetComponent<TextMeshProUGUI>().text = "Game Starting In:" + timerInt.ToString();
-        }
-    }
-
-    [PunRPC]
-    public void StartCountdown()
-    {
-        if (PhotonNetwork.IsMasterClient)
-        {
-            timer = timeLimit;
-            Hashtable ht = new Hashtable() { { "Time", timer } };
-            room.SetCustomProperties(ht);
-            timerStarted = true;
-        }
-        else
-        {
-            timer = (float)room.CustomProperties["Time"];
-            timerStarted = true;
-        }
     }
 
     void UpdateTimer()
     {
-        timer -= Time.deltaTime;
+        timer -= 1 * Time.deltaTime;
         Hashtable ht = room.CustomProperties;
         ht.Remove("Time");
         ht.Add("Time", timer);
         room.SetCustomProperties(ht);
+        timerInt = (int) timer;
+        timerText.GetComponent<TextMeshProUGUI>().text = "Game Starting In:" + timerInt.ToString();
         if (timer <= 0)
         {
             photonViews.RPC("LoadMain", RpcTarget.AllBuffered, null);

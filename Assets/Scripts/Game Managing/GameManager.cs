@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using ExitGames.Client.Photon.StructWrapping;
 
 public class GameManager : MonoBehaviour
 {
     public Computers InteractablesParent;
     public int renderTotal;
     public GameObject[] characters;
+
+    bool isMaster = false;
 
     private int index;
 
@@ -16,8 +19,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        PhotonNetwork.Instantiate(characters[PlayerPrefs.GetInt("selectedCharacter")].name, Vector3.zero, Quaternion.identity);
+        PhotonNetwork.AutomaticallySyncScene = false;
+        PhotonNetwork.Instantiate(characters[PhotonNetwork.LocalPlayer.CustomProperties["selected"].Get<int>()].name, Vector3.zero, Quaternion.identity);
     }
+
 
     // Update is called once per frame
     void Update()
