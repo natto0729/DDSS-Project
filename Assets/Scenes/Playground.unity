@@ -2532,6 +2532,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractablesParent: {fileID: 1825154643}
   renderTotal: 0
+  characters:
+  - {fileID: 4416926081852918481, guid: 87d2b4bc0d0803f42b26c7824ff194e4, type: 3}
+  - {fileID: 4416926081852918481, guid: 8482ab14a1fcfe54781d316322620e8b, type: 3}
+  - {fileID: 4416926081852918481, guid: 455476d55606e2a4cb882beffd0b8b1c, type: 3}
   finalDoor1: {fileID: 118864996}
   finalDoor2: {fileID: 1598605265}
 --- !u!4 &437542006
@@ -13883,7 +13887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2079641690
 Transform:
   m_ObjectHideFlags: 0

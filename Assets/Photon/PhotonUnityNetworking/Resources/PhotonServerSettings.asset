@@ -46,6 +46,11 @@ MonoBehaviour:
   - CloseNetwork
   - OpenNetwork
   - StartCountdown
+  - DeleteCharacterNetwork
+  - DeactivateCharacterNetwork
+  - AddToListNet
+  - ChosenPlayersNet
+  - LoadMain
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

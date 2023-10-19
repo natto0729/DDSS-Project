@@ -7,10 +7,17 @@ public class GameManager : MonoBehaviour
 {
     public Computers InteractablesParent;
     public int renderTotal;
+    public GameObject[] characters;
+
     private int index;
 
     public Door finalDoor1;
     public Door finalDoor2;
+
+    void Start()
+    {
+        PhotonNetwork.Instantiate(characters[PlayerPrefs.GetInt("selectedCharacter")].name, Vector3.zero, Quaternion.identity);
+    }
 
     // Update is called once per frame
     void Update()
