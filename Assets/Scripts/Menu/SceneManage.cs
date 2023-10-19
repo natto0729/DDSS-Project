@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class SceneManage : MonoBehaviour
 {
     public CharacterSelect characterSelect;
-    public void Mode()
+    public void GameOver()
     {
-        SceneManager.LoadScene("Mode");
+        SceneManager.LoadScene("GameOver");
     }
 
     public void Exit()
@@ -16,11 +16,13 @@ public class SceneManage : MonoBehaviour
         Application.Quit();
     }
 
-    public void CharacterSelect()    {
+    public void CharacterSelect()
+    {
         SceneManager.LoadScene("Character");
     }
 
-    public void MainMenu(){
+    public void MainMenu()
+    {
         SceneManager.LoadScene("Title Scene");
     }
 
@@ -28,4 +30,10 @@ public class SceneManage : MonoBehaviour
     {
         characterSelect.StartGame();
     }
+
+    public void WinGame()
+    {
+        SceneManager.LoadScene("Winning Scene");
+    }
+
 }
