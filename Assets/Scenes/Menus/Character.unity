@@ -1672,6 +1672,7 @@ GameObject:
   - component: {fileID: 965809086}
   - component: {fileID: 965809088}
   - component: {fileID: 965809087}
+  - component: {fileID: 965809089}
   m_Layer: 5
   m_Name: Counter
   m_TagString: Untagged
@@ -1796,6 +1797,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965809085}
   m_CullTransparentMesh: 1
+--- !u!114 &965809089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965809085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 6
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1043641724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,8 +1984,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterChosen: 0
-  timer: 3
   timerText: {fileID: 965809085}
+  timeLimit: 3
 --- !u!4 &1344650859
 Transform:
   m_ObjectHideFlags: 0
@@ -1992,7 +2015,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameVersion: 0
   canSelect: 0
-  characters: []
 --- !u!114 &1344650861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2890,7 +2912,6 @@ MonoBehaviour:
   startButton: {fileID: 683995686}
   leftButton: {fileID: 1043641724}
   rightButton: {fileID: 42250832}
-  gm: {fileID: 1344650860}
 --- !u!114 &1983519638
 MonoBehaviour:
   m_ObjectHideFlags: 0

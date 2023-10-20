@@ -52,6 +52,7 @@ MonoBehaviour:
   - ChosenPlayersNet
   - LoadMain
   - UpdateCountdown
+  - SpawnStuff
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

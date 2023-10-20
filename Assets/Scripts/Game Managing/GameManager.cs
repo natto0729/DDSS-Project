@@ -10,23 +10,31 @@ public class GameManager : MonoBehaviour
     public int renderTotal;
     public GameObject[] characters;
 
-    bool isMaster = false;
-
     private int index;
+    bool loadChar = false;
 
     public Door finalDoor1;
     public Door finalDoor2;
 
+    [PunRPC]
+    void SpawnStuff()
+    {
+        PhotonNetwork.Instantiate(characters[PhotonNetwork.LocalPlayer.CustomProperties["selected"].Get<int>()].name, Vector3.zero, Quaternion.identity);
+    }
+
     void Start()
     {
-        PhotonNetwork.AutomaticallySyncScene = false;
-        PhotonNetwork.Instantiate(characters[PhotonNetwork.LocalPlayer.CustomProperties["selected"].Get<int>()].name, Vector3.zero, Quaternion.identity);
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        if(PhotonNetwork.IsMasterClient && loadChar == false)
+        {
+            gameObject.GetComponent<PhotonView>().RPC("SpawnStuff", RpcTarget.AllBuffered, null);
+            loadChar = true;
+        }
         RenderProgress();
         if(renderTotal == 100)
         {

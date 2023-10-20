@@ -4,16 +4,16 @@ using Photon.Realtime;
 using ExitGames.Client.Photon;
 using UnityEngine.SceneManagement;
 using TMPro;
+using ExitGames.Client.Photon.StructWrapping;
 
 public class Connector : MonoBehaviourPunCallbacks
 {
     public int characterChosen;
     public GameObject timerText;
-    public float timer;
-    float timeLimit;
+    float timer;
+    public float timeLimit;
     int timerInt;
     bool playersYes = false;
-    bool canCount = false;
     Room room;
     bool timerStarted;
     PhotonView photonViews;
@@ -42,14 +42,13 @@ public class Connector : MonoBehaviourPunCallbacks
         }
         else
         {
-            timer = (float)room.CustomProperties["Time"];
+            timer = room.CustomProperties["Time"].Get<float>();
             timerStarted = true;
         }
     }
 
     private void Start()
     {
-        PhotonNetwork.AutomaticallySyncScene = false;
         photonViews = GetComponent<PhotonView>();
     }
 
@@ -74,7 +73,6 @@ public class Connector : MonoBehaviourPunCallbacks
         {           
             Debug.Log("Game Start");
             photonViews.RPC("StartCountdown", RpcTarget.All);
-            canCount = true;
         }
 
         if (timerStarted == true)
@@ -85,7 +83,7 @@ public class Connector : MonoBehaviourPunCallbacks
 
     void UpdateTimer()
     {
-        timer -= 1 * Time.deltaTime;
+        timer -= Time.deltaTime;
         Hashtable ht = room.CustomProperties;
         ht.Remove("Time");
         ht.Add("Time", timer);
