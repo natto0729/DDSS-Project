@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
@@ -10,12 +11,13 @@ public class Connector : MonoBehaviourPunCallbacks
 {
     public int characterChosen;
     public GameObject timerText;
+    public GameObject counter;
     float timer;
     public float timeLimit;
     int timerInt;
     bool playersYes = false;
     Room room;
-    bool timerStarted;
+    bool timerStarted = false;
     PhotonView photonViews;
 
     [PunRPC]
@@ -35,13 +37,11 @@ public class Connector : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            timer = timeLimit;
-            Hashtable ht = new Hashtable() { { "Time", timer } };
-            room.SetCustomProperties(ht);
             timerStarted = true;
         }
         else
         {
+            Debug.Log(room.CustomProperties["Time"].Get<float>());
             timer = room.CustomProperties["Time"].Get<float>();
             timerStarted = true;
         }
@@ -54,6 +54,7 @@ public class Connector : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        timerStarted = false;
         base.OnPlayerEnteredRoom(newPlayer);
         Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         Debug.Log(PhotonNetwork.IsMasterClient);
@@ -65,12 +66,15 @@ public class Connector : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if(PhotonNetwork.IsMasterClient && room == null)
+        if(room == null)
         {
             room = PhotonNetwork.CurrentRoom;
         }
-        if (playersYes && characterChosen >= 3 && PhotonNetwork.IsMasterClient)
-        {           
+        if (!timerStarted && playersYes && characterChosen >= 3 && PhotonNetwork.IsMasterClient)
+        { 
+            timer = timeLimit;
+            Hashtable ht = new Hashtable() {{ "Time", timer }};
+            room.SetCustomProperties(ht);          
             Debug.Log("Game Start");
             photonViews.RPC("StartCountdown", RpcTarget.All);
         }
@@ -89,7 +93,7 @@ public class Connector : MonoBehaviourPunCallbacks
         ht.Add("Time", timer);
         room.SetCustomProperties(ht);
         timerInt = (int) timer;
-        timerText.GetComponent<TextMeshProUGUI>().text = "Game Starting In:" + timerInt.ToString();
+        counter.GetComponent<PhotonView>().RPC("CounterUpdate", RpcTarget.All, timerInt);
         if (timer <= 0)
         {
             photonViews.RPC("LoadMain", RpcTarget.AllBuffered, null);
