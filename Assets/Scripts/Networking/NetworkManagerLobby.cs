@@ -1,10 +1,9 @@
 //12.09.2023 - v0.0
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using ExitGames.Client.Photon.StructWrapping;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR;
-using Oculus.Interaction;
 
 public class NetworkManagerLobby : MonoBehaviourPunCallbacks
 {
@@ -57,5 +56,15 @@ public class NetworkManagerLobby : MonoBehaviourPunCallbacks
         base.OnJoinedRoom();
         networkStatus = "Room Joined";
         canSelect = true;
+        if(XRSettings.enabled && PhotonNetwork.CurrentRoom.CustomProperties["VRCheck"].Get<bool>() == true)
+        {
+            PhotonNetwork.LeaveRoom();
+            SceneManager.LoadScene("MainMenuExample"); 
+        }
+        if(PhotonNetwork.CurrentRoom.PlayerCount > 4 && !XRSettings.enabled)
+        {
+            PhotonNetwork.LeaveRoom();
+            SceneManager.LoadScene("Title Scene");
+        }
     }
 }

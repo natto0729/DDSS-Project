@@ -2,10 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
 
 public class SceneManage : MonoBehaviour
 {
     public CharacterSelect characterSelect;
+
+    public void Start()
+    {
+        if(XRSettings.enabled)
+        {
+            GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(false);
+            GameObject.Find("Canvas").transform.GetChild(2).gameObject.SetActive(false);
+        }
+    }
     public void GameOver()
     {
         SceneManager.LoadScene("GameOver");

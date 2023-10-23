@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using ExitGames.Client.Photon.StructWrapping;
+using UnityEngine.XR;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,7 +20,14 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     void SpawnStuff()
     {
-        PhotonNetwork.Instantiate(characters[PhotonNetwork.LocalPlayer.CustomProperties["selected"].Get<int>()].name, Vector3.zero, Quaternion.identity);
+        if(XRSettings.enabled)
+        {
+            PhotonNetwork.Instantiate("OVRPlayerController Variant", Vector3.zero, Quaternion.identity);
+        }
+        else if(!XRSettings.enabled)
+        {
+            PhotonNetwork.Instantiate(characters[PhotonNetwork.LocalPlayer.CustomProperties["selected"].Get<int>()].name, Vector3.zero, Quaternion.identity);
+        }
     }
 
     void Start()

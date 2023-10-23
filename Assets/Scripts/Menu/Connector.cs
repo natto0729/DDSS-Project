@@ -1,22 +1,20 @@
-using System.Threading;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using ExitGames.Client.Photon;
 using UnityEngine.SceneManagement;
-using TMPro;
 using ExitGames.Client.Photon.StructWrapping;
+using UnityEngine.XR;
 
 public class Connector : MonoBehaviourPunCallbacks
 {
-    public CharacterSelect characterSelect;
     public int characterChosen;
-    public GameObject timerText;
     public GameObject counter;
     float timer;
     public float timeLimit;
     int timerInt;
     bool playersYes = false;
+    bool VRConnected = true;
     Room room;
     bool timerStarted = false;
     PhotonView photonViews;
@@ -55,15 +53,20 @@ public class Connector : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        if(characterSelect.hasSelected)
-        {
-            counter.GetComponent<PhotonView>().RPC("WaitingUpdate", RpcTarget.All, null);
-        }
-        timerStarted = false;
         base.OnPlayerEnteredRoom(newPlayer);
+        if(XRSettings.enabled)
+        {
+            if(!room.CustomProperties["VRCheck"].Get<bool>())
+            {
+                Hashtable VRCheck = new Hashtable() {{ "VRCheck", VRConnected }};
+                room.SetCustomProperties(VRCheck); 
+            }
+        }
+        counter.GetComponent<PhotonView>().RPC("WaitingUpdate", RpcTarget.AllBuffered, null);
+        timerStarted = false;
         Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         Debug.Log(PhotonNetwork.IsMasterClient);
-        if(PhotonNetwork.CurrentRoom.PlayerCount >= 3)
+        if(PhotonNetwork.CurrentRoom.PlayerCount >= 3 && room.CustomProperties["VRCheck"].Get<bool>() == true)
         {
             playersYes = true;
         }

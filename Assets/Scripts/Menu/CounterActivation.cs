@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using TMPro;
+using UnityEngine.XR;
 
 public class CounterActivation : MonoBehaviour
 {
+    public CharacterSelect characterSelect;
+
     [PunRPC]
     public void CounterUpdate(int timer)
     {
@@ -15,6 +18,9 @@ public class CounterActivation : MonoBehaviour
     [PunRPC]
     public void WaitingUpdate()
     {
-        gameObject.GetComponent<TextMeshProUGUI>().SetText("Waiting For Other Players...");
+        if(XRSettings.enabled || characterSelect.hasSelected)
+        {
+            gameObject.GetComponent<TextMeshProUGUI>().SetText("Waiting For Other Players...");
+        }
     }
 }
