@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
@@ -14,8 +12,11 @@ public class PlatformSelector : MonoBehaviour
             SceneManager.LoadScene("MainMenuExample");
         }
         else if(!XRSettings.enabled)
-        {
+        { 
+            Screen.SetResolution(Screen.width, Screen.height, FullScreenMode.FullScreenWindow);
             SceneManager.LoadScene("Title Scene");
         }
     }
 }
+
+

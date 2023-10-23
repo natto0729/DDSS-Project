@@ -54,6 +54,7 @@ MonoBehaviour:
   - UpdateCountdown
   - SpawnStuff
   - CounterUpdate
+  - WaitingUpdate
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -11,4 +11,10 @@ public class CounterActivation : MonoBehaviour
     {
         gameObject.GetComponent<TextMeshProUGUI>().SetText("Game Starting In:" + timer.ToString());
     }
+
+    [PunRPC]
+    public void WaitingUpdate()
+    {
+        gameObject.GetComponent<TextMeshProUGUI>().SetText("Waiting For Other Players...");
+    }
 }

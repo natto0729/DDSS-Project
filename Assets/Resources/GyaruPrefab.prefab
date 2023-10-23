@@ -2571,7 +2571,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4883859244475504229, guid: 7cc2b56d3c333e146958b8c685d8fdd0, type: 3}
+  - {fileID: 2100000, guid: 1f239997555c1d643acc6f293f3a287d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3982,6 +3982,7 @@ MonoBehaviour:
   Gravity: -15
   FallTimeout: 0.15
   Flashlight: {fileID: 1861864596264704200}
+  infiniteBattery: 1
   isLit: 0
   maxBattery: 100
   regenBatteryTime: 5
@@ -6027,7 +6028,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4883859244475504229, guid: 7cc2b56d3c333e146958b8c685d8fdd0, type: 3}
+  - {fileID: 2100000, guid: 1f239997555c1d643acc6f293f3a287d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

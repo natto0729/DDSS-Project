@@ -17,6 +17,8 @@ public class CharacterSelect : MonoBehaviour
     public GameObject leftButton;
     public GameObject rightButton;
 
+    public bool hasSelected = false;
+
     PhotonView photonView;
 
     [PunRPC]
@@ -59,6 +61,7 @@ public class CharacterSelect : MonoBehaviour
             }
             else
             {
+                hasSelected = true;
                 Hashtable selected = new Hashtable() {{"selected" , selectedCharacter}};
                 PhotonNetwork.LocalPlayer.SetCustomProperties(selected);
                 PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);

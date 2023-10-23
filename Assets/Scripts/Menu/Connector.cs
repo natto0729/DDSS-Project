@@ -9,6 +9,7 @@ using ExitGames.Client.Photon.StructWrapping;
 
 public class Connector : MonoBehaviourPunCallbacks
 {
+    public CharacterSelect characterSelect;
     public int characterChosen;
     public GameObject timerText;
     public GameObject counter;
@@ -54,6 +55,10 @@ public class Connector : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        if(characterSelect.hasSelected)
+        {
+            counter.GetComponent<PhotonView>().RPC("WaitingUpdate", RpcTarget.All, null);
+        }
         timerStarted = false;
         base.OnPlayerEnteredRoom(newPlayer);
         Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
@@ -70,7 +75,7 @@ public class Connector : MonoBehaviourPunCallbacks
         {
             room = PhotonNetwork.CurrentRoom;
         }
-        if (!timerStarted && playersYes && characterChosen >= 3 && PhotonNetwork.IsMasterClient)
+        if (!timerStarted && playersYes && characterChosen >= PhotonNetwork.CurrentRoom.PlayerCount && PhotonNetwork.IsMasterClient)
         { 
             timer = timeLimit;
             Hashtable ht = new Hashtable() {{ "Time", timer }};

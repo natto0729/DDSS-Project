@@ -2048,6 +2048,7 @@ MonoBehaviour:
   Gravity: -15
   FallTimeout: 0.15
   Flashlight: {fileID: 2001132570007160549}
+  infiniteBattery: 0
   isLit: 0
   maxBattery: 100
   regenBatteryTime: 5

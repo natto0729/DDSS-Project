@@ -87,6 +87,9 @@ namespace StarterAssets
         [Tooltip("Flashlight object")]
         public Transform Flashlight;
 
+        [Tooltip("Sets if character has infinite battery")]
+        public bool infiniteBattery = false;
+
         [Tooltip("If flashlight is on")]
         public bool isLit = false;
 
@@ -250,7 +253,10 @@ namespace StarterAssets
 
             GravityForce();
             Crouch();
-            Battery();
+            if(!infiniteBattery)
+            {
+                Battery();
+            }
             FlashlightSwitch();
             GroundedCheck();
             Stamina();
