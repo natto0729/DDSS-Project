@@ -7,6 +7,7 @@ using UnityEngine.XR;
 public class SceneManage : MonoBehaviour
 {
     public CharacterSelect characterSelect;
+    [SerializeField] private AudioSource titleButtonSoundEffect;
 
     public void Start()
     {
