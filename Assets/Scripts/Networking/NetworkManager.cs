@@ -18,7 +18,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void Start()
     {
         Connect();
-        
     }
 
     void OnGUI()
@@ -61,7 +60,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if(!XRSettings.enabled)
         {
             PhotonNetwork.Instantiate(characters[3].name, Vector3.zero, Quaternion.identity);
-
         }
         else if(XRSettings.enabled)
         {

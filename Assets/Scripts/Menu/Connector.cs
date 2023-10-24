@@ -64,7 +64,7 @@ public class Connector : MonoBehaviourPunCallbacks
         timerStarted = false;
         Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         Debug.Log(PhotonNetwork.IsMasterClient);
-        if(PhotonNetwork.CurrentRoom.PlayerCount >= 4 && VRConnected == true)
+        if(PhotonNetwork.CurrentRoom.PlayerCount >= 3)
         {
             playersYes = true;
         }
@@ -76,7 +76,7 @@ public class Connector : MonoBehaviourPunCallbacks
         {
             room = PhotonNetwork.CurrentRoom;
         }
-        if (!timerStarted && playersYes && characterChosen >= PhotonNetwork.CurrentRoom.PlayerCount - 1 && PhotonNetwork.IsMasterClient)
+        if (!timerStarted && playersYes && characterChosen >= PhotonNetwork.CurrentRoom.PlayerCount - 1 && PhotonNetwork.IsMasterClient && VRConnected == true)
         { 
             timer = timeLimit;
             Hashtable ht = new Hashtable() {{ "Time", timer }};

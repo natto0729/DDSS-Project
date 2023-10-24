@@ -222,7 +222,7 @@ namespace StarterAssets
 
         private void Start()
         {
-            GameObject.Find("Environment").transform.GetChild(4).GetComponent<Computers>().AddRenderingComputer();
+            GameObject.Find("Environment").transform.GetChild(4).GetComponent<Computers>().AddRenderingComputer(gameObject.GetComponent<CharacterController>());
             
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
