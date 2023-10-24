@@ -783,6 +783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSelect: {fileID: 1983519637}
+  titleButtonSoundEffect: {fileID: 0}
 --- !u!1 &683995686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c0389e05889453646b8e0ea3278eebec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdda0348ec652084fb8dcc025d38eeac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
