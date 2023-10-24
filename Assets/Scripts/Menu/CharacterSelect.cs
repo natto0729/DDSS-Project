@@ -20,6 +20,7 @@ public class CharacterSelect : MonoBehaviour
     public bool hasSelected = false;
 
     PhotonView photonView;
+    [SerializeField] private AudioSource clickSoundEffect;
 
     [PunRPC]
     public void AddToListNet(String add)
@@ -38,6 +39,7 @@ public class CharacterSelect : MonoBehaviour
         characters[selectedCharacter].SetActive(false);
         selectedCharacter = (selectedCharacter + 1) % characters.Count;
         characters[selectedCharacter].SetActive(true);
+        clickSoundEffect.Play();
     }
     public void PreviousCharacter()
     {
@@ -49,6 +51,7 @@ public class CharacterSelect : MonoBehaviour
             selectedCharacter += characters.Count;
         }
         characters[selectedCharacter].SetActive(true);
+        clickSoundEffect.Play();
     }
 
     public void StartGame()
