@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private int index;
     bool loadChar = false;
+    public bool testPlay = false;
 
     public Door finalDoor1;
     public Door finalDoor2;
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PhotonNetwork.IsMasterClient && loadChar == false)
+        if(PhotonNetwork.IsMasterClient && loadChar == false && testPlay == false)
         {
             gameObject.GetComponent<PhotonView>().RPC("SpawnStuff", RpcTarget.AllBuffered, null);
             loadChar = true;

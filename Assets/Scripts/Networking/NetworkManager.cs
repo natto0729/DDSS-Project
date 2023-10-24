@@ -12,12 +12,17 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public string gameVersion;
     string networkStatus;
 
+    public bool testPlay = false;
+
     public GameObject[] characters;
 
     // Start is called before the first frame update
     void Start()
     {
-        Connect();
+        if(testPlay == true)
+        {
+            Connect();
+        }
     }
 
     void OnGUI()
