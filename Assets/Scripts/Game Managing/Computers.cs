@@ -9,7 +9,7 @@ public class Computers : MonoBehaviour
 
     public bool canRender = true;
 
-    private Transform[] computers;
+    private Rendering[] computers;
 
     private Transform rand;
 
@@ -17,16 +17,16 @@ public class Computers : MonoBehaviour
 
     void Start()
     {
-        computers = gameObject.GetComponentsInChildren<Transform>();
+        computers = gameObject.GetComponentsInChildren<Rendering>();
     }
 
     public void AddRenderingComputer()
     {  
         canRender = false;      
-        rand = computers[Random.Range(1,computers.Length)];
+        rand = computers[Random.Range(1,computers.Length)].transform;
         while(renderComputers.Contains(rand))
         {
-            rand = computers[Random.Range(1,computers.Length)];
+            rand = computers[Random.Range(1,computers.Length)].transform;
         }
         renderComputers.Add(rand);
         renderComputers[index].GetComponent<Rendering>().enabled = true;

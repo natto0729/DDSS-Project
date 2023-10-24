@@ -9372,6 +9372,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1269342324755090594}
     m_Modifications:
+    - target: {fileID: 2499555338371296653, guid: db59ffe50ef6cc24d979a848fe2a8b61,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1917
+      objectReference: {fileID: 0}
     - target: {fileID: 4849315123549293142, guid: db59ffe50ef6cc24d979a848fe2a8b61,
         type: 3}
       propertyPath: m_RootOrder

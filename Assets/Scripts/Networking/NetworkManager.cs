@@ -60,7 +60,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         networkStatus = "Room Joined";
         if(!XRSettings.enabled)
         {
-            PhotonNetwork.Instantiate(characters[2].name, Vector3.zero, Quaternion.identity);
+            PhotonNetwork.Instantiate(characters[3].name, Vector3.zero, Quaternion.identity);
 
         }
         else if(XRSettings.enabled)

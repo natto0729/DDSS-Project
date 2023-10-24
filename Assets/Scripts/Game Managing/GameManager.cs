@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public Door finalDoor1;
     public Door finalDoor2;
+    public Door finalDoor3;
+    public Door finalDoor4;
 
     [PunRPC]
     void SpawnStuff()
@@ -48,6 +50,8 @@ public class GameManager : MonoBehaviour
         {
             finalDoor1.GetComponent<PhotonView>().RPC ("OpenNetwork",RpcTarget.AllBuffered, new Vector3(0,0,0));
             finalDoor2.GetComponent<PhotonView>().RPC ("OpenNetwork",RpcTarget.AllBuffered, new Vector3(0,0,0));
+            finalDoor3.GetComponent<PhotonView>().RPC("OpenNetwork", RpcTarget.AllBuffered, new Vector3(0,0,0));
+            finalDoor4.GetComponent<PhotonView>().RPC("OpenNetwork", RpcTarget.AllBuffered, new Vector3(0,0,0));
         }
     }
 

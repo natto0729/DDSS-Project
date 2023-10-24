@@ -6254,6 +6254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartman Cell
       objectReference: {fileID: 0}
+    - target: {fileID: 1608665956222263373, guid: 21e1c23d7b835df4091fab3509a89e96,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1917
+      objectReference: {fileID: 0}
     - target: {fileID: 4360411031735149422, guid: 21e1c23d7b835df4091fab3509a89e96,
         type: 3}
       propertyPath: sceneViewId

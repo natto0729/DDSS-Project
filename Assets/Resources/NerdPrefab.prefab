@@ -6042,6 +6042,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nerd Cell
       objectReference: {fileID: 0}
+    - target: {fileID: 2499555338371296653, guid: 513a8ebb9c6a56e4ca250d6bbf20348e,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1917
+      objectReference: {fileID: 0}
     - target: {fileID: 4132092183715352972, guid: 513a8ebb9c6a56e4ca250d6bbf20348e,
         type: 3}
       propertyPath: sceneViewId
