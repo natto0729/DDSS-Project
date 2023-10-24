@@ -10,6 +10,8 @@ public class NetworkManagerLobby : MonoBehaviourPunCallbacks
     public string gameVersion;
     string networkStatus;
 
+    public Connector connector;
+
     public bool canSelect = false;
 
     // Start is called before the first frame update
@@ -56,7 +58,7 @@ public class NetworkManagerLobby : MonoBehaviourPunCallbacks
         base.OnJoinedRoom();
         networkStatus = "Room Joined";
         canSelect = true;
-        if(XRSettings.enabled && PhotonNetwork.CurrentRoom.CustomProperties["VRCheck"].Get<bool>() == true)
+        if(XRSettings.enabled && connector.VRConnected == true)
         {
             PhotonNetwork.LeaveRoom();
             SceneManager.LoadScene("MainMenuExample"); 

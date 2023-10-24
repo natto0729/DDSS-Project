@@ -2000,6 +2000,7 @@ MonoBehaviour:
   characterChosen: 0
   counter: {fileID: 965809085}
   timeLimit: 6
+  VRConnected: 1
 --- !u!4 &1344650859
 Transform:
   m_ObjectHideFlags: 0
@@ -2028,6 +2029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameVersion: 0
+  connector: {fileID: 1344650858}
   canSelect: 0
 --- !u!114 &1344650861
 MonoBehaviour:

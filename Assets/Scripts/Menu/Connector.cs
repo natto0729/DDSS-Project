@@ -14,10 +14,16 @@ public class Connector : MonoBehaviourPunCallbacks
     public float timeLimit;
     int timerInt;
     bool playersYes = false;
-    bool VRConnected = true;
+    public bool VRConnected = false;
     Room room;
     bool timerStarted = false;
     PhotonView photonViews;
+
+    [PunRPC]
+    private void VRChecked()
+    {
+        VRConnected = true; 
+    }
 
     [PunRPC]
     private void ChosenPlayersNet()
@@ -54,19 +60,11 @@ public class Connector : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         base.OnPlayerEnteredRoom(newPlayer);
-        if(XRSettings.enabled)
-        {
-            if(!room.CustomProperties["VRCheck"].Get<bool>())
-            {
-                Hashtable VRCheck = new Hashtable() {{ "VRCheck", VRConnected }};
-                room.SetCustomProperties(VRCheck); 
-            }
-        }
         counter.GetComponent<PhotonView>().RPC("WaitingUpdate", RpcTarget.AllBuffered, null);
         timerStarted = false;
         Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         Debug.Log(PhotonNetwork.IsMasterClient);
-        if(PhotonNetwork.CurrentRoom.PlayerCount >= 3 && room.CustomProperties["VRCheck"].Get<bool>() == true)
+        if(PhotonNetwork.CurrentRoom.PlayerCount >= 3 && VRConnected == true)
         {
             playersYes = true;
         }
@@ -77,6 +75,10 @@ public class Connector : MonoBehaviourPunCallbacks
         if(room == null)
         {
             room = PhotonNetwork.CurrentRoom;
+        }
+        if(XRSettings.enabled && VRConnected == false)
+        {
+            photonViews.RPC("VRChecked", RpcTarget.AllBuffered, null);
         }
         if (!timerStarted && playersYes && characterChosen >= PhotonNetwork.CurrentRoom.PlayerCount && PhotonNetwork.IsMasterClient)
         { 
