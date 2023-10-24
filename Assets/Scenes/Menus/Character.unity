@@ -2000,7 +2000,7 @@ MonoBehaviour:
   characterChosen: 0
   counter: {fileID: 965809085}
   timeLimit: 6
-  VRConnected: 1
+  VRConnected: 0
 --- !u!4 &1344650859
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 [System.Serializable]
@@ -17,7 +18,7 @@ public class VRMap
     }
 }
 
-public class VRRig : MonoBehaviour
+public class VRRig : MonoBehaviourPunCallbacks
 {
     public float turnSmoothness;
     public VRMap head;

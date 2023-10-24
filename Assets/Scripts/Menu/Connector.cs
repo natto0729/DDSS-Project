@@ -20,7 +20,7 @@ public class Connector : MonoBehaviourPunCallbacks
     PhotonView photonViews;
 
     [PunRPC]
-    private void VRChecked()
+    public void VRChecked()
     {
         VRConnected = true; 
     }
@@ -64,7 +64,7 @@ public class Connector : MonoBehaviourPunCallbacks
         timerStarted = false;
         Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         Debug.Log(PhotonNetwork.IsMasterClient);
-        if(PhotonNetwork.CurrentRoom.PlayerCount >= 3 && VRConnected == true)
+        if(PhotonNetwork.CurrentRoom.PlayerCount >= 4 && VRConnected == true)
         {
             playersYes = true;
         }
@@ -76,11 +76,7 @@ public class Connector : MonoBehaviourPunCallbacks
         {
             room = PhotonNetwork.CurrentRoom;
         }
-        if(XRSettings.enabled && VRConnected == false)
-        {
-            photonViews.RPC("VRChecked", RpcTarget.AllBuffered, null);
-        }
-        if (!timerStarted && playersYes && characterChosen >= PhotonNetwork.CurrentRoom.PlayerCount && PhotonNetwork.IsMasterClient)
+        if (!timerStarted && playersYes && characterChosen >= PhotonNetwork.CurrentRoom.PlayerCount - 1 && PhotonNetwork.IsMasterClient)
         { 
             timer = timeLimit;
             Hashtable ht = new Hashtable() {{ "Time", timer }};

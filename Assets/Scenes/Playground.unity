@@ -2540,6 +2540,8 @@ MonoBehaviour:
   - {fileID: 4416926081852918481, guid: 20f9421cc964c814caac443c4cee3305, type: 3}
   finalDoor1: {fileID: 118864996}
   finalDoor2: {fileID: 1598605265}
+  finalDoor3: {fileID: 0}
+  finalDoor4: {fileID: 0}
 --- !u!4 &437542006
 Transform:
   m_ObjectHideFlags: 0
@@ -13932,7 +13934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2079641690
 Transform:
   m_ObjectHideFlags: 0
