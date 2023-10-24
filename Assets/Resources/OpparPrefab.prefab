@@ -4364,6 +4364,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -502.677
       objectReference: {fileID: 0}
+    - target: {fileID: 2499555338371296653, guid: 63431b1166ff40341ba613981fff83d6,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1917
+      objectReference: {fileID: 0}
     - target: {fileID: 6708706851593255505, guid: 63431b1166ff40341ba613981fff83d6,
         type: 3}
       propertyPath: m_Name
