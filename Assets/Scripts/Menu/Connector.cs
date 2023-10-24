@@ -28,7 +28,7 @@ public class Connector : MonoBehaviourPunCallbacks
     [PunRPC]
     private void LoadMain()
     {
-        SceneManager.LoadScene("Playground");
+        SceneManager.LoadScene(5);
     }
 
     [PunRPC]
