@@ -460,7 +460,7 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
-  m_UseLocal: 1
+  m_UseLocal: 0
 --- !u!1 &1236646887
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
-  m_UseLocal: 1
+  m_UseLocal: 0
 --- !u!1 &1408757682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,6 +2857,11 @@ MonoBehaviour:
     trackingRotationOffset: {x: -17, y: 115, z: 13}
   mainC: {fileID: 0}
   headConstraint: {fileID: 70788304}
+  useText: {fileID: 0}
+  maxUseDistance: 1
+  useLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2032241793
 MonoBehaviour:
   m_ObjectHideFlags: 0

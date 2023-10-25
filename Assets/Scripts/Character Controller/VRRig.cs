@@ -39,13 +39,13 @@ public class VRRig : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("Environment").transform.GetChild(4).GetComponent<Computers>().AddRenderingComputer();
         headBodyOffset = transform.position - headConstraint.position;
     }
 
     void Update()
     {
-        ComputerPrompt();
-        DoorPrompt();
+        Prompt();
         if(OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
         {
             OnInteractDoor();
@@ -67,7 +67,7 @@ public class VRRig : MonoBehaviourPunCallbacks
         rightHand.Map();
     }
 
-    private void DoorPrompt()
+    private void Prompt()
     {
         if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out RaycastHit hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Door>(out Door door) && !door.needsKey && !door.isFinalDoor)
         {
@@ -101,16 +101,7 @@ public class VRRig : MonoBehaviourPunCallbacks
             useText.transform.position = hit.point - (hit.point - mainC.transform.position).normalized * 1f;
             useText.transform.rotation = Quaternion.LookRotation((hit.point - mainC.transform.position).normalized);
         }
-        else
-        {
-            useText.gameObject.SetActive(false);
-        }
-    }
-
-    
-    private void ComputerPrompt()
-    {
-        if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out RaycastHit hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.isRendering)
+        else if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.isRendering)
         {
             useText.SetText("Stop Rendering \"Right Trigger\"");
             useText.gameObject.SetActive(true);

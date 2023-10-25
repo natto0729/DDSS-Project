@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Computers : MonoBehaviour
 {
-    public int index = 0;
-    private int extraIndex = 0;
-
     public int numberOfComputers = 0;
 
     public bool canRender = true;
@@ -15,6 +13,8 @@ public class Computers : MonoBehaviour
     public Rendering[] computers;
 
     private int rand;
+
+    private int index = 0;
 
     private int saved;
 
@@ -27,24 +27,56 @@ public class Computers : MonoBehaviour
     public void ActivateComputer(int rand)
     {
         saved = rand;
-        canRender = false;   
         computers[saved].GetComponent<Rendering>().enabled = true;
         computers[saved].transform.GetChild(0).gameObject.SetActive(true);
         computers[saved].transform.GetChild(1).gameObject.SetActive(true);
+    }
+
+    [PunRPC]
+    public void SyncTime()
+    {
+        canRender =false;
+        if(gameObject.GetComponent<PhotonView>().IsMine && !XRSettings.enabled)
+        {
+            gameObject.GetComponent<PhotonView>().RPC("ActivateComputer", RpcTarget.AllBuffered, rand);
+        }
+        foreach(Rendering computer in computers)
+        {
+            if(computers[index].enabled)
+            {
+                if(computers[index].progress != null)
+                {
+                    StopCoroutine(computers[index].progress);
+                    computers[index].progress = null;
+                }
+                computers[index].currentRender = 0;
+                if(computers[index].progress == null)
+                {
+                    computers[index].progress = computers[index].RenderingProgress();
+                    StartCoroutine(computers[index].progress);
+                }
+            }
+            index ++;
+        }
         numberOfComputers += 1;
-        if(numberOfComputers >= PhotonNetwork.CurrentRoom.PlayerCount)
+        if(numberOfComputers >= PhotonNetwork.CurrentRoom.PlayerCount - 1)
         {
             canRender = true;
         }
+        index = 0;
     }
 
     public void AddRenderingComputer()
     {     
-        rand = Random.Range(1,computers.Length);
-        while(computers[rand].GetComponent<Rendering>().enabled)
+        if(!XRSettings.enabled)
         {
             rand = Random.Range(1,computers.Length);
+            while(computers[rand].GetComponent<Rendering>().enabled)
+            {
+                rand = Random.Range(1,computers.Length);
+            }
         }
-        gameObject.GetComponent<PhotonView>().RPC("ActivateComputer", RpcTarget.AllBuffered, rand);
+        gameObject.GetComponent<PhotonView>().RPC("SyncTime", RpcTarget.AllBuffered, null);
+        
     }
 }

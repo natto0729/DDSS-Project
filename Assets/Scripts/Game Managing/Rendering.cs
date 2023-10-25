@@ -15,7 +15,9 @@ public class Rendering : MonoBehaviour
     public float currentRender;
     public float maxRender;
 
-    public Coroutine progress;
+    private bool isStopped = false;
+
+    public IEnumerator progress;
 
     private Transform renderingPopUp;
 
@@ -25,15 +27,20 @@ public class Rendering : MonoBehaviour
     public void StopProgress()
     {
         isRendering =false;
-        StopCoroutine(RenderingProgress());
+        isStopped = true;
+        renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering Stopped!");
+        renderingPopUp.GetComponent<TextMeshPro>().color = Color.red;
+        if(progress != null)
+        {
+            StopCoroutine(progress);
+            progress = null;
+        }
     }
 
     [PunRPC]
     public void StartProgress()
     {
-        renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering Stopped!");
-        renderingPopUp.GetComponent<TextMeshPro>().color = Color.red;
-        StartCoroutine(RenderingProgress());
+        isStopped = false;
     }
 
     private void Start()
@@ -43,17 +50,25 @@ public class Rendering : MonoBehaviour
 
     public void Update()
     {
-        if(!InteractablesParent.canRender)
+        if(InteractablesParent.canRender && !isRendering && !isStopped)
+        {
+            if(progress == null)
+            {
+                progress = RenderingProgress();
+            }
+            StartCoroutine(progress);
+        }
+        else if(!InteractablesParent.canRender)
         {
             isRendering = false;
             currentRender = 0;
-            StopCoroutine(RenderingProgress());
+            if(progress != null)
+            {
+                StopCoroutine(progress);
+                progress = null;
+            }
         }
-        if(InteractablesParent.canRender && !isRendering)
-        {
-            StartCoroutine(RenderingProgress());
-        }
-        if(isRendering)
+        else if(isRendering)
         {
             RenderText();
         }
