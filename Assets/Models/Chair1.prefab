@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 5165874543267707928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 156.30786, y: 0.03142631, z: -198.15123}
-  m_LocalScale: {x: 0.032768566, y: 0.92019624, z: 0.04108058}
+  m_LocalScale: {x: 207.95131, y: 207.9513, z: 207.95132}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
-  m_UseLocal: 1
+  m_UseLocal: 0
 --- !u!114 &1617458057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,5 +191,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
+  m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3

@@ -57,7 +57,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210452980474681633, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
+      propertyPath: m_TeleportEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210452980474681633, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
       propertyPath: m_SynchronizeAngularVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096026303633315619, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: m_TeleportEnabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
