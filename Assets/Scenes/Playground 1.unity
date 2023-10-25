@@ -2007,11 +2007,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1617458055, guid: 9dd49b1d6b78297478eee93da2956af8, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1617458055, guid: 9dd49b1d6b78297478eee93da2956af8, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1617458059, guid: 9dd49b1d6b78297478eee93da2956af8, type: 3}
       propertyPath: sceneViewId
