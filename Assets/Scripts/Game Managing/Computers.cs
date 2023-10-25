@@ -19,8 +19,8 @@ public class Computers : MonoBehaviour
     {
         computers = gameObject.GetComponentsInChildren<Rendering>();
     }
-    
-    public void AddRenderingComputer()
+
+    public void AddRenderingComputer(CharacterController player)
     {  
         canRender = false;      
         rand = computers[Random.Range(1,computers.Length)].transform;
@@ -29,6 +29,7 @@ public class Computers : MonoBehaviour
             rand = computers[Random.Range(1,computers.Length)].transform;
         }
         renderComputers.Add(rand);
+        player.Move(renderComputers[index].GetChild(6).position - player.gameObject.transform.position);
         renderComputers[index].GetComponent<Rendering>().enabled = true;
         renderComputers[index].GetChild(0).gameObject.SetActive(true);
         renderComputers[index].GetChild(1).gameObject.SetActive(true);

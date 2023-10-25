@@ -41,13 +41,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PhotonNetwork.IsMasterClient)
-        {
-            for(int i = 0; i >= PhotonNetwork.CurrentRoom.PlayerCount - 1; i++)
-            {
-                InteractablesParent.GetComponent<Computers>().AddRenderingComputer();
-            }
-        }
         if(PhotonNetwork.IsMasterClient && loadChar == false && testPlay == false)
         {
             gameObject.GetComponent<PhotonView>().RPC("SpawnStuff", RpcTarget.AllBuffered, null);
