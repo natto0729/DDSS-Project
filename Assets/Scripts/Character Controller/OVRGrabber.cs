@@ -131,7 +131,7 @@ public class OVRGrabber : MonoBehaviour
         }
 
         // We're going to setup the player collision to ignore the hand collision.
-        SetPlayerIgnoreCollision(gameObject, true);
+        gameObject.GetComponent<PhotonView>().RPC("SetPlayerIgnoreCollision",RpcTarget.All,gameObject.name, true);
     }
 
     // Using Update instead of FixedUpdate. Doing this in FixedUpdate causes visible judder even with
@@ -323,7 +323,7 @@ public class OVRGrabber : MonoBehaviour
 
             // NOTE: This is to get around having to setup collision layers, but in your own project you might
             // choose to remove this line in favor of your own collision layer setup.
-            SetPlayerIgnoreCollision(m_grabbedObj.gameObject, true);
+            gameObject.GetComponent<PhotonView>().RPC("SetPlayerIgnoreCollision",RpcTarget.All,m_grabbedObj.gameObject.name, true);
 
             if (m_parentHeldObject)
             {
@@ -378,12 +378,14 @@ public class OVRGrabber : MonoBehaviour
             Vector3 angularVelocity =
                 trackingSpace.orientation * OVRInput.GetLocalControllerAngularVelocity(m_controller);
 
-            GrabbableRelease(linearVelocity, angularVelocity);
+            gameObject.GetComponent<PhotonView>().RPC("GrabbableRelease", RpcTarget.All, linearVelocity, angularVelocity);
         }
 
         // Re-enable grab volumes to allow overlap events
         GrabVolumeEnable(true);
     }
+
+    [PunRPC]
     protected void GrabbableRelease(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEnd", RpcTarget.All, linearVelocity, angularVelocity);
@@ -415,18 +417,19 @@ public class OVRGrabber : MonoBehaviour
     {
         if (m_grabbedObj == grabbable)
         {
-            GrabbableRelease(Vector3.zero, Vector3.zero);
+            gameObject.GetComponent<PhotonView>().RPC("GrabbableRelease", RpcTarget.All, Vector3.zero, Vector3.zero);
         }
     }
 
-    protected void SetPlayerIgnoreCollision(GameObject grabbable, bool ignore)
+    [PunRPC]
+    protected void SetPlayerIgnoreCollision(string grabbable, bool ignore)
     {
         if (m_player != null)
         {
             Collider[] playerColliders = m_player.GetComponentsInChildren<Collider>();
             foreach (Collider pc in playerColliders)
             {
-                Collider[] colliders = grabbable.GetComponentsInChildren<Collider>();
+                Collider[] colliders = GameObject.Find(grabbable).GetComponentsInChildren<Collider>();
                 foreach (Collider c in colliders)
                 {
                     if (!c.isTrigger && !pc.isTrigger)
