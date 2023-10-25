@@ -17,9 +17,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 using System;
 using UnityEngine;
+using Photon.Pun;
 
 /// <summary>
 /// An object that can be grabbed and thrown by OVRGrabber.
@@ -120,16 +120,18 @@ public class OVRGrabbable : MonoBehaviour
     /// <summary>
     /// Notifies the object that it has been grabbed.
     /// </summary>
-    virtual public void GrabBegin(OVRGrabber hand, Collider grabPoint)
+    [PunRPC]
+    virtual public void GrabBegin(string hand, string grabPoint)
     {
-        m_grabbedBy = hand;
-        m_grabbedCollider = grabPoint;
+        m_grabbedBy = GameObject.Find(hand).GetComponent<OVRGrabber>();
+        m_grabbedCollider = GameObject.Find(grabPoint).GetComponent<Collider>();
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     /// <summary>
     /// Notifies the object that it has been released.
     /// </summary>
+    [PunRPC]
     virtual public void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();

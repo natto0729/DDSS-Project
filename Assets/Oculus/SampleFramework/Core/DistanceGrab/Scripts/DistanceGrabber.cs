@@ -164,7 +164,7 @@ namespace OculusSampleFramework
                 }
 
                 m_grabbedObj = closestGrabbable;
-                m_grabbedObj.GrabBegin(this, closestGrabbableCollider);
+                m_grabbedObj.GrabBegin(this.name, closestGrabbableCollider.name);
                 SetPlayerIgnoreCollision(m_grabbedObj.gameObject, true);
 
                 m_movingObjectToHand = true;

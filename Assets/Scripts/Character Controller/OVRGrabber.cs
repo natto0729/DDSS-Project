@@ -19,6 +19,8 @@
  */
 
 using System.Collections.Generic;
+using Photon.Pun;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -276,7 +278,7 @@ public class OVRGrabber : MonoBehaviour
             }
 
             m_grabbedObj = closestGrabbable;
-            m_grabbedObj.GrabBegin(this, closestGrabbableCollider);
+            m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabBegin", RpcTarget.All, this.gameObject.name, closestGrabbableCollider.gameObject.name);
 
             m_lastPos = transform.position;
             m_lastRot = transform.rotation;
@@ -382,7 +384,7 @@ public class OVRGrabber : MonoBehaviour
 
     protected void GrabbableRelease(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        m_grabbedObj.GrabEnd(linearVelocity, angularVelocity);
+        m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEnd", RpcTarget.All, linearVelocity, angularVelocity);
         if (m_parentHeldObject) m_grabbedObj.transform.parent = null;
         m_grabbedObj = null;
     }

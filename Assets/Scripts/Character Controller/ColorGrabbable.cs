@@ -17,9 +17,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-
+using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace OculusSampleFramework
 {
@@ -50,9 +50,9 @@ namespace OculusSampleFramework
             else SetColor(m_color);
         }
 
-        override public void GrabBegin(OVRGrabber hand, Collider grabPoint)
+        override public void GrabBegin(string hand, string grabPoint)
         {
-            base.GrabBegin(hand, grabPoint);
+            base.GrabBegin(GameObject.Find(hand).GetComponent<OVRGrabber>().name, GameObject.Find(grabPoint).GetComponent<Collider>().name);
             UpdateColor();
         }
 
