@@ -43,6 +43,16 @@ public class Rendering : MonoBehaviour
 
     public void Update()
     {
+        if(!InteractablesParent.canRender)
+        {
+            isRendering = false;
+            currentRender = 0;
+            StopCoroutine(RenderingProgress());
+        }
+        if(InteractablesParent.canRender && !isRendering)
+        {
+            StartCoroutine(RenderingProgress());
+        }
         if(isRendering)
         {
             RenderText();

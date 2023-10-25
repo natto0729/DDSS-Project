@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class Computers : MonoBehaviour
@@ -7,50 +8,43 @@ public class Computers : MonoBehaviour
     public int index = 0;
     private int extraIndex = 0;
 
+    public int numberOfComputers = 0;
+
     public bool canRender = true;
 
-    private Rendering[] computers;
+    public Rendering[] computers;
 
-    private Transform rand;
+    private int rand;
 
-    public List<Transform> renderComputers = new List<Transform>();
+    private int saved;
 
     void Start()
     {
         computers = gameObject.GetComponentsInChildren<Rendering>();
     }
 
-    public void AddRenderingComputer(CharacterController player)
-    {  
-        canRender = false;      
-        rand = computers[Random.Range(1,computers.Length)].transform;
-        while(renderComputers.Contains(rand))
+    [PunRPC]
+    public void ActivateComputer(int rand)
+    {
+        saved = rand;
+        canRender = false;   
+        computers[saved].GetComponent<Rendering>().enabled = true;
+        computers[saved].transform.GetChild(0).gameObject.SetActive(true);
+        computers[saved].transform.GetChild(1).gameObject.SetActive(true);
+        numberOfComputers += 1;
+        if(numberOfComputers >= PhotonNetwork.CurrentRoom.PlayerCount)
         {
-            rand = computers[Random.Range(1,computers.Length)].transform;
+            canRender = true;
         }
-        renderComputers.Add(rand);
-        player.Move(renderComputers[index].GetChild(6).position - player.gameObject.transform.position);
-        renderComputers[index].GetComponent<Rendering>().enabled = true;
-        renderComputers[index].GetChild(0).gameObject.SetActive(true);
-        renderComputers[index].GetChild(1).gameObject.SetActive(true);
-        index ++;
+    }
 
-        foreach(Transform computer in renderComputers)
+    public void AddRenderingComputer()
+    {     
+        rand = Random.Range(1,computers.Length);
+        while(computers[rand].GetComponent<Rendering>().enabled)
         {
-            if(renderComputers[extraIndex].GetComponent<Rendering>().progress != null)
-            {
-                StopCoroutine(renderComputers[extraIndex].GetComponent<Rendering>().progress);
-                renderComputers[extraIndex].GetComponent<Rendering>().progress = null;
-            }
-            renderComputers[extraIndex].GetComponent<Rendering>().currentRender = 0;
-            if(renderComputers[extraIndex].GetComponent<Rendering>().progress == null)
-            {
-                renderComputers[extraIndex].GetComponent<Rendering>().progress = StartCoroutine(renderComputers[extraIndex].GetComponent<Rendering>().RenderingProgress());
-            }
-            extraIndex ++;
+            rand = Random.Range(1,computers.Length);
         }
-        
-        canRender = true;
-        extraIndex = 0;
+        gameObject.GetComponent<PhotonView>().RPC("ActivateComputer", RpcTarget.AllBuffered, rand);
     }
 }

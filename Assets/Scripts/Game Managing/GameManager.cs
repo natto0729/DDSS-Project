@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] characters;
 
     private int index;
+    private int numberOfComputers;
     bool loadChar = false;
     public bool testPlay = false;
 
@@ -59,18 +60,24 @@ public class GameManager : MonoBehaviour
     private void RenderProgress()
     {
         renderTotal = 0;
-        foreach(Transform computer in InteractablesParent.renderComputers)
+        foreach(Rendering computer in InteractablesParent.computers)
         {
-            renderTotal += (int) InteractablesParent.renderComputers[index].GetComponent<Rendering>().currentRender;
+            if(InteractablesParent.computers[index].enabled)
+            {
+                renderTotal += (int) InteractablesParent.computers[index].GetComponent<Rendering>().currentRender;
+                numberOfComputers += 1;
+            }
 
             index++;
         }
-
-        if(InteractablesParent.renderComputers.Count > 1)
+        
+        if(numberOfComputers > 1)
         {
-            renderTotal = renderTotal/InteractablesParent.renderComputers.Count;
+            renderTotal = renderTotal/numberOfComputers;
         }
 
+        numberOfComputers = 0;
         index = 0;
     }
+
 }

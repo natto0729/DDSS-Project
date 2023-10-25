@@ -441,6 +441,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &108854441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1213,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &172360516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1332,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &183425064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,6 +1967,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &267363280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,6 +2542,7 @@ MonoBehaviour:
   - {fileID: 4416926081852918481, guid: 8482ab14a1fcfe54781d316322620e8b, type: 3}
   - {fileID: 4416926081852918481, guid: 455476d55606e2a4cb882beffd0b8b1c, type: 3}
   - {fileID: 4416926081852918481, guid: 20f9421cc964c814caac443c4cee3305, type: 3}
+  testPlay: 0
   finalDoor1: {fileID: 118864996}
   finalDoor2: {fileID: 1598605265}
   finalDoor3: {fileID: 0}
@@ -2856,6 +2861,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &572053195
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,6 +3324,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &630562388
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,6 +3859,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1001 &746329221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4930,6 +4938,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &874605735
 GameObject:
   m_ObjectHideFlags: 0
@@ -5360,6 +5369,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &892874796
 GameObject:
   m_ObjectHideFlags: 0
@@ -5735,6 +5745,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &958347331
 GameObject:
   m_ObjectHideFlags: 0
@@ -6602,6 +6613,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -6785,6 +6797,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1102115178
 GameObject:
   m_ObjectHideFlags: 0
@@ -6903,6 +6916,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1105429223
 GameObject:
   m_ObjectHideFlags: 0
@@ -7115,6 +7129,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1159641951
 GameObject:
   m_ObjectHideFlags: 0
@@ -7609,6 +7624,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1275464738
 GameObject:
   m_ObjectHideFlags: 0
@@ -7862,6 +7878,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1293641129
 GameObject:
   m_ObjectHideFlags: 0
@@ -7980,6 +7997,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1332603710
 GameObject:
   m_ObjectHideFlags: 0
@@ -8270,6 +8288,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1334957701
 GameObject:
   m_ObjectHideFlags: 0
@@ -8482,6 +8501,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1391297723
 GameObject:
   m_ObjectHideFlags: 0
@@ -9375,6 +9395,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1468907437
 GameObject:
   m_ObjectHideFlags: 0
@@ -10759,6 +10780,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1661818662
 GameObject:
   m_ObjectHideFlags: 0
@@ -11887,6 +11909,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1853087481
 GameObject:
   m_ObjectHideFlags: 0
@@ -12537,6 +12560,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1935302867
 GameObject:
   m_ObjectHideFlags: 0
@@ -12655,6 +12679,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &1951218191
 GameObject:
   m_ObjectHideFlags: 0
@@ -13409,6 +13434,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!1 &2010847810
 GameObject:
   m_ObjectHideFlags: 0
@@ -13963,6 +13989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameVersion: 0.0
+  testPlay: 1
   characters:
   - {fileID: 4416926081852918481, guid: 87d2b4bc0d0803f42b26c7824ff194e4, type: 3}
   - {fileID: 4416926081852918481, guid: 8482ab14a1fcfe54781d316322620e8b, type: 3}

@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 3074026686791255532}
   - component: {fileID: 1446844670652326921}
   - component: {fileID: 917403758295768389}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: RenderingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,6 +1135,7 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+  isRendering: 0
 --- !u!65 &1338363383
 BoxCollider:
   m_ObjectHideFlags: 0
