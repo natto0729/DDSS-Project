@@ -2664,6 +2664,7 @@ GameObject:
   - component: {fileID: 1361672664}
   - component: {fileID: 1361672665}
   - component: {fileID: -4146278028164877290}
+  - component: {fileID: 2894271611759388582}
   m_Layer: 8
   m_Name: NerdPrefab
   m_TagString: Player
@@ -3155,6 +3156,18 @@ MonoBehaviour:
     m_Bits: 64
   canPush: 1
   strength: 1.1
+--- !u!114 &2894271611759388582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4da798508752f468959d0f77232585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4444468170536368780
 GameObject:
   m_ObjectHideFlags: 0

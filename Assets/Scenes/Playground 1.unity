@@ -11945,7 +11945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510f64a7e6b3f7459a080c3c3edd490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfComputers: 0
   canRender: 1
   computers: []
 --- !u!114 &611518794

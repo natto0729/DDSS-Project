@@ -39,7 +39,6 @@ public class VRRig : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("Environment").transform.GetChild(4).GetComponent<Computers>().AddRenderingComputer();
         headBodyOffset = transform.position - headConstraint.position;
     }
 

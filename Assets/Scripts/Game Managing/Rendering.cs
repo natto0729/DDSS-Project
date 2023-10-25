@@ -58,17 +58,18 @@ public class Rendering : MonoBehaviour
             }
             StartCoroutine(progress);
         }
-        else if(!InteractablesParent.canRender)
+        if(!InteractablesParent.canRender)
         {
             isRendering = false;
             currentRender = 0;
+            Debug.Log(isRendering);
             if(progress != null)
             {
                 StopCoroutine(progress);
                 progress = null;
             }
         }
-        else if(isRendering)
+        if(isRendering)
         {
             RenderText();
         }

@@ -6,39 +6,32 @@ using UnityEngine.XR;
 
 public class Computers : MonoBehaviour
 {
-    public int numberOfComputers = 0;
-
     public bool canRender = true;
 
     public Rendering[] computers;
 
     private int rand;
+    private int saved;
 
     private int index = 0;
 
-    private int saved;
+    PhotonView photonViews;
 
     void Start()
     {
+        photonViews = gameObject.GetComponent<PhotonView>();
         computers = gameObject.GetComponentsInChildren<Rendering>();
     }
 
     [PunRPC]
-    public void ActivateComputer(int rand)
-    {
-        saved = rand;
-        computers[saved].GetComponent<Rendering>().enabled = true;
-        computers[saved].transform.GetChild(0).gameObject.SetActive(true);
-        computers[saved].transform.GetChild(1).gameObject.SetActive(true);
-    }
-
-    [PunRPC]
-    public void SyncTime()
+    public void SyncTime(int saved)
     {
         canRender =false;
-        if(gameObject.GetComponent<PhotonView>().IsMine && !XRSettings.enabled)
+        if(!XRSettings.enabled)
         {
-            gameObject.GetComponent<PhotonView>().RPC("ActivateComputer", RpcTarget.AllBuffered, rand);
+            computers[saved].GetComponent<Rendering>().enabled = true;
+            computers[saved].transform.GetChild(0).gameObject.SetActive(true);
+            computers[saved].transform.GetChild(1).gameObject.SetActive(true);
         }
         foreach(Rendering computer in computers)
         {
@@ -58,22 +51,23 @@ public class Computers : MonoBehaviour
             }
             index ++;
         }
-        numberOfComputers += 1;
-        if(numberOfComputers >= PhotonNetwork.CurrentRoom.PlayerCount - 1)
-        {
-            canRender = true;
-        }
+        canRender = true;
         index = 0;
     }
 
     public void AddRenderingComputer()
     {     
         rand = Random.Range(1,computers.Length);
+        Debug.Log(rand);
         while(computers[rand].GetComponent<Rendering>().enabled)
         {
             rand = Random.Range(1,computers.Length);
+            Debug.Log(rand);
         }
-        gameObject.GetComponent<PhotonView>().RPC("SyncTime", RpcTarget.AllBuffered, null);
-        
+        saved = rand;
+        if(PhotonNetwork.IsMasterClient)
+        {
+            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved);   
+        }
     }
 }
