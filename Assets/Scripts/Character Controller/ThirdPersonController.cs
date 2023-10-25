@@ -2,7 +2,9 @@
 using TMPro;
 using UnityEngine;
 using Photon.Pun;
-#if ENABLE_INPUT_SYSTEM 
+using Photon.Realtime;
+
+#if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
 
@@ -217,13 +219,10 @@ namespace StarterAssets
 
         private void Awake()
         {
-            // get a reference to our main camera
         }
 
         private void Start()
         {
-            GameObject.Find("Environment").transform.GetChild(4).GetComponent<Computers>().AddRenderingComputer(gameObject.GetComponent<CharacterController>());
-            
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
             currentStamina = maxStamina;

@@ -19,8 +19,8 @@ public class Computers : MonoBehaviour
     {
         computers = gameObject.GetComponentsInChildren<Rendering>();
     }
-
-    public void AddRenderingComputer(CharacterController player)
+    
+    public void AddRenderingComputer()
     {  
         canRender = false;      
         rand = computers[Random.Range(1,computers.Length)].transform;
