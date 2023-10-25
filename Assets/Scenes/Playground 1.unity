@@ -8146,7 +8146,7 @@ MonoBehaviour:
   - {fileID: 4416926081852918481, guid: 8482ab14a1fcfe54781d316322620e8b, type: 3}
   - {fileID: 4416926081852918481, guid: 455476d55606e2a4cb882beffd0b8b1c, type: 3}
   - {fileID: 4416926081852918481, guid: 20f9421cc964c814caac443c4cee3305, type: 3}
-  testPlay: 1
+  testPlay: 0
   finalDoor1: {fileID: 1795793641}
   finalDoor2: {fileID: 1487955858}
   finalDoor3: {fileID: 1416486722}
@@ -41823,7 +41823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameVersion: 0.0
-  testPlay: 1
+  testPlay: 0
   characters:
   - {fileID: 4416926081852918481, guid: 87d2b4bc0d0803f42b26c7824ff194e4, type: 3}
   - {fileID: 4416926081852918481, guid: 8482ab14a1fcfe54781d316322620e8b, type: 3}
