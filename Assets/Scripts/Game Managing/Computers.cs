@@ -68,13 +68,10 @@ public class Computers : MonoBehaviour
 
     public void AddRenderingComputer()
     {     
-        if(!XRSettings.enabled)
+        rand = Random.Range(1,computers.Length);
+        while(computers[rand].GetComponent<Rendering>().enabled)
         {
             rand = Random.Range(1,computers.Length);
-            while(computers[rand].GetComponent<Rendering>().enabled)
-            {
-                rand = Random.Range(1,computers.Length);
-            }
         }
         gameObject.GetComponent<PhotonView>().RPC("SyncTime", RpcTarget.AllBuffered, null);
         
