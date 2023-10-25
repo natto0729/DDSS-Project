@@ -160,7 +160,7 @@ namespace OculusSampleFramework
             {
                 if (closestGrabbable.isGrabbed)
                 {
-                    ((DistanceGrabber)closestGrabbable.grabbedBy).OffhandGrabbed(closestGrabbable);
+                    ((DistanceGrabber)closestGrabbable.grabbedBy).OffhandGrabbed(closestGrabbable.gameObject.name);
                 }
 
                 m_grabbedObj = closestGrabbable;
@@ -383,7 +383,7 @@ namespace OculusSampleFramework
         }
 
         // Just here to allow calling of a protected member function.
-        protected override void OffhandGrabbed(OVRGrabbable grabbable)
+        protected override void OffhandGrabbed(string grabbable)
         {
             base.OffhandGrabbed(grabbable);
         }

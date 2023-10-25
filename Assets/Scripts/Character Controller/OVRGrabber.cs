@@ -275,7 +275,7 @@ public class OVRGrabber : MonoBehaviour
         {
             if (closestGrabbable.isGrabbed)
             {
-                closestGrabbable.grabbedBy.OffhandGrabbed(closestGrabbable);
+                closestGrabbable.grabbedBy.GetComponent<PhotonView>().RPC("OffHandGrabbed",RpcTarget.All,closestGrabbable.gameObject.name);
             }
 
             m_grabbedObj = closestGrabbable;
@@ -413,9 +413,10 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 
-    protected virtual void OffhandGrabbed(OVRGrabbable grabbable)
+    [PunRPC]
+    protected virtual void OffhandGrabbed(string grabbable)
     {
-        if (m_grabbedObj == grabbable)
+        if (m_grabbedObj == GameObject.Find(grabbable).GetComponent<OVRGrabbable>())
         {
             gameObject.GetComponent<PhotonView>().RPC("GrabbableRelease", RpcTarget.All, Vector3.zero, Vector3.zero);
         }
