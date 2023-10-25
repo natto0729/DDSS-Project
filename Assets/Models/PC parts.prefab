@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 4472228677640766023}
   - component: {fileID: 5475605149339459264}
   - component: {fileID: 377928331}
+  - component: {fileID: 589528708}
   m_Layer: 0
   m_Name: ScreenPC
   m_TagString: Untagged
@@ -129,6 +130,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1989223727561187673, guid: df8a7555cb42e3645874cbae1bfa0908, type: 3}
+--- !u!328 &589528708
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253667542539131120}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 02bc443349519924fbfc3cca89effa5f, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &1657786128720515372
 GameObject:
   m_ObjectHideFlags: 0
