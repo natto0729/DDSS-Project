@@ -275,7 +275,7 @@ public class OVRGrabber : MonoBehaviour
         {
             if (closestGrabbable.isGrabbed)
             {
-                closestGrabbable.grabbedBy.GetComponent<PhotonView>().RPC("OffHandGrabbed",RpcTarget.All,closestGrabbable.gameObject.name);
+                closestGrabbable.grabbedBy.GetComponent<PhotonView>().RPC("OffhandGrabbed",RpcTarget.All,closestGrabbable.gameObject.name);
             }
 
             m_grabbedObj = closestGrabbable;
