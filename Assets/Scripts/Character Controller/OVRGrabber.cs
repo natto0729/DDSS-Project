@@ -100,7 +100,7 @@ public class OVRGrabber : MonoBehaviour
         );
         if (canRelease)
         {
-            GrabEnd();
+            gameObject.GetComponent<PhotonView>().RPC("GrabEnd",RpcTarget.All,null);
         }
     }
 
@@ -184,7 +184,7 @@ public class OVRGrabber : MonoBehaviour
     {
         if (m_grabbedObj != null)
         {
-            GrabEnd();
+            gameObject.GetComponent<PhotonView>().RPC("GrabBegin",RpcTarget.All,null);
         }
     }
 
@@ -229,14 +229,15 @@ public class OVRGrabber : MonoBehaviour
     {
         if ((m_prevFlex >= grabBegin) && (prevFlex < grabBegin))
         {
-            GrabBegin();
+            gameObject.GetComponent<PhotonView>().RPC("GrabBegin",RpcTarget.All,null);
         }
         else if ((m_prevFlex <= grabEnd) && (prevFlex > grabEnd))
         {
-            GrabEnd();
+            gameObject.GetComponent<PhotonView>().RPC("GrabEnd",RpcTarget.All,null);
         }
     }
 
+    [PunRPC]
     protected virtual void GrabBegin()
     {
         float closestMagSq = float.MaxValue;
@@ -354,6 +355,7 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 
+    [PunRPC]
     protected void GrabEnd()
     {
         if (m_grabbedObj != null)
@@ -381,7 +383,6 @@ public class OVRGrabber : MonoBehaviour
         // Re-enable grab volumes to allow overlap events
         GrabVolumeEnable(true);
     }
-
     protected void GrabbableRelease(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEnd", RpcTarget.All, linearVelocity, angularVelocity);
