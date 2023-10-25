@@ -596,7 +596,7 @@ namespace StarterAssets
         {
             if(Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out RaycastHit hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Rendering>(out Rendering computer) && !computer.isRendering)
             {
-                useText.SetText("Stop Rendering \"Right Trigger\"");
+                useText.SetText("Start Rendering \"E\"");
                 useText.gameObject.SetActive(true);
                 useText.transform.position = hit.point - (hit.point - _mainCamera.transform.position).normalized * 1f;
                 useText.transform.rotation = Quaternion.LookRotation((hit.point - _mainCamera.transform.position).normalized);
