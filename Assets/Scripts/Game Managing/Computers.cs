@@ -27,12 +27,9 @@ public class Computers : MonoBehaviour
     public void SyncTime(int saved)
     {
         canRender =false;
-        if(!XRSettings.enabled)
-        {
-            computers[saved].GetComponent<Rendering>().enabled = true;
-            computers[saved].transform.GetChild(0).gameObject.SetActive(true);
-            computers[saved].transform.GetChild(1).gameObject.SetActive(true);
-        }
+        computers[saved].GetComponent<Rendering>().enabled = true;
+        computers[saved].transform.GetChild(0).gameObject.SetActive(true);
+        computers[saved].transform.GetChild(1).gameObject.SetActive(true);
         foreach(Rendering computer in computers)
         {
             if(computers[index].enabled)
@@ -65,7 +62,7 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
-        if(PhotonNetwork.IsMasterClient)
+        if(PhotonNetwork.IsMasterClient && !XRSettings.enabled)
         {
             photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved);   
         }
