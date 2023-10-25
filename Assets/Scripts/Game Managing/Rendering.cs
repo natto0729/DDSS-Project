@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Photon.Pun;
 using UnityEngine.Rendering;
 using UnityEngine.XR;
 
@@ -18,6 +19,23 @@ public class Rendering : MonoBehaviour
 
     private Transform renderingPopUp;
 
+    public bool isRendering = false;
+
+    [PunRPC]
+    public void StopProgress()
+    {
+        isRendering =false;
+        StopCoroutine(RenderingProgress());
+    }
+
+    [PunRPC]
+    public void StartProgress()
+    {
+        renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering Stopped!");
+        renderingPopUp.GetComponent<TextMeshPro>().color = Color.red;
+        StartCoroutine(RenderingProgress());
+    }
+
     private void Start()
     {
         renderingPopUp = gameObject.transform.GetChild(1);
@@ -25,12 +43,16 @@ public class Rendering : MonoBehaviour
 
     public void Update()
     {
-        RenderText();
+        if(isRendering)
+        {
+            RenderText();
+        }
     }
 
     public void RenderText()
     {
         renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering:" + currentRender + "%");
+        renderingPopUp.GetComponent<TextMeshPro>().color = Color.white;
         if(XRSettings.enabled)
         {
             renderingPopUp.LookAt(GameObject.Find("CenterEyeAnchor").transform);
@@ -43,6 +65,7 @@ public class Rendering : MonoBehaviour
 
     public IEnumerator RenderingProgress()
     {
+        isRendering = true;
         while(!InteractablesParent.canRender)
         {
             yield return new WaitForSeconds(0.1f);
@@ -61,5 +84,7 @@ public class Rendering : MonoBehaviour
 
             yield return timeToWait;
         }
+
+        isRendering = false;
     }
 }

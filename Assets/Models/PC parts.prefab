@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 960187059}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5475605149339459264}
   - component: {fileID: 377928331}
   - component: {fileID: 589528708}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ScreenPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777932069408113968}
   - component: {fileID: 2078206242}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: transform18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 532564216161746895}
   - component: {fileID: 6895491551233150599}
   - component: {fileID: 1866745770}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8266000751204850109}
   - component: {fileID: 1806302705}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2857441091792079099}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: computer_with_screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 6187189680562113260}
   - component: {fileID: 7044267455843556701}
   - component: {fileID: 559468907}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCube35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6950395161514444656}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: curve1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5261576915792719319}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8202128468019123134}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PCbase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4869054243716063011}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: transform17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 3074026686791255532}
   - component: {fileID: 1446844670652326921}
   - component: {fileID: 917403758295768389}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: RenderingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 42020726152764911}
   - component: {fileID: 2040336388029252159}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 2134229025867247249}
   - component: {fileID: 2323120751297063340}
   - component: {fileID: 965028956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Keyboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 7460156509679521006}
   - component: {fileID: 5821248187069066667}
   - component: {fileID: 2011697188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1087,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1096964727863618381}
   - component: {fileID: 1078119101}
-  m_Layer: 0
+  - component: {fileID: 1338363383}
+  m_Layer: 3
   m_Name: PC parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1134,6 +1135,19 @@ MonoBehaviour:
   renderValueIncrement: 2
   currentRender: 0
   maxRender: 100
+--- !u!65 &1338363383
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168211934079040052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6, y: 6, z: 6}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7541062482158501708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,7 +1160,7 @@ GameObject:
   - component: {fileID: 6739337815506615352}
   - component: {fileID: 7509587045244869949}
   - component: {fileID: 189858162}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}

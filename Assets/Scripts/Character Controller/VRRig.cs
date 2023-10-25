@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using TMPro;
 
 [System.Serializable]
 public class VRMap
@@ -29,10 +30,27 @@ public class VRRig : MonoBehaviourPunCallbacks
     public Transform headConstraint;
     private Vector3 headBodyOffset;
 
+    [Header("Interaction Actions")]
+    public TextMeshPro useText;
+    public float maxUseDistance = 1f;
+    public LayerMask useLayers;
+    bool hasKey = true;
+
     // Start is called before the first frame update
     void Start()
     {
         headBodyOffset = transform.position - headConstraint.position;
+    }
+
+    void Update()
+    {
+        ComputerPrompt();
+        DoorPrompt();
+        if(OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+        {
+            OnInteractDoor();
+            OnInteractComputer();
+        }
     }
 
     // Update is called once per frame
@@ -48,4 +66,102 @@ public class VRRig : MonoBehaviourPunCallbacks
         leftHand.Map();
         rightHand.Map();
     }
+
+    private void DoorPrompt()
+    {
+        if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out RaycastHit hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Door>(out Door door) && !door.needsKey && !door.isFinalDoor)
+        {
+            if(door.isOpen)
+            {
+                useText.SetText("Close \"Right Trigger\"");
+            }
+            else
+            {
+                useText.SetText("Open \"Right Trigger\"");
+            }
+            useText.gameObject.SetActive(true);
+            useText.transform.position = hit.point - (hit.point - mainC.transform.position).normalized * 1f;
+            useText.transform.rotation = Quaternion.LookRotation((hit.point - mainC.transform.position).normalized);
+        }
+        else if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Door>(out door) && door.needsKey && !door.isFinalDoor)
+        {
+            if(!hasKey)
+            {
+                useText.SetText("Access Card Needed");
+            }
+            else if(door.isOpen)
+            {
+                useText.SetText("Close \"Right Trigger\"");
+            }
+            else
+            {
+                useText.SetText("Open \"Right Trigger\"");
+            }
+            useText.gameObject.SetActive(true);
+            useText.transform.position = hit.point - (hit.point - mainC.transform.position).normalized * 1f;
+            useText.transform.rotation = Quaternion.LookRotation((hit.point - mainC.transform.position).normalized);
+        }
+        else
+        {
+            useText.gameObject.SetActive(false);
+        }
+    }
+
+    
+    private void ComputerPrompt()
+    {
+        if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out RaycastHit hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.isRendering)
+        {
+            useText.SetText("Stop Rendering \"Right Trigger\"");
+            useText.gameObject.SetActive(true);
+            useText.transform.position = hit.point - (hit.point - mainC.transform.position).normalized * 1f;
+            useText.transform.rotation = Quaternion.LookRotation((hit.point - mainC.transform.position).normalized);
+        }
+        else
+        {
+            useText.gameObject.SetActive(false);
+        }
+    }
+
+    public void OnInteractDoor()
+    {
+        if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out RaycastHit hit, maxUseDistance, useLayers))
+        {
+            if(hit.collider.TryGetComponent<Door>(out Door door) && door.needsKey && !door.isFinalDoor)
+            {
+                if(door.isOpen && hasKey)
+                {
+                    door.GetComponent<PhotonView>().RPC ("CloseNetwork",RpcTarget.AllBuffered, null);
+                }
+                else if(!door.isOpen && hasKey)
+                {
+                    door.GetComponent<PhotonView>().RPC ("OpenNetwork",RpcTarget.AllBuffered, transform.position);
+                }
+            }
+            else if(hit.collider.TryGetComponent<Door>(out door) && !door.needsKey && !door.isFinalDoor)
+            {
+                if(door.isOpen)
+                {
+                    door.GetComponent<PhotonView>().RPC ("CloseNetwork",RpcTarget.AllBuffered, null);
+                }
+                else
+                {
+                    door.GetComponent<PhotonView>().RPC ("OpenNetwork",RpcTarget.AllBuffered, transform.position);
+                }
+            }
+        }
+    }
+
+    public void OnInteractComputer()
+    {
+        if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out RaycastHit hit, maxUseDistance, useLayers))
+        {
+            if(hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.isRendering)
+            {
+                computer.GetComponent<PhotonView>().RPC ("StopProgress",RpcTarget.AllBuffered, null);
+            }
+        }
+    }
 }
+
+

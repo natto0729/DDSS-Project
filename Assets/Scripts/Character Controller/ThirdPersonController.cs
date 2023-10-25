@@ -261,6 +261,7 @@ namespace StarterAssets
             GroundedCheck();
             Stamina();
             Move();
+            ComputerPrompt();
             DoorPrompt();
         }
 
@@ -533,7 +534,7 @@ namespace StarterAssets
                         door.GetComponent<PhotonView>().RPC ("OpenNetwork",RpcTarget.AllBuffered, transform.position);
                     }
                 }
-                else if(hit.collider.TryGetComponent<Door>(out door) && !door.needsKey && !door.isFinalDoor)
+                if(hit.collider.TryGetComponent<Door>(out door) && !door.needsKey && !door.isFinalDoor)
                 {
                     if(door.isOpen)
                     {
@@ -543,6 +544,10 @@ namespace StarterAssets
                     {
                         door.GetComponent<PhotonView>().RPC ("OpenNetwork",RpcTarget.AllBuffered, transform.position);
                     }
+                }
+                else if(hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.isRendering)
+                {
+                    computer.GetComponent<PhotonView>().RPC ("StartProgress",RpcTarget.AllBuffered, null);
                 }
             }
         }
@@ -577,6 +582,21 @@ namespace StarterAssets
                 {
                     useText.SetText("Open \"E\"");
                 }
+                useText.gameObject.SetActive(true);
+                useText.transform.position = hit.point - (hit.point - _mainCamera.transform.position).normalized * 1f;
+                useText.transform.rotation = Quaternion.LookRotation((hit.point - _mainCamera.transform.position).normalized);
+            }
+            else
+            {
+                useText.gameObject.SetActive(false);
+            }
+        }
+
+        private void ComputerPrompt()
+        {
+            if(Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out RaycastHit hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Rendering>(out Rendering computer) && !computer.isRendering)
+            {
+                useText.SetText("Stop Rendering \"Right Trigger\"");
                 useText.gameObject.SetActive(true);
                 useText.transform.position = hit.point - (hit.point - _mainCamera.transform.position).normalized * 1f;
                 useText.transform.rotation = Quaternion.LookRotation((hit.point - _mainCamera.transform.position).normalized);
