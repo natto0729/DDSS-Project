@@ -801,6 +801,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: book (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6393359083385835889, guid: a633f8a800f039b41a038c7897dbd301,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 41
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a633f8a800f039b41a038c7897dbd301, type: 3}
 --- !u!4 &30824384 stripped
@@ -19263,6 +19268,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 237204306}
     m_Modifications:
+    - target: {fileID: 1617458059, guid: 9dd49b1d6b78297478eee93da2956af8, type: 3}
+      propertyPath: sceneViewId
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5165874543267707928, guid: 9dd49b1d6b78297478eee93da2956af8,
         type: 3}
       propertyPath: m_Name
@@ -33920,6 +33929,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262801265854936561, guid: cdfa4ec851f9bc443a9828c24452d563,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 7096426317166337384, guid: cdfa4ec851f9bc443a9828c24452d563,
         type: 3}
