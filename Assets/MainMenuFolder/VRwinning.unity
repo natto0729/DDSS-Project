@@ -288,6 +288,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 5979468226061598514, guid: 51db6361d193d0241a7aaa9b1a293fb6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51db6361d193d0241a7aaa9b1a293fb6, type: 3}
 --- !u!4 &69828592 stripped
@@ -1422,6 +1427,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cupboard
       objectReference: {fileID: 0}
+    - target: {fileID: 2717126115018961326, guid: 5338a6e1c1ca29e4ab156851f43c6475,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7767124714599555120, guid: 5338a6e1c1ca29e4ab156851f43c6475,
         type: 3}
       propertyPath: m_RootOrder
@@ -1841,6 +1851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf
       objectReference: {fileID: 0}
+    - target: {fileID: 2355212488139052816, guid: 137e690bbe3d864429d985c65b76cf61,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6372509569696085368, guid: 137e690bbe3d864429d985c65b76cf61,
         type: 3}
       propertyPath: m_RootOrder
@@ -1930,6 +1945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shelf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355212488139052816, guid: 137e690bbe3d864429d985c65b76cf61,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6372509569696085368, guid: 137e690bbe3d864429d985c65b76cf61,
         type: 3}
@@ -2103,6 +2123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069390890410438014, guid: eb1c782e241148d429d8a897e797f941,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7764847383170142652, guid: eb1c782e241148d429d8a897e797f941,
         type: 3}
@@ -2284,6 +2309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bin
       objectReference: {fileID: 0}
+    - target: {fileID: 2589166560681413993, guid: 7554fa38d00016e44a48c53773e16bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4888047955807147270, guid: 7554fa38d00016e44a48c53773e16bab,
         type: 3}
       propertyPath: m_RootOrder
@@ -2390,8 +2420,8 @@ Light:
   serializedVersion: 10
   m_Type: 3
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1000
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 1016.8
   m_Range: 16.16
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2449,7 +2479,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950745696}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.3821237, y: 2.94, z: 9.3599415}
+  m_LocalPosition: {x: 1.81, y: 5.77, z: 9.3599415}
   m_LocalScale: {x: 10.316, y: 10.316, z: 10.316}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3132,6 +3162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cupboard (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2717126115018961326, guid: 5338a6e1c1ca29e4ab156851f43c6475,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7767124714599555120, guid: 5338a6e1c1ca29e4ab156851f43c6475,
         type: 3}
       propertyPath: m_RootOrder
@@ -3291,6 +3326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: clock
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069915412991674704, guid: 70727c85256926043b7462af1e52ee82,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70727c85256926043b7462af1e52ee82, type: 3}
