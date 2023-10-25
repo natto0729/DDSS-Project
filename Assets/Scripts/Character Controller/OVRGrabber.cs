@@ -167,7 +167,7 @@ public class OVRGrabber : MonoBehaviour
 
         if (!m_parentHeldObject)
         {
-            MoveGrabbedObject(destPos, destRot);
+            gameObject.GetComponent<PhotonView>().RPC("MoveGrabbedObject",RpcTarget.All,destPos, destRot);
         }
 
         m_lastPos = transform.position;
@@ -319,7 +319,7 @@ public class OVRGrabber : MonoBehaviour
             // NOTE: force teleport on grab, to avoid high-speed travel to dest which hits a lot of other objects at high
             // speed and sends them flying. The grabbed object may still teleport inside of other objects, but fixing that
             // is beyond the scope of this demo.
-            MoveGrabbedObject(m_lastPos, m_lastRot, true);
+            gameObject.GetComponent<PhotonView>().RPC("MoveGrabbedObject",RpcTarget.All,m_lastPos, m_lastRot, true);
 
             // NOTE: This is to get around having to setup collision layers, but in your own project you might
             // choose to remove this line in favor of your own collision layer setup.
@@ -331,7 +331,8 @@ public class OVRGrabber : MonoBehaviour
             }
         }
     }
-
+    
+    [PunRPC]
     protected virtual void MoveGrabbedObject(Vector3 pos, Quaternion rot, bool forceTeleport = false)
     {
         if (m_grabbedObj == null)
