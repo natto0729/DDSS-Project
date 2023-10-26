@@ -69,6 +69,7 @@ public class RagdollController : MonoBehaviour
             rigid.isKinematic = false;
         }
 
+        Physics.SyncTransforms();
         rigidBody.isKinematic = false;
         rigidBody.useGravity = true;
         rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
