@@ -3601,7 +3601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e49fc878f17b840936142e052ba8b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 4416926081852918491}
   player: {fileID: 0}
   rig: {fileID: 8732595939009592110}
   animator: {fileID: 6982812146204527121}
