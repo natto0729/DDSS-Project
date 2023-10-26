@@ -12,8 +12,6 @@ public class RagdollController : MonoBehaviour
     public Rigidbody rigidBody;
     public GameObject rig;
     public Animator animator;
-    public PhotonRigidbodyView rigidView;
-    public PhotonAnimatorView animView;
 
     public bool mode = false;
     public bool canSwitch = true;
@@ -59,7 +57,6 @@ public class RagdollController : MonoBehaviour
     public void RagdollModeOn()
     {
         animator.enabled = false;
-        animView.enabled = false;
         foreach(Collider col in ragDollColliders)
         {
             col.enabled = true;
@@ -70,11 +67,9 @@ public class RagdollController : MonoBehaviour
         }
 
         player.enabled = false;
-        rigidView.enabled = true;
         rigidBody.isKinematic = false;
         rigidBody.useGravity = true;
         rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-        rigidView.enabled = true;
     }
 
     [PunRPC]
@@ -92,12 +87,10 @@ public class RagdollController : MonoBehaviour
 
 
         animator.enabled = true;
-        animView.enabled = true;
         player.enabled = true;
         rigidBody.isKinematic = false;
         rigidBody.useGravity = false;
         rigidBody.collisionDetectionMode = CollisionDetectionMode.Discrete;
-        rigidView.enabled = false;
     }
 
 }
