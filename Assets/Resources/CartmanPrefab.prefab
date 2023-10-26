@@ -3078,7 +3078,6 @@ GameObject:
   - component: {fileID: 8215560130329961113}
   - component: {fileID: 752483955}
   - component: {fileID: 7963171814789269310}
-  - component: {fileID: 4378015204720264656}
   - component: {fileID: 3176044970134850524}
   - component: {fileID: 5509147803820304276}
   m_Layer: 8
@@ -3610,7 +3609,6 @@ MonoBehaviour:
   rigidBody: {fileID: 3176044970134850524}
   rig: {fileID: 8732595939009592110}
   animator: {fileID: 6982812146204527121}
-  altCollider: {fileID: 4378015204720264656}
   rigidView: {fileID: 5509147803820304276}
   mode: 0
   canSwitch: 1
@@ -3633,20 +3631,6 @@ MonoBehaviour:
   m_grabPoints:
   - {fileID: 4416926081852918491}
   isPlayer: 1
---- !u!136 &4378015204720264656
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4416926081852918481}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.29
-  m_Height: 1.7984188
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9307922, z: 0}
 --- !u!54 &3176044970134850524
 Rigidbody:
   m_ObjectHideFlags: 0
