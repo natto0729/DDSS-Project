@@ -41,11 +41,6 @@ public class RagdollController : MonoBehaviour
         }
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-	{
-		
-	}
-
     void GetRagdollBits()
     {
         ragDollColliders = rig.GetComponentsInChildren<Collider>();

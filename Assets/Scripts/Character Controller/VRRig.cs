@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class VRMap
@@ -36,14 +37,30 @@ public class VRRig : MonoBehaviourPunCallbacks
     public LayerMask useLayers;
     bool hasKey = true;
 
+    GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         headBodyOffset = transform.position - headConstraint.position;
     }
 
     void Update()
     {
+        if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        {
+            if(gameManager.renderTotal < 100)
+            {
+                PhotonNetwork.LeaveRoom();
+                SceneManager.LoadScene("VRwinning");
+            }
+            else if(gameManager.renderTotal >= 100)
+            {
+                PhotonNetwork.LeaveRoom();
+                SceneManager.LoadScene("VRgameOver");
+            }
+        }
         Prompt();
         if(OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
         {

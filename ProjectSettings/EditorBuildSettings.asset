@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playground 1.unity
     guid: 88b394f0b34c94b4780f83f1fb4513cd
+  - enabled: 1
+    path: Assets/Scenes/Menus/Winning Scene.unity
+    guid: a6676b694b4cd73419e7b13748bc7f47
+  - enabled: 1
+    path: Assets/Scenes/Menus/GameOver.unity
+    guid: 04c9c08d73d92a3468c58c64869f8201
+  - enabled: 1
+    path: Assets/MainMenuFolder/VRgameOver.unity
+    guid: c39703626423b144e88bdfad783076ba
+  - enabled: 1
+    path: Assets/MainMenuFolder/VRwinning.unity
+    guid: e9ec3693feb63b34ca25c01080f2645a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9a28689a66af1c04db7fe8bba514d09b,
       type: 2}
