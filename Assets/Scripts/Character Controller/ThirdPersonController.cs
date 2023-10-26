@@ -542,7 +542,7 @@ namespace StarterAssets
                         door.GetComponent<PhotonView>().RPC ("OpenNetwork",RpcTarget.AllBuffered, transform.position);
                     }
                 }
-                else if(hit.collider.TryGetComponent<Rendering>(out Rendering computer) && !computer.isRendering)
+                else if(hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.enabled && !computer.isRendering)
                 {
                     computer.GetComponent<PhotonView>().RPC ("StartProgress",RpcTarget.AllBuffered, null);
                 }

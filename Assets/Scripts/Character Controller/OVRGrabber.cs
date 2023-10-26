@@ -279,7 +279,15 @@ public class OVRGrabber : MonoBehaviour
             }
 
             m_grabbedObj = closestGrabbable;
-            m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabBegin", RpcTarget.All, this.gameObject.name, closestGrabbableCollider.gameObject.name);
+            if(!m_grabbedObj.isPlayer)
+            {
+                m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabBegin", RpcTarget.All, this.gameObject.name, closestGrabbableCollider.gameObject.name);
+            }
+            else
+            {
+                m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabBeginPlayer", RpcTarget.All, this.gameObject.name, closestGrabbableCollider.gameObject.name);
+            }
+            
 
             m_lastPos = transform.position;
             m_lastRot = transform.rotation;
@@ -388,7 +396,14 @@ public class OVRGrabber : MonoBehaviour
     [PunRPC]
     protected void GrabbableRelease(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEnd", RpcTarget.All, linearVelocity, angularVelocity);
+        if(!m_grabbedObj.isPlayer)
+        {
+            m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEnd", RpcTarget.All, linearVelocity, angularVelocity);
+        }
+        else
+        {
+             m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEndPlayer", RpcTarget.All, linearVelocity, angularVelocity);
+        }
         if (m_parentHeldObject) m_grabbedObj.transform.parent = null;
         m_grabbedObj = null;
     }

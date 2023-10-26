@@ -45,6 +45,8 @@ public class OVRGrabbable : MonoBehaviour
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
 
+    public bool isPlayer;
+
     /// <summary>
     /// If true, the object can currently be grabbed.
     /// </summary>
@@ -134,6 +136,27 @@ public class OVRGrabbable : MonoBehaviour
     [PunRPC]
     virtual public void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        rb.isKinematic = m_grabbedKinematic;
+        rb.velocity = linearVelocity;
+        rb.angularVelocity = angularVelocity;
+        m_grabbedBy = null;
+        m_grabbedCollider = null;
+    }
+
+    [PunRPC]
+    virtual public void GrabBeginPlayer(string hand, string grabPoint)
+    {
+        gameObject.GetComponent<PhotonView>().RPC("RagdollModeOn", RpcTarget.All, null);
+        m_grabbedBy = GameObject.Find(hand).GetComponent<OVRGrabber>();
+        m_grabbedCollider = GameObject.Find(grabPoint).GetComponent<Collider>();
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
+    }
+
+    [PunRPC]
+    virtual public void GrabEndPlayer(Vector3 linearVelocity, Vector3 angularVelocity)
+    {
+        gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.All, null);
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = m_grabbedKinematic;
         rb.velocity = linearVelocity;

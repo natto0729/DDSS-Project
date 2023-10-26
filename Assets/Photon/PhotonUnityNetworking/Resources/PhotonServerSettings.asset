@@ -67,6 +67,10 @@ MonoBehaviour:
   - RenderingOn
   - ActivateComputer
   - SyncTime
+  - RagdollModeOff
+  - RagdollModeOn
+  - GrabBeginPlayer
+  - GrabEndPlayer
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
