@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class CharacterComputer : MonoBehaviour
 {
+
+PhotonView photonView;
+
     // Start is called before the first frame update
     void Start()
     {
-        if(PhotonNetwork.IsMasterClient)
+        photonView = GetComponent<PhotonView>();
+
+        if(photonView.IsMine)
         {
             GameObject.Find("Environment").transform.GetChild(4).GetComponent<Computers>().AddRenderingComputer();
         }
