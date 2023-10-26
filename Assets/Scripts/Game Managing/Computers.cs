@@ -34,7 +34,7 @@ public class Computers : MonoBehaviour
     {
         Debug.Log(XRCheck);
         canRender =false;
-        if(!XRCheck)
+        if(!XRCheck && canXR)
         {
             computers[number].GetComponent<Rendering>().enabled = true;
             computers[number].transform.GetChild(0).gameObject.SetActive(true);
@@ -77,14 +77,9 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
-        if(XRSettings.enabled && canXR == true)
+        if(XRSettings.enabled)
         {
             isXR = true;
-            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
-        }
-        else if(XRSettings.enabled && canXR == false)
-        {
-            isXR = false;
             photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
         }
         else if(!XRSettings.enabled)
