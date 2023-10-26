@@ -15,7 +15,6 @@ public class Computers : MonoBehaviour
 
     private int index = 0;
     public bool isXR = false;
-    public bool canXR = true;
 
     PhotonView photonViews;
 
@@ -33,8 +32,7 @@ public class Computers : MonoBehaviour
     public void SyncTime(int number, bool XRCheck)
     {
         Debug.Log(XRCheck);
-        canRender =false;
-        if(!XRCheck || canXR)
+        if(!XRCheck)
         {
             computers[number].GetComponent<Rendering>().enabled = true;
             computers[number].transform.GetChild(0).gameObject.SetActive(true);
@@ -62,12 +60,11 @@ public class Computers : MonoBehaviour
         index = 0;
         if(XRCheck)
         {
-            canXR = false;
             isXR = false;
         }   
     }
 
-    public void AddRenderingComputer()
+    public void AddRenderingComputer(bool isVR)
     {    
         rand = Random.Range(1,computers.Length);
         Debug.Log(rand);
@@ -77,15 +74,13 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
-        if(XRSettings.enabled)
+        if(isVR)
         {
-            canXR = false;
-            isXR = true;
-            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
+            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isVR); 
         }
-        else if(!XRSettings.enabled)
+        else
         {
-            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
+            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isVR); 
         }
     }
 }

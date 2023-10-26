@@ -6,16 +6,15 @@ using UnityEngine;
 public class CharacterComputer : MonoBehaviour
 {
 
-PhotonView photonView;
+public bool isVR;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        photonView = GetComponent<PhotonView>();
-
-        if(photonView.IsMine)
+        if(PhotonNetwork.IsMasterClient)
         {
-            GameObject.Find("Environment").transform.GetChild(4).GetComponent<Computers>().AddRenderingComputer();
+            GameObject.Find("Environment").transform.GetChild(4).GetComponent<Computers>().AddRenderingComputer(isVR);
         }
     }
 }
