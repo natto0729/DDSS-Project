@@ -70,6 +70,7 @@ public class RagdollController : MonoBehaviour
 
         rigidBody.isKinematic = true;
         rigidBody.useGravity =false;
+        rigidBody.collisionDetectionMode = CollisionDetectionMode.Discrete;
         rigidView.enabled = true;
         altCollider.enabled = true;
         controller.enabled = false;
@@ -95,6 +96,7 @@ public class RagdollController : MonoBehaviour
         player.enabled = true;
         rigidBody.isKinematic = false;
         rigidBody.useGravity = true;
+        rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rigidView.enabled = false;
         altCollider.enabled = false;
     }
