@@ -100,7 +100,7 @@ public class VRRig : MonoBehaviourPunCallbacks
             useText.transform.position = hit.point - (hit.point - mainC.transform.position).normalized * 1f;
             useText.transform.rotation = Quaternion.LookRotation((hit.point - mainC.transform.position).normalized);
         }
-        else if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.isRendering)
+        else if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.enabled && computer.isRendering)
         {
             useText.SetText("Stop Rendering \"Right Trigger\"");
             useText.gameObject.SetActive(true);
@@ -146,7 +146,7 @@ public class VRRig : MonoBehaviourPunCallbacks
     {
         if(Physics.Raycast(mainC.transform.position, mainC.transform.forward, out RaycastHit hit, maxUseDistance, useLayers))
         {
-            if(hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.isRendering)
+            if(hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.enabled &&  computer.isRendering)
             {
                 computer.GetComponent<PhotonView>().RPC ("StopProgress",RpcTarget.AllBuffered, null);
             }
