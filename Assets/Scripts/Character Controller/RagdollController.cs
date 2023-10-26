@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.InputSystem;
+using StarterAssets;
 
 public class RagdollController : MonoBehaviour
 {
-    public CharacterController controller;
+    public ThirdPersonController player;
     public GameObject rig;
     public Animator animator;
     public bool mode = false;
@@ -61,8 +63,7 @@ public class RagdollController : MonoBehaviour
             rigid.isKinematic = false;
         }
 
-        controller.enabled = false;
-
+        player.enabled = false;
     }
 
     [PunRPC]
@@ -78,7 +79,7 @@ public class RagdollController : MonoBehaviour
         }
 
         animator.enabled = true;
-        controller.enabled = true;
+        player.enabled = true;
     }
 
 }
