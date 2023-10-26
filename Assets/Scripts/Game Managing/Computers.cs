@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.Video;
 using UnityEngine.XR;
 
 public class Computers : MonoBehaviour
@@ -37,6 +38,7 @@ public class Computers : MonoBehaviour
             computers[number].GetComponent<Rendering>().enabled = true;
             computers[number].transform.GetChild(0).gameObject.SetActive(true);
             computers[number].transform.GetChild(1).gameObject.SetActive(true);
+            computers[number].transform.GetChild(2).GetChild(3).GetComponent<VideoPlayer>().enabled = true;
         }
         foreach(Rendering computer in computers)
         {

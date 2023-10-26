@@ -9864,10 +9864,6 @@ PrefabInstance:
       propertyPath: InteractablesParent
       value: 
       objectReference: {fileID: 611518793}
-    - target: {fileID: 1078119103, guid: 41cd46b90fb53604399086139471f6a8, type: 3}
-      propertyPath: sceneViewId
-      value: 99
-      objectReference: {fileID: 0}
     - target: {fileID: 1096964727863618381, guid: 41cd46b90fb53604399086139471f6a8,
         type: 3}
       propertyPath: m_RootOrder
@@ -11947,6 +11943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canRender: 1
   computers: []
+  isXR: 0
 --- !u!114 &611518794
 MonoBehaviour:
   m_ObjectHideFlags: 0
