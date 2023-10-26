@@ -8,8 +8,13 @@ using StarterAssets;
 public class RagdollController : MonoBehaviour
 {
     public ThirdPersonController player;
+    public CharacterController controller;
+    public Rigidbody rigidBody;
     public GameObject rig;
     public Animator animator;
+    public Collider altCollider;
+    public PhotonRigidbodyView rigidView;
+
     public bool mode = false;
     public bool canSwitch = true;
 
@@ -63,7 +68,12 @@ public class RagdollController : MonoBehaviour
             rigid.isKinematic = false;
         }
 
+        controller.enabled = false;
         player.enabled = false;
+        rigidBody.isKinematic = true;
+        rigidBody.useGravity =false;
+        rigidView.enabled = true;
+        altCollider.enabled = true;
     }
 
     [PunRPC]
@@ -78,7 +88,13 @@ public class RagdollController : MonoBehaviour
             rigid.isKinematic = true;
         }
 
+        
+        rigidBody.isKinematic = false;
+        rigidBody.useGravity = true;
+        rigidView.enabled = false;
+        altCollider.enabled = false;
         animator.enabled = true;
+        controller.enabled = true;
         player.enabled = true;
     }
 
