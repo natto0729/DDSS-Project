@@ -68,7 +68,7 @@ public class Computers : MonoBehaviour
         saved = rand;
         if(PhotonNetwork.IsMasterClient)
         {
-            if(!XRSettings.enabled)
+            if(XRSettings.enabled)
             {
                 isXR = true;
             }
