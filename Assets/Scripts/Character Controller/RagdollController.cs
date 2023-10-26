@@ -9,7 +9,6 @@ using Oculus.Platform;
 public class RagdollController : MonoBehaviour
 {
     public ThirdPersonController player;
-    public CharacterController controller;
     public Rigidbody rigidBody;
     public GameObject rig;
     public Animator animator;
@@ -70,13 +69,12 @@ public class RagdollController : MonoBehaviour
             rigid.isKinematic = false;
         }
 
-        Physics.SyncTransforms();
+        player.enabled = false;
+        rigidView.enabled = true;
         rigidBody.isKinematic = false;
         rigidBody.useGravity = true;
         rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rigidView.enabled = true;
-        controller.enabled = false;
-        player.enabled = false;
     }
 
     [PunRPC]
@@ -95,9 +93,8 @@ public class RagdollController : MonoBehaviour
 
         animator.enabled = true;
         animView.enabled = true;
-        controller.enabled = true;
         player.enabled = true;
-        rigidBody.isKinematic = true;
+        rigidBody.isKinematic = false;
         rigidBody.useGravity = false;
         rigidBody.collisionDetectionMode = CollisionDetectionMode.Discrete;
         rigidView.enabled = false;
