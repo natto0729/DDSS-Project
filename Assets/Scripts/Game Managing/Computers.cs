@@ -20,20 +20,24 @@ public class Computers : MonoBehaviour
 
     void Start()
     {
-        if(XRSettings.enabled)
-        {
-            isXR = true;
-        }
         photonViews = gameObject.GetComponent<PhotonView>();
         computers = gameObject.GetComponentsInChildren<Rendering>();
     }
 
     [PunRPC]
-    public void SyncTime(int number, bool XRCheck)
+    public void SyncTime(int number)
     {
-        Debug.Log(XRCheck);
+        if(XRSettings.enabled)
+        {
+            isXR = true;
+        }
+        if(!XRSettings.enabled)
+        {
+            isXR = false;
+        }
+        Debug.Log(isXR);
         canRender =false;
-        if(!XRCheck)
+        if(!isXR)
         {
             computers[number].GetComponent<Rendering>().enabled = true;
             computers[number].transform.GetChild(0).gameObject.SetActive(true);
