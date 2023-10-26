@@ -15,6 +15,7 @@ public class Computers : MonoBehaviour
 
     private int index = 0;
     public bool isXR = false;
+    public bool canXR = true;
 
     PhotonView photonViews;
 
@@ -57,6 +58,7 @@ public class Computers : MonoBehaviour
         index = 0;
         if(XRCheck)
         {
+            canXR = false;
             isXR = false;
         }   
     }
@@ -71,7 +73,7 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
-        if(XRSettings.enabled)
+        if(XRSettings.enabled && canXR == true)
         {
             isXR = true;
             photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
