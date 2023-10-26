@@ -3077,6 +3077,7 @@ GameObject:
   - component: {fileID: -4017050470309313181}
   - component: {fileID: 8215560130329961113}
   - component: {fileID: 752483955}
+  - component: {fileID: 7963171814789269310}
   m_Layer: 8
   m_Name: CartmanPrefab
   m_TagString: Player
@@ -3605,6 +3606,36 @@ MonoBehaviour:
   animator: {fileID: 6982812146204527121}
   mode: 0
   canSwitch: 1
+--- !u!114 &7963171814789269310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints:
+  - {fileID: 1518963297}
+  - {fileID: 1759241769}
+  - {fileID: 1424318158}
+  - {fileID: 499398871}
+  - {fileID: 1406598536}
+  - {fileID: 1092378346}
+  - {fileID: 1751011603}
+  - {fileID: 2115239930}
+  - {fileID: 925096200}
+  - {fileID: 706197308}
+  - {fileID: 1172248103}
+  - {fileID: 4416926081852918491}
+  isPlayer: 1
 --- !u!1 &4430021634362805821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,7 +4352,6 @@ GameObject:
   - component: {fileID: 2581683146197223811}
   - component: {fileID: 145764222715371758}
   - component: {fileID: 8073074200551801865}
-  - component: {fileID: 8979060085264084518}
   m_Layer: 0
   m_Name: QuickRigCharacter_Hips
   m_TagString: Untagged
@@ -4473,36 +4503,6 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 1
---- !u!114 &8979060085264084518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5620444238298492603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints:
-  - {fileID: 1518963297}
-  - {fileID: 1759241769}
-  - {fileID: 1424318158}
-  - {fileID: 499398871}
-  - {fileID: 1406598536}
-  - {fileID: 1092378346}
-  - {fileID: 1751011603}
-  - {fileID: 2115239930}
-  - {fileID: 925096200}
-  - {fileID: 706197308}
-  - {fileID: 1172248103}
-  - {fileID: 4416926081852918491}
-  isPlayer: 1
 --- !u!1 &5657436302377482433
 GameObject:
   m_ObjectHideFlags: 0
