@@ -3610,7 +3610,7 @@ MonoBehaviour:
   rigidBody: {fileID: 3176044970134850524}
   rig: {fileID: 8732595939009592110}
   animator: {fileID: 6982812146204527121}
-  altCollider: {fileID: 4416926081852918491}
+  altCollider: {fileID: 4378015204720264656}
   rigidView: {fileID: 5509147803820304276}
   mode: 0
   canSwitch: 1

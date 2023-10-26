@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.InputSystem;
 using StarterAssets;
+using Oculus.Platform;
 
 public class RagdollController : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class RagdollController : MonoBehaviour
     public Rigidbody rigidBody;
     public GameObject rig;
     public Animator animator;
-    public Collider altCollider;
+    CapsuleCollider altCollider;
     public PhotonRigidbodyView rigidView;
 
     public bool mode = false;
@@ -74,6 +75,10 @@ public class RagdollController : MonoBehaviour
         rigidView.enabled = true;
         altCollider.enabled = true;
         controller.enabled = false;
+        altCollider = gameObject.AddComponent<CapsuleCollider>();
+        altCollider.center = new Vector3(0, 0.9307922f, 0);
+        altCollider.radius = 0.29f;
+        altCollider.height = 1.798419f;
         player.enabled = false;
     }
 
@@ -98,7 +103,8 @@ public class RagdollController : MonoBehaviour
         rigidBody.useGravity = true;
         rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rigidView.enabled = false;
-        altCollider.enabled = false;
+        Destroy(altCollider);
+        altCollider = null;
     }
 
 }
