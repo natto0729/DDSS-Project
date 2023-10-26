@@ -77,7 +77,12 @@ public class Rendering : MonoBehaviour
             renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering:" + currentRender + "%");
             renderingPopUp.GetComponent<TextMeshPro>().color = Color.white;
         }
-        if(!isRendering)
+        if(!isRendering && currentRender == maxRender)
+        {
+            renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering Finished!");
+            renderingPopUp.GetComponent<TextMeshPro>().color = Color.green;
+        }
+        if(!isRendering && currentRender != maxRender)
         {
             renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering Stopped!");
             renderingPopUp.GetComponent<TextMeshPro>().color = Color.red;
