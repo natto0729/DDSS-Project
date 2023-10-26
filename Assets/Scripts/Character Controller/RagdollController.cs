@@ -24,7 +24,6 @@ public class RagdollController : MonoBehaviour
     void Start()
     {
         GetRagdollBits();
-        
     }
 
     // Update is called once per frame

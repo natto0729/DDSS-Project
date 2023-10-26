@@ -149,20 +149,17 @@ public class OVRGrabbable : MonoBehaviour
     {
         m_grabbedBy = GameObject.Find(hand).GetComponent<OVRGrabber>();
         m_grabbedCollider = GameObject.Find(grabPoint).GetComponent<Collider>();
-        gameObject.GetComponent<Rigidbody>().isKinematic = true;
         gameObject.GetComponent<PhotonView>().RPC("RagdollModeOn", RpcTarget.All, null);
     }
 
     [PunRPC]
     virtual public void GrabEndPlayer(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-        rb.isKinematic = m_grabbedKinematic;
-        rb.velocity = linearVelocity;
-        rb.angularVelocity = angularVelocity;
+        gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.All, null);
+        CharacterController gm = gameObject.GetComponent<CharacterController>();
+        gm.Move(linearVelocity * Time.deltaTime);
         m_grabbedBy = null;
         m_grabbedCollider = null;
-        gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.All, null);
     }
 
     void Awake()

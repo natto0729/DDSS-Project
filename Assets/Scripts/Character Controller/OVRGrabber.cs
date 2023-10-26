@@ -353,8 +353,7 @@ public class OVRGrabber : MonoBehaviour
             CharacterController grabbedController = m_grabbedObj.gameObject.GetComponent<CharacterController>();
             Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
             Quaternion grabbableRotation = rot * m_grabbedObjectRotOff;
-            grabbedController.transform.position = grabbablePosition;
-            grabbedController.transform.rotation = grabbableRotation;
+            grabbedController.Move(grabbedController.transform.position - grabbablePosition);
         }
         else if(!m_grabbedObj.isPlayer)
         {
