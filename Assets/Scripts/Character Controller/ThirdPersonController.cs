@@ -268,6 +268,14 @@ namespace StarterAssets
             CameraAim();
         }
 
+        private void OnControllerColliderHit(ControllerColliderHit hit) 
+        {
+            if(hit.gameObject.GetComponent<exit>())
+            {
+                hit.gameObject.GetComponent<exit>().EndOfGame();
+            }
+        }
+
         private void AssignAnimationIDs()
         {
             _animIDSpeed = Animator.StringToHash("Speed");
