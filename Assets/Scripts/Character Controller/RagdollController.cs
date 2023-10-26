@@ -68,17 +68,18 @@ public class RagdollController : MonoBehaviour
             rigid.isKinematic = false;
         }
 
-        controller.enabled = false;
-        player.enabled = false;
         rigidBody.isKinematic = true;
         rigidBody.useGravity =false;
         rigidView.enabled = true;
         altCollider.enabled = true;
+        controller.enabled = false;
+        player.enabled = false;
     }
 
     [PunRPC]
     public void RagdollModeOff()
-    {
+    {      
+
         foreach(Collider col in ragDollColliders)
         {
             col.enabled = false;
@@ -88,14 +89,14 @@ public class RagdollController : MonoBehaviour
             rigid.isKinematic = true;
         }
 
-        
+
+        animator.enabled = true;
+        controller.enabled = true;
+        player.enabled = true;
         rigidBody.isKinematic = false;
         rigidBody.useGravity = true;
         rigidView.enabled = false;
         altCollider.enabled = false;
-        animator.enabled = true;
-        controller.enabled = true;
-        player.enabled = true;
     }
 
 }
