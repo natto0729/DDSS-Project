@@ -3601,7 +3601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4416926081852918490}
-  controller: {fileID: 0}
+  controller: {fileID: 4416926081852918491}
   rig: {fileID: 8732595939009592110}
   animator: {fileID: 6982812146204527121}
   mode: 0
