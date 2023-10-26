@@ -69,11 +69,10 @@ public class RagdollController : MonoBehaviour
             rigid.isKinematic = false;
         }
 
-        rigidBody.isKinematic = true;
-        rigidBody.useGravity =false;
-        rigidBody.collisionDetectionMode = CollisionDetectionMode.Discrete;
+        rigidBody.isKinematic = false;
+        rigidBody.useGravity = true;
+        rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rigidView.enabled = true;
-        altCollider.enabled = true;
         controller.enabled = false;
         altCollider = gameObject.AddComponent<CapsuleCollider>();
         altCollider.center = new Vector3(0, 0.9307922f, 0);
@@ -99,9 +98,9 @@ public class RagdollController : MonoBehaviour
         animator.enabled = true;
         controller.enabled = true;
         player.enabled = true;
-        rigidBody.isKinematic = false;
-        rigidBody.useGravity = true;
-        rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        rigidBody.isKinematic = true;
+        rigidBody.useGravity = false;
+        rigidBody.collisionDetectionMode = CollisionDetectionMode.Discrete;
         rigidView.enabled = false;
         Destroy(altCollider);
         altCollider = null;
