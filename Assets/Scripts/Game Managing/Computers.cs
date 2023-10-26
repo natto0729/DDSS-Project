@@ -34,7 +34,7 @@ public class Computers : MonoBehaviour
     {
         Debug.Log(XRCheck);
         canRender =false;
-        if(!XRCheck && canXR)
+        if(!XRCheck || !canXR)
         {
             computers[number].GetComponent<Rendering>().enabled = true;
             computers[number].transform.GetChild(0).gameObject.SetActive(true);
