@@ -9,6 +9,7 @@ using Oculus.Platform;
 public class RagdollController : MonoBehaviour
 {
     public ThirdPersonController player;
+    public CharacterController controller;
     public GameObject rig;
     public Animator animator;
 
@@ -60,6 +61,7 @@ public class RagdollController : MonoBehaviour
             rigid.isKinematic = false;
         }
 
+        controller.enabled = false;
         player.enabled = false;
     }
 
@@ -78,6 +80,7 @@ public class RagdollController : MonoBehaviour
 
 
         animator.enabled = true;
+        controller.enabled = true;
         player.enabled = true;
     }
 
