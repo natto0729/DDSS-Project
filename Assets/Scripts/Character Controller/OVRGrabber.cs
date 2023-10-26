@@ -348,19 +348,29 @@ public class OVRGrabber : MonoBehaviour
             return;
         }
 
-        Rigidbody grabbedRigidbody = m_grabbedObj.grabbedRigidbody;
-        Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
-        Quaternion grabbableRotation = rot * m_grabbedObjectRotOff;
-
-        if (forceTeleport)
+        if(m_grabbedObj.isPlayer)
         {
-            grabbedRigidbody.transform.position = grabbablePosition;
-            grabbedRigidbody.transform.rotation = grabbableRotation;
+            CharacterController grabbedController = m_grabbedObj.gameObject.GetComponent<CharacterController>();
+            Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
+            Quaternion grabbableRotation = rot * m_grabbedObjectRotOff;
+            grabbedController.transform.position = grabbablePosition;
+            grabbedController.transform.rotation = grabbableRotation;
         }
-        else
+        else if(!m_grabbedObj.isPlayer)
         {
-            grabbedRigidbody.MovePosition(grabbablePosition);
-            grabbedRigidbody.MoveRotation(grabbableRotation);
+            Rigidbody grabbedRigidbody = m_grabbedObj.grabbedRigidbody;
+            Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
+            Quaternion grabbableRotation = rot * m_grabbedObjectRotOff;
+            if (forceTeleport)
+            {
+                grabbedRigidbody.transform.position = grabbablePosition;
+                grabbedRigidbody.transform.rotation = grabbableRotation;
+            }
+            else
+            {
+                grabbedRigidbody.MovePosition(grabbablePosition);
+                grabbedRigidbody.MoveRotation(grabbableRotation);
+            }
         }
     }
 
