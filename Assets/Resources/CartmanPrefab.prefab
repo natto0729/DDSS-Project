@@ -3610,6 +3610,7 @@ MonoBehaviour:
   rig: {fileID: 8732595939009592110}
   animator: {fileID: 6982812146204527121}
   rigidView: {fileID: 7661592743305306680}
+  animView: {fileID: 2699271426470454394}
   mode: 0
   canSwitch: 1
 --- !u!114 &7963171814789269310
