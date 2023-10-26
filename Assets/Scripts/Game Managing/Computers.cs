@@ -21,6 +21,10 @@ public class Computers : MonoBehaviour
 
     void Start()
     {
+        if(XRSettings.enabled)
+        {
+            isXR = true;
+        }
         photonViews = gameObject.GetComponent<PhotonView>();
         computers = gameObject.GetComponentsInChildren<Rendering>();
     }
