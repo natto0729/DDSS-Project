@@ -70,14 +70,9 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
-        if(PhotonNetwork.IsMasterClient && XRSettings.enabled)
+        if(PhotonNetwork.IsMasterClient)
         {
-            photonViews.RPC("SyncTime", RpcTarget.All, saved, true);
-            photonViews.RPC("SyncTime", RpcTarget.OthersBuffered, saved, false);  
-        }
-        else if(PhotonNetwork.IsMasterClient && !XRSettings.enabled)
-        {
-            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR);   
+            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR);  
         }
     }
 }
