@@ -71,9 +71,6 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
-<<<<<<< Updated upstream
-        photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved);  
-=======
         if(XRSettings.enabled)
         {
             isXR = true;
@@ -83,6 +80,5 @@ public class Computers : MonoBehaviour
         {
             photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
         }
->>>>>>> Stashed changes
     }
 }
