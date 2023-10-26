@@ -78,7 +78,12 @@ public class Computers : MonoBehaviour
             isXR = true;
             photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
         }
-        else
+        else if(XRSettings.enabled && canXR == false)
+        {
+            isXR = false;
+            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
+        }
+        else if(!XRSettings.enabled)
         {
             photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
         }
