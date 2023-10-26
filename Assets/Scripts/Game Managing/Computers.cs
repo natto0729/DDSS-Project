@@ -75,6 +75,6 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
-        photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR);  
+        photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved);  
     }
 }
