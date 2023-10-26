@@ -20,10 +20,6 @@ public class Computers : MonoBehaviour
 
     void Start()
     {
-        if(!XRSettings.enabled)
-        {
-            isXR = true;
-        }
         photonViews = gameObject.GetComponent<PhotonView>();
         computers = gameObject.GetComponentsInChildren<Rendering>();
     }
@@ -70,6 +66,10 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
+        if(XRSettings.enabled)
+        {
+            isXR = true;
+        }
         if(PhotonNetwork.IsMasterClient)
         {
             photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR);  
