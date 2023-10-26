@@ -25,14 +25,14 @@ public class Computers : MonoBehaviour
     }
 
     [PunRPC]
-    public void SyncTime(int saved, bool isXR)
+    public void SyncTime(int number, bool XRCheck)
     {
         canRender =false;
-        if(!isXR)
+        if(!XRCheck)
         {
-            computers[saved].GetComponent<Rendering>().enabled = true;
-            computers[saved].transform.GetChild(0).gameObject.SetActive(true);
-            computers[saved].transform.GetChild(1).gameObject.SetActive(true);
+            computers[number].GetComponent<Rendering>().enabled = true;
+            computers[number].transform.GetChild(0).gameObject.SetActive(true);
+            computers[number].transform.GetChild(1).gameObject.SetActive(true);
         }
         foreach(Rendering computer in computers)
         {
@@ -57,7 +57,7 @@ public class Computers : MonoBehaviour
     }
 
     public void AddRenderingComputer()
-    {     
+    {    
         rand = Random.Range(1,computers.Length);
         Debug.Log(rand);
         while(computers[rand].GetComponent<Rendering>().enabled)
