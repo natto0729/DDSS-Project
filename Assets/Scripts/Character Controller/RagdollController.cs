@@ -62,6 +62,7 @@ public class RagdollController : MonoBehaviour
         }
 
         controller.enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
 
     }
 
@@ -79,6 +80,7 @@ public class RagdollController : MonoBehaviour
 
         animator.enabled = true;
         controller.enabled = true;
+        GetComponent<Rigidbody>().isKinematic = false;
     }
 
 }
