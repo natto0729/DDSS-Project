@@ -13,8 +13,8 @@ public class RagdollController : MonoBehaviour
     public Rigidbody rigidBody;
     public GameObject rig;
     public Animator animator;
-    CapsuleCollider altCollider;
     public PhotonRigidbodyView rigidView;
+    public PhotonAnimatorView animView;
 
     public bool mode = false;
     public bool canSwitch = true;
@@ -60,6 +60,7 @@ public class RagdollController : MonoBehaviour
     public void RagdollModeOn()
     {
         animator.enabled = false;
+        animView.enabled = false;
         foreach(Collider col in ragDollColliders)
         {
             col.enabled = true;
@@ -75,10 +76,6 @@ public class RagdollController : MonoBehaviour
         rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rigidView.enabled = true;
         controller.enabled = false;
-        altCollider = gameObject.AddComponent<CapsuleCollider>();
-        altCollider.center = new Vector3(0, 0.9307922f, 0);
-        altCollider.radius = 0.29f;
-        altCollider.height = 1.798419f;
         player.enabled = false;
     }
 
@@ -97,14 +94,13 @@ public class RagdollController : MonoBehaviour
 
 
         animator.enabled = true;
+        animView.enabled = true;
         controller.enabled = true;
         player.enabled = true;
         rigidBody.isKinematic = true;
         rigidBody.useGravity = false;
         rigidBody.collisionDetectionMode = CollisionDetectionMode.Discrete;
         rigidView.enabled = false;
-        Destroy(altCollider);
-        altCollider = null;
     }
 
 }
