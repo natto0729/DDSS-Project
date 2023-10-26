@@ -20,6 +20,10 @@ public class Computers : MonoBehaviour
 
     void Start()
     {
+        if(!XRSettings.enabled)
+        {
+            isXR = true;
+        }
         photonViews = gameObject.GetComponent<PhotonView>();
         computers = gameObject.GetComponentsInChildren<Rendering>();
     }
@@ -66,12 +70,13 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
-        if(PhotonNetwork.IsMasterClient)
+        if(PhotonNetwork.IsMasterClient && XRSettings.enabled)
         {
-            if(XRSettings.enabled)
-            {
-                isXR = true;
-            }
+            photonViews.RPC("SyncTime", RpcTarget.All, saved, true);
+            photonViews.RPC("SyncTime", RpcTarget.OthersBuffered, saved, false);  
+        }
+        else if(PhotonNetwork.IsMasterClient && !XRSettings.enabled)
+        {
             photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR);   
         }
     }
