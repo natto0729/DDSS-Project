@@ -14,7 +14,7 @@ public class Computers : MonoBehaviour
     private int saved;
 
     private int index = 0;
-    private bool isXR = false;
+    public bool isXR = false;
 
     PhotonView photonViews;
 
@@ -25,19 +25,11 @@ public class Computers : MonoBehaviour
     }
 
     [PunRPC]
-    public void SyncTime(int number)
+    public void SyncTime(int number, bool XRCheck)
     {
-        if(XRSettings.enabled)
-        {
-            isXR = true;
-        }
-        if(!XRSettings.enabled)
-        {
-            isXR = false;
-        }
-        Debug.Log(isXR);
+        Debug.Log(XRCheck);
         canRender =false;
-        if(!isXR)
+        if(!XRCheck)
         {
             computers[number].GetComponent<Rendering>().enabled = true;
             computers[number].transform.GetChild(0).gameObject.SetActive(true);
@@ -63,6 +55,10 @@ public class Computers : MonoBehaviour
         }
         canRender = true;
         index = 0;
+        if(XRCheck)
+        {
+            isXR = false;
+        }   
     }
 
     public void AddRenderingComputer()
@@ -75,6 +71,18 @@ public class Computers : MonoBehaviour
             Debug.Log(rand);
         }
         saved = rand;
+<<<<<<< Updated upstream
         photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved);  
+=======
+        if(XRSettings.enabled)
+        {
+            isXR = true;
+            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
+        }
+        else
+        {
+            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isXR); 
+        }
+>>>>>>> Stashed changes
     }
 }
