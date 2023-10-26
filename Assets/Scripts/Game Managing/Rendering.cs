@@ -28,8 +28,6 @@ public class Rendering : MonoBehaviour
     {
         isRendering =false;
         isStopped = true;
-        renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering Stopped!");
-        renderingPopUp.GetComponent<TextMeshPro>().color = Color.red;
         if(progress != null)
         {
             StopCoroutine(progress);
@@ -69,16 +67,21 @@ public class Rendering : MonoBehaviour
                 progress = null;
             }
         }
-        if(isRendering)
-        {
-            RenderText();
-        }
+        RenderText();
     }
 
     public void RenderText()
     {
-        renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering:" + currentRender + "%");
-        renderingPopUp.GetComponent<TextMeshPro>().color = Color.white;
+        if(isRendering)
+        {
+            renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering:" + currentRender + "%");
+            renderingPopUp.GetComponent<TextMeshPro>().color = Color.white;
+        }
+        if(!isRendering)
+        {
+            renderingPopUp.GetComponent<TextMeshPro>().SetText("Rendering Stopped!");
+            renderingPopUp.GetComponent<TextMeshPro>().color = Color.red;
+        }
         if(XRSettings.enabled)
         {
             renderingPopUp.LookAt(GameObject.Find("CenterEyeAnchor").transform);
