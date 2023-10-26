@@ -584,7 +584,7 @@ namespace StarterAssets
                 useText.transform.position = hit.point - (hit.point - _mainCamera.transform.position).normalized * 1f;
                 useText.transform.rotation = Quaternion.LookRotation((hit.point - _mainCamera.transform.position).normalized);
             }
-            else if(Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Rendering>(out Rendering computer) && !computer.isRendering)
+            else if(Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out hit, maxUseDistance, useLayers) && hit.collider.TryGetComponent<Rendering>(out Rendering computer) && computer.enabled && !computer.isRendering)
             {
                 useText.SetText("Start Rendering \"E\"");
                 useText.gameObject.SetActive(true);
