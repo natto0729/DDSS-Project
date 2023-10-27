@@ -288,16 +288,9 @@ namespace StarterAssets
 
         public void Die()
         {
-            if(XRSettings.enabled)
+            if(!XRSettings.enabled)
             {
-                if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
-                {
-                    PhotonNetwork.LeaveRoom();
-                    SceneManager.LoadScene(8);
-                }
-            }
-            else
-            {
+                Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
                 PhotonNetwork.LeaveRoom();
                 SceneManager.LoadScene("GameOver");
             }

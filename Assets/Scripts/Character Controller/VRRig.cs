@@ -49,6 +49,11 @@ public class VRRig : MonoBehaviourPunCallbacks
 
     void Update()
     {
+        if(PhotonNetwork.CurrentRoom.PlayerCount <= 1 && gameManager.renderTotal <= 100 && XRSettings.enabled)
+        {
+            PhotonNetwork.LeaveRoom();
+            SceneManager.LoadScene(8);
+        }
         if (gameManager.renderTotal >= 100 && XRSettings.enabled)
         {
             PhotonNetwork.LeaveRoom();
