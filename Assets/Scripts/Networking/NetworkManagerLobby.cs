@@ -68,7 +68,7 @@ public class NetworkManagerLobby : MonoBehaviourPunCallbacks
             Debug.Log(connector.VRConnected);
             connector.GetComponent<PhotonView>().RPC("VRChecked", RpcTarget.AllBuffered, null);
         }
-        else if(PhotonNetwork.CurrentRoom.PlayerCount > 4 && !XRSettings.enabled)
+        else if(PhotonNetwork.CurrentRoom.PlayerCount > 5 && !XRSettings.enabled)
         {
             PhotonNetwork.LeaveRoom();
             SceneManager.LoadScene("Title Scene");
