@@ -10,6 +10,7 @@ public class RagdollController : MonoBehaviour
 {
     public ThirdPersonController player;
     public CharacterController controller;
+    public Rigidbody hips;
     public GameObject rig;
     public Animator animator;
 
@@ -38,6 +39,12 @@ public class RagdollController : MonoBehaviour
         {
             canSwitch = true;
             RagdollModeOn();
+        }
+
+        if(controller.enabled == false)
+        {
+            hips.MovePosition(controller.transform.position);
+            hips.MoveRotation(controller.transform.rotation);
         }
     }
 
