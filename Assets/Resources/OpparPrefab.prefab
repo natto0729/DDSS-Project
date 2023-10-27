@@ -3030,18 +3030,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints:
-  - {fileID: 379002233}
-  - {fileID: 83857766}
-  - {fileID: 1885881703}
-  - {fileID: 364305933}
-  - {fileID: 356405191}
-  - {fileID: 369469593}
-  - {fileID: 776215436}
-  - {fileID: 776215436}
-  - {fileID: 945228788}
   - {fileID: 4416926081852918491}
-  - {fileID: 1846073614}
-  - {fileID: 2111333307}
   isPlayer: 1
 --- !u!1 &4791350137810008451
 GameObject:

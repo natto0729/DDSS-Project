@@ -424,6 +424,7 @@ public class OVRGrabber : MonoBehaviour
         }
         if (m_parentHeldObject) m_grabbedObj.transform.parent = null;
         m_grabbedObj = null;
+        playerCheck = false;
     }
 
     [PunRPC]

@@ -3851,17 +3851,6 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 4416926081852918491}
-  - {fileID: 1189640882}
-  - {fileID: 43606735}
-  - {fileID: 1600237880}
-  - {fileID: 680437116}
-  - {fileID: 381571750}
-  - {fileID: 1233971622}
-  - {fileID: 756267882}
-  - {fileID: 857712035}
-  - {fileID: 167940613}
-  - {fileID: 1564623841}
-  - {fileID: 1251053814}
   isPlayer: 1
 --- !u!1 &4444468170536368780
 GameObject:
