@@ -288,7 +288,7 @@ public class OVRGrabber : MonoBehaviour
             }
             else
             {
-                m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabBeginPlayer", RpcTarget.All, this.gameObject.name, closestGrabbableCollider.gameObject.name);
+                m_grabbedObj.GrabBeginPlayer();
             }
             
 
