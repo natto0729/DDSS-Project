@@ -31,15 +31,6 @@ public class RagdollController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!mode && canSwitch && !isGrabbed)
-        {
-            gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.AllBuffered, null);
-        }
-        else if(mode && !canSwitch && !isGrabbed)
-        {
-            gameObject.GetComponent<PhotonView>().RPC("RagdollModeOn", RpcTarget.AllBuffered, null);
-        }
-
         if (controller.enabled == false)
         {
             gameObject.GetComponent<PhotonView>().RPC("RagDollMove", RpcTarget.AllBuffered, null);
