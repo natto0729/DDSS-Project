@@ -398,11 +398,11 @@ public class OVRGrabber : MonoBehaviour
                 trackingSpace.orientation * OVRInput.GetLocalControllerAngularVelocity(m_controller);
             if(!playerCheck)
             {
-                gameObject.GetComponent<PhotonView>().RPC("GrabbableRelease", RpcTarget.All, linearVelocity, angularVelocity);
+                GrabbableRelease( linearVelocity, angularVelocity);
             }
             else if (playerCheck)
             {
-                gameObject.GetComponent<PhotonView>().RPC("GrabbableRelease", RpcTarget.All, Vector3.zero, Vector3.zero);
+                GrabbableRelease(Vector3.zero, Vector3.zero); 
             }
 
         }
@@ -411,17 +411,17 @@ public class OVRGrabber : MonoBehaviour
         gameObject.GetComponent<PhotonView>().RPC("GrabVolumeEnable", RpcTarget.All, true);
     }
 
-    [PunRPC]
     protected void GrabbableRelease(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         if (playerCheck)
         {
             m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEndPlayer", RpcTarget.All, linearVelocity, angularVelocity);
         }
-        if (!playerCheck)
+        else
         {
             m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEnd", RpcTarget.All, linearVelocity, angularVelocity);
         }
+
         if (m_parentHeldObject) m_grabbedObj.transform.parent = null;
         m_grabbedObj = null;
         playerCheck = false;
