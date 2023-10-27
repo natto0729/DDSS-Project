@@ -4,7 +4,6 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.InputSystem;
 using StarterAssets;
-using Oculus.Platform;
 
 public class RagdollController : MonoBehaviour
 {
@@ -41,10 +40,9 @@ public class RagdollController : MonoBehaviour
             RagdollModeOn();
         }
 
-        if(controller.enabled == false)
+        if (controller.enabled == false)
         {
-            hips.MovePosition(controller.transform.position);
-            hips.MoveRotation(controller.transform.rotation);
+            gameObject.GetComponent<PhotonView>().RPC("RagDollMove", RpcTarget.All, null);
         }
     }
 
@@ -52,6 +50,13 @@ public class RagdollController : MonoBehaviour
     {
         ragDollColliders = rig.GetComponentsInChildren<Collider>();
         limbsRigidBodies = rig.GetComponentsInChildren<Rigidbody>();
+    }
+
+    [PunRPC]
+    public void RagDollMove()
+    {
+        hips.MovePosition(controller.transform.position);
+        hips.MoveRotation(controller.transform.rotation);
     }
 
     [PunRPC]
