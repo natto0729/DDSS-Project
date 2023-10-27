@@ -832,7 +832,6 @@ GameObject:
   - component: {fileID: 1996250020}
   - component: {fileID: 1996250022}
   - component: {fileID: 1996250021}
-  - component: {fileID: 2044916933}
   - component: {fileID: 2044916932}
   m_Layer: 0
   m_Name: QuickRigCharacter_LeftArm
@@ -933,22 +932,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &2044916933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626275920688008674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &2044916932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,7 +1296,6 @@ GameObject:
   - component: {fileID: 1121707315}
   - component: {fileID: 1121707316}
   - component: {fileID: 1121707314}
-  - component: {fileID: 1446854714}
   - component: {fileID: 1446854713}
   m_Layer: 0
   m_Name: QuickRigCharacter_RightLeg
@@ -1414,22 +1396,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &1446854714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966371874100851283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &1446854713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1792,7 +1758,6 @@ GameObject:
   - component: {fileID: 1008977010}
   - component: {fileID: 1008977011}
   - component: {fileID: 1008977009}
-  - component: {fileID: 192879589}
   - component: {fileID: 192879588}
   m_Layer: 0
   m_Name: QuickRigCharacter_LeftForeArm
@@ -1893,22 +1858,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &192879589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403299477612552621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &192879588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2654,7 +2603,6 @@ GameObject:
   - component: {fileID: 332739165}
   - component: {fileID: 332739167}
   - component: {fileID: 332739166}
-  - component: {fileID: 886674726}
   - component: {fileID: 886674725}
   m_Layer: 0
   m_Name: QuickRigCharacter_Spine
@@ -2754,22 +2702,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &886674726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2244643255990599715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &886674725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3532,7 +3464,6 @@ GameObject:
   - component: {fileID: 1596782273}
   - component: {fileID: 1596782274}
   - component: {fileID: 1596782272}
-  - component: {fileID: 2044916936}
   - component: {fileID: 2044916935}
   m_Layer: 0
   m_Name: QuickRigCharacter_LeftLeg
@@ -3633,22 +3564,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &2044916936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3157119908631616071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &2044916935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4235,7 +4150,6 @@ GameObject:
   - component: {fileID: 1517368719}
   - component: {fileID: 1517368720}
   - component: {fileID: 1517368718}
-  - component: {fileID: 1803246131}
   - component: {fileID: 1803246130}
   m_Layer: 0
   m_Name: QuickRigCharacter_RightForeArm
@@ -4336,22 +4250,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &1803246131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4009716455248198285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &1803246130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4848,7 +4746,29 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 2984712254430578902}
   - {fileID: 2699271426470454394}
+  - {fileID: 0}
+  - {fileID: 945216690}
+  - {fileID: 0}
+  - {fileID: 925563036}
+  - {fileID: 0}
+  - {fileID: 775260006}
+  - {fileID: 0}
+  - {fileID: 886674725}
+  - {fileID: 0}
+  - {fileID: 2044916935}
+  - {fileID: 0}
+  - {fileID: 1446854713}
   - {fileID: 1783321458199757920}
+  - {fileID: 0}
+  - {fileID: 2044916932}
+  - {fileID: 0}
+  - {fileID: 988052544}
+  - {fileID: 0}
+  - {fileID: 1525743095}
+  - {fileID: 0}
+  - {fileID: 192879588}
+  - {fileID: 0}
+  - {fileID: 1803246130}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -6487,7 +6407,6 @@ GameObject:
   - component: {fileID: 335232471}
   - component: {fileID: 335232472}
   - component: {fileID: 335232470}
-  - component: {fileID: 988052545}
   - component: {fileID: 988052544}
   m_Layer: 0
   m_Name: QuickRigCharacter_Head
@@ -6586,22 +6505,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &988052545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5687940239338119632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &988052544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6812,7 +6715,6 @@ GameObject:
   - component: {fileID: 1097090594}
   - component: {fileID: 1097090596}
   - component: {fileID: 1097090595}
-  - component: {fileID: 1525743096}
   - component: {fileID: 1525743095}
   m_Layer: 0
   m_Name: QuickRigCharacter_RightArm
@@ -6913,22 +6815,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &1525743096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5924900528933866360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &1525743095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7887,7 +7773,6 @@ GameObject:
   - component: {fileID: 365354259}
   - component: {fileID: 365354261}
   - component: {fileID: 365354260}
-  - component: {fileID: 925563037}
   - component: {fileID: 925563036}
   m_Layer: 0
   m_Name: QuickRigCharacter_LeftUpLeg
@@ -7988,22 +7873,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &925563037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7188275268766741194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &925563036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8613,7 +8482,6 @@ GameObject:
   - component: {fileID: 5087623613106614800}
   - component: {fileID: 2084954272}
   - component: {fileID: 2084954273}
-  - component: {fileID: 945216691}
   - component: {fileID: 945216690}
   m_Layer: 0
   m_Name: QuickRigCharacter_Hips
@@ -8712,22 +8580,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.012718559, y: 0.028275408, z: 0.025806861}
   m_Center: {x: -0.003003296, y: 0.000816118, z: 0.0005033305}
---- !u!114 &945216691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7929895370295885495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &945216690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9233,7 +9085,6 @@ GameObject:
   - component: {fileID: 2024161500}
   - component: {fileID: 2024161502}
   - component: {fileID: 2024161501}
-  - component: {fileID: 775260007}
   - component: {fileID: 775260006}
   m_Layer: 0
   m_Name: QuickRigCharacter_RightUpLeg
@@ -9334,22 +9185,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &775260007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8288482261129721490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &775260006
 MonoBehaviour:
   m_ObjectHideFlags: 0
