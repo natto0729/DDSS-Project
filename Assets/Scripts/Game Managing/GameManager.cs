@@ -49,12 +49,12 @@ public class GameManager : MonoBehaviour
         if (gameManager.renderTotal >= 100 && XRSettings.enabled)
         {
             PhotonNetwork.LeaveRoom();
-            SceneManager.LoadScene("Winning Scene");
+            SceneManager.LoadScene(5);
         }
         else if(gameManager.renderTotal >= 100 && !XRSettings.enabled)
         {
             PhotonNetwork.LeaveRoom();
-            SceneManager.LoadScene("VRgameOver");
+            SceneManager.LoadScene(7);
         }
         
         if (PhotonNetwork.IsMasterClient && loadChar == false && testPlay == false)

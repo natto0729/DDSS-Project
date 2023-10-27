@@ -290,12 +290,12 @@ namespace StarterAssets
                     if (gameManager.renderTotal < 100)
                     {
                         PhotonNetwork.LeaveRoom();
-                        SceneManager.LoadScene("VRwinning");
+                        SceneManager.LoadScene(8);
                     }
                     else if (gameManager.renderTotal >= 100)
                     {
                         PhotonNetwork.LeaveRoom();
-                        SceneManager.LoadScene("VRgameOver");
+                        SceneManager.LoadScene(7);
                     }
                 }
             }
