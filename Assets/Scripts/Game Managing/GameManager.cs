@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        PhotonNetwork.AutomaticallySyncScene = false;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
@@ -52,7 +51,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  
+
         if (PhotonNetwork.IsMasterClient && loadChar == false && testPlay == false)
         {
             gameObject.GetComponent<PhotonView>().RPC("SpawnStuff", RpcTarget.AllBuffered, null);

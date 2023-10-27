@@ -254,7 +254,6 @@ namespace StarterAssets
         {
             if (gameManager.renderTotal >= 100 && !XRSettings.enabled)
             {
-                PhotonNetwork.AutomaticallySyncScene = false;
                 PhotonNetwork.LeaveRoom();
                 SceneManager.LoadScene(5);
             }
@@ -291,7 +290,6 @@ namespace StarterAssets
         {
             if(!XRSettings.enabled)
             {
-                PhotonNetwork.AutomaticallySyncScene = false;
                 PhotonNetwork.LeaveRoom();
                 SceneManager.LoadScene("GameOver");
             }
