@@ -2664,7 +2664,6 @@ GameObject:
   - component: {fileID: 1361672665}
   - component: {fileID: -4146278028164877290}
   - component: {fileID: 2894271611759388582}
-  - component: {fileID: 1904400747}
   - component: {fileID: 8102924810735845690}
   m_Layer: 8
   m_Name: NerdPrefab
@@ -3159,27 +3158,6 @@ MonoBehaviour:
   isVR: 0
   isOppar: 0
   isNerd: 1
---- !u!114 &1904400747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4416926081852918481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e49fc878f17b840936142e052ba8b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4416926081852918490}
-  controller: {fileID: 4416926081852918491}
-  hips: {fileID: 0}
-  rig: {fileID: 508365323625164313}
-  animator: {fileID: 6982812146204527121}
-  cameraRoot: {fileID: 8338988566280778634}
-  mode: 0
-  canSwitch: 1
-  isGrabbed: 0
 --- !u!114 &8102924810735845690
 MonoBehaviour:
   m_ObjectHideFlags: 0
