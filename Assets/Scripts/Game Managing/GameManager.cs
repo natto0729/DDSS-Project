@@ -49,8 +49,14 @@ public class GameManager : MonoBehaviour
         if (gameManager.renderTotal >= 100 && XRSettings.enabled)
         {
             PhotonNetwork.LeaveRoom();
+            SceneManager.LoadScene("Winning Scene");
+        }
+        else if(gameManager.renderTotal >= 100 && !XRSettings.enabled)
+        {
+            PhotonNetwork.LeaveRoom();
             SceneManager.LoadScene("VRgameOver");
         }
+        
         if (PhotonNetwork.IsMasterClient && loadChar == false && testPlay == false)
         {
             gameObject.GetComponent<PhotonView>().RPC("SpawnStuff", RpcTarget.AllBuffered, null);
