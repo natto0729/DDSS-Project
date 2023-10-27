@@ -46,10 +46,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.renderTotal >= 100)
+        if (gameManager.renderTotal >= 100 && XRSettings.enabled)
         {
             PhotonNetwork.LeaveRoom();
-            SceneManager.LoadScene("Winning Scene");
+            SceneManager.LoadScene("VRgameOver");
         }
         if (PhotonNetwork.IsMasterClient && loadChar == false && testPlay == false)
         {
