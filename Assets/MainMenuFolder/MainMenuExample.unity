@@ -5241,10 +5241,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5549738640047326267, guid: 0dbae5181ae2ac349a79d62f344444bd,
+        type: 3}
+      propertyPath: m_UseRelativeTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5549738640442710362, guid: 0dbae5181ae2ac349a79d62f344444bd,
         type: 3}
       propertyPath: m_Name
       value: XRRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 5549738640442710363, guid: 0dbae5181ae2ac349a79d62f344444bd,
+        type: 3}
+      propertyPath: m_RequestedTrackingMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5549738640442710364, guid: 0dbae5181ae2ac349a79d62f344444bd,
         type: 3}

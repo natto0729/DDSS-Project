@@ -48,7 +48,7 @@ public class VRRig : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        /*if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
             if(gameManager.renderTotal < 100)
             {
@@ -60,7 +60,7 @@ public class VRRig : MonoBehaviourPunCallbacks
                 PhotonNetwork.LeaveRoom();
                 SceneManager.LoadScene("VRgameOver");
             }
-        }
+        }*/
         Prompt();
         if(OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
         {
