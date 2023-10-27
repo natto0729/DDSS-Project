@@ -15,6 +15,7 @@ public class RagdollController : MonoBehaviour
 
     public bool mode = false;
     public bool canSwitch = true;
+    public bool isGrabbed = false;
 
     Collider[] ragDollColliders;
     Rigidbody[] limbsRigidBodies;
@@ -55,6 +56,11 @@ public class RagdollController : MonoBehaviour
     [PunRPC]
     public void RagDollMove()
     {
+        if(isGrabbed)
+        {
+            hips.isKinematic = true;
+            hips.useGravity = false;
+        }
         hips.MovePosition(controller.transform.position);
         hips.MoveRotation(controller.transform.rotation);
     }

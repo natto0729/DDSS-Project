@@ -147,6 +147,7 @@ public class OVRGrabbable : MonoBehaviour
     [PunRPC]
     virtual public void GrabBeginPlayer(string hand, string grabPoint)
     {
+        gameObject.GetComponent<RagdollController>().isGrabbed = false;
         m_grabbedBy = GameObject.Find(hand).GetComponent<OVRGrabber>();
         m_grabbedCollider = GameObject.Find(grabPoint).GetComponent<Collider>();
         gameObject.GetComponent<PhotonView>().RPC("RagdollModeOn", RpcTarget.All, null);
@@ -155,6 +156,7 @@ public class OVRGrabbable : MonoBehaviour
     [PunRPC]
     virtual public void GrabEndPlayer(Vector3 linearVelocity, Vector3 angularVelocity)
     {
+        gameObject.GetComponent<RagdollController>().isGrabbed = true;
         gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.All, null);
         CharacterController gm = gameObject.GetComponent<CharacterController>();
         gm.Move(linearVelocity * Time.deltaTime);
