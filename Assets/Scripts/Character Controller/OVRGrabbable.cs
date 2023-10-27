@@ -20,6 +20,7 @@
 using System;
 using UnityEngine;
 using Photon.Pun;
+using StarterAssets;
 
 /// <summary>
 /// An object that can be grabbed and thrown by OVRGrabber.
@@ -147,7 +148,9 @@ public class OVRGrabbable : MonoBehaviour
     [PunRPC]
     virtual public void GrabBeginPlayer(string hand, string grabPoint)
     {
-        gameObject.GetComponent<RagdollController>().isGrabbed = true;
+        gameObject.GetComponent<CharacterController>().enabled = false;
+        gameObject.GetComponent<Animator>().enabled = false;
+        gameObject.GetComponent<ThirdPersonController>().enabled = false;
         m_grabbedBy = GameObject.Find(hand).GetComponent<OVRGrabber>();
         m_grabbedCollider = GameObject.Find(grabPoint).GetComponent<Collider>();
     }
@@ -155,6 +158,9 @@ public class OVRGrabbable : MonoBehaviour
     [PunRPC]
     virtual public void GrabEndPlayer(Vector3 faulty, Vector3 faulty1)
     {
+        gameObject.GetComponent<CharacterController>().enabled = true;
+        gameObject.GetComponent<Animator>().enabled = true;
+        gameObject.GetComponent<ThirdPersonController>().enabled = true;
         m_grabbedBy = null;
         m_grabbedCollider = null;
     }
