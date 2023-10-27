@@ -12,6 +12,7 @@ public class RagdollController : MonoBehaviour
     public Rigidbody hips;
     public GameObject rig;
     public Animator animator;
+    public GameObject cameraRoot;
 
     public bool mode = false;
     public bool canSwitch = true;
@@ -63,8 +64,8 @@ public class RagdollController : MonoBehaviour
                 rigid.useGravity = false;
             }
         }
-        hips.MovePosition(controller.transform.position);
-        hips.MoveRotation(controller.transform.rotation);
+        hips.MovePosition(cameraRoot.transform.position);
+        hips.MoveRotation(cameraRoot.transform.rotation);
     }
 
     [PunRPC]

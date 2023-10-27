@@ -3353,6 +3353,7 @@ MonoBehaviour:
   hips: {fileID: 1518963296}
   rig: {fileID: 8732595939009592110}
   animator: {fileID: 6982812146204527121}
+  cameraRoot: {fileID: 8338988566280778634}
   mode: 0
   canSwitch: 1
   isGrabbed: 0
