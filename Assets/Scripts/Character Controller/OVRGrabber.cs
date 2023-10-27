@@ -352,7 +352,7 @@ public class OVRGrabber : MonoBehaviour
         {
             CharacterController grabbedController = m_grabbedObj.gameObject.GetComponent<CharacterController>();
             Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
-            grabbedController.Move(grabbedController.transform.position - grabbablePosition);
+            grabbedController.Move(grabbablePosition.normalized);
         }
         else if(!m_grabbedObj.isPlayer)
         {
