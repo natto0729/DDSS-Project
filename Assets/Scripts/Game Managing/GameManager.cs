@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        PhotonNetwork.AutomaticallySyncScene = false;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
