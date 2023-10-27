@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 #if ENABLE_INPUT_SYSTEM 
@@ -149,6 +150,8 @@ namespace StarterAssets
 
         public bool hasKey;
 
+        GameManager gameManager;
+
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -222,7 +225,8 @@ namespace StarterAssets
         }
 
         private void Start()
-        {            
+        {
+            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
             currentStamina = maxStamina;
@@ -279,8 +283,27 @@ namespace StarterAssets
 
         public void Die()
         {
-            PhotonNetwork.LeaveRoom();
-            SceneManager.LoadScene("GameOver");
+            if(XRSettings.enabled)
+            {
+                if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+                {
+                    if (gameManager.renderTotal < 100)
+                    {
+                        PhotonNetwork.LeaveRoom();
+                        SceneManager.LoadScene("VRwinning");
+                    }
+                    else if (gameManager.renderTotal >= 100)
+                    {
+                        PhotonNetwork.LeaveRoom();
+                        SceneManager.LoadScene("VRgameOver");
+                    }
+                }
+            }
+            else
+            {
+                PhotonNetwork.LeaveRoom();
+                SceneManager.LoadScene("GameOver");
+            }
         }
 
         private void AssignAnimationIDs()
