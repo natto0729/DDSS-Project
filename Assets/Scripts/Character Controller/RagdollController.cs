@@ -26,20 +26,12 @@ public class RagdollController : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<PhotonView>().RPC("GetRagdollBits", RpcTarget.AllBuffered, null);
+        gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.AllBuffered, null);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!mode && canSwitch)
-        {
-            gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.AllBuffered, null);
-        }
-        else if(mode && !canSwitch)
-        {
-            gameObject.GetComponent<PhotonView>().RPC("RagdollModeOn", RpcTarget.AllBuffered, null);
-        }
-
         if (controller.enabled == false)
         {
             gameObject.GetComponent<PhotonView>().RPC("RagDollMove", RpcTarget.AllBuffered, null);
@@ -71,8 +63,7 @@ public class RagdollController : MonoBehaviour
     [PunRPC]
     public void RagdollModeOn()
     {
-        mode = false;
-        canSwitch = false;
+
         animator.enabled = false;
         foreach(Collider col in ragDollColliders)
         {
@@ -90,8 +81,7 @@ public class RagdollController : MonoBehaviour
     [PunRPC]
     public void RagdollModeOff()
     {
-        mode = false;
-        canSwitch = false;
+
         foreach (Collider col in ragDollColliders)
         {
             col.enabled = false;
