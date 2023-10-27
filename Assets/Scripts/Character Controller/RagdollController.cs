@@ -30,12 +30,12 @@ public class RagdollController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!mode && canSwitch)
+        if(!mode && canSwitch && !isGrabbed)
         {
             canSwitch = false;
             RagdollModeOff();
         }
-        else if(mode && !canSwitch)
+        else if(mode && !canSwitch && !isGrabbed)
         {
             canSwitch = true;
             RagdollModeOn();
