@@ -64,7 +64,7 @@ public class Connector : MonoBehaviourPunCallbacks
         timerStarted = false;
         Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         Debug.Log(PhotonNetwork.IsMasterClient);
-        if(PhotonNetwork.CurrentRoom.PlayerCount >= 4)
+        if(PhotonNetwork.CurrentRoom.PlayerCount >= 2)
         {
             playersYes = true;
         }
