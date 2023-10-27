@@ -3307,6 +3307,7 @@ GameObject:
   - component: {fileID: -4146278028164877290}
   - component: {fileID: 2894271611759388582}
   - component: {fileID: 1904400747}
+  - component: {fileID: 8102924810735845690}
   m_Layer: 8
   m_Name: NerdPrefab
   m_TagString: Player
@@ -3825,10 +3826,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4416926081852918490}
   controller: {fileID: 4416926081852918491}
+  hips: {fileID: 1189640881}
   rig: {fileID: 508365323625164313}
   animator: {fileID: 6982812146204527121}
+  cameraRoot: {fileID: 8338988566280778634}
   mode: 0
   canSwitch: 1
+  isGrabbed: 0
+--- !u!114 &8102924810735845690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints:
+  - {fileID: 4416926081852918491}
+  - {fileID: 1189640882}
+  - {fileID: 43606735}
+  - {fileID: 1600237880}
+  - {fileID: 680437116}
+  - {fileID: 381571750}
+  - {fileID: 1233971622}
+  - {fileID: 756267882}
+  - {fileID: 857712035}
+  - {fileID: 167940613}
+  - {fileID: 1564623841}
+  - {fileID: 1251053814}
+  isPlayer: 1
 --- !u!1 &4444468170536368780
 GameObject:
   m_ObjectHideFlags: 0
