@@ -154,7 +154,7 @@ public class OVRGrabbable : MonoBehaviour
     }
 
     [PunRPC]
-    virtual public void GrabEndPlayer()
+    virtual public void GrabEndPlayer(Vector3 faulty, Vector3 faulty1)
     {
         gameObject.GetComponent<RagdollController>().isGrabbed = false;
         gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.All, null);
