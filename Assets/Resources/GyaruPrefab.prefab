@@ -4696,6 +4696,7 @@ GameObject:
   - component: {fileID: 382410967884887326}
   - component: {fileID: 9025132059060186821}
   - component: {fileID: 6675945966097863837}
+  - component: {fileID: 4144430525044814021}
   m_Layer: 8
   m_Name: GyaruPrefab
   m_TagString: Player
@@ -5214,10 +5215,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4416926081852918490}
   controller: {fileID: 4416926081852918491}
-  rig: {fileID: 7929895370295885495}
+  hips: {fileID: 2084954272}
+  rig: {fileID: 8338988566280778634}
   animator: {fileID: 6982812146204527121}
+  cameraRoot: {fileID: 0}
   mode: 0
   canSwitch: 1
+  isGrabbed: 0
+--- !u!114 &4144430525044814021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints:
+  - {fileID: 4416926081852918491}
+  - {fileID: 2084954273}
+  - {fileID: 365354261}
+  - {fileID: 1596782274}
+  - {fileID: 2024161502}
+  - {fileID: 1121707316}
+  - {fileID: 332739167}
+  - {fileID: 1996250022}
+  - {fileID: 1008977011}
+  - {fileID: 1097090596}
+  - {fileID: 1517368720}
+  - {fileID: 335232472}
+  isPlayer: 1
 --- !u!1 &4502726658213890221
 GameObject:
   m_ObjectHideFlags: 0
