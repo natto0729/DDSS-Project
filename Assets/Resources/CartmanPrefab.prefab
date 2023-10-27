@@ -3527,6 +3527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4416926081852918490}
   controller: {fileID: 4416926081852918491}
+  hips: {fileID: 1518963296}
   rig: {fileID: 8732595939009592110}
   animator: {fileID: 6982812146204527121}
   mode: 0
