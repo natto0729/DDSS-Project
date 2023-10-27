@@ -34,7 +34,7 @@ public class Connector : MonoBehaviourPunCallbacks
     [PunRPC]
     private void LoadMain()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(4);
     }
 
     [PunRPC]
