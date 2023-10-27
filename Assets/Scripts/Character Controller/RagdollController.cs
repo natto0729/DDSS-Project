@@ -79,8 +79,7 @@ public class RagdollController : MonoBehaviour
     [PunRPC]
     public void RagdollModeOff()
     {
-        canSwitch = true;
-        canSwitch = false;
+
         foreach (Collider col in ragDollColliders)
         {
             col.enabled = false;
