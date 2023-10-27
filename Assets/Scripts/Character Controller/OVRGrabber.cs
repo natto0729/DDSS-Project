@@ -410,7 +410,7 @@ public class OVRGrabber : MonoBehaviour
         }
         else
         {
-             m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEndPlayer", RpcTarget.All, linearVelocity, angularVelocity);
+             m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEndPlayer", RpcTarget.All, null);
         }
         if (m_parentHeldObject) m_grabbedObj.transform.parent = null;
         m_grabbedObj = null;
