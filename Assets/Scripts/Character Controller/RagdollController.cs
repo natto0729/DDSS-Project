@@ -33,12 +33,12 @@ public class RagdollController : MonoBehaviour
         if(!mode && canSwitch && !isGrabbed)
         {
             canSwitch = false;
-            RagdollModeOff();
+            gameObject.GetComponent<PhotonView>().RPC("RagDollModeOff", RpcTarget.All, null);
         }
         else if(mode && !canSwitch && !isGrabbed)
         {
             canSwitch = true;
-            RagdollModeOn();
+            gameObject.GetComponent<PhotonView>().RPC("RagDollModeOn", RpcTarget.All, null);
         }
 
         if (controller.enabled == false)
