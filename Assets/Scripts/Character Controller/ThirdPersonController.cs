@@ -258,7 +258,7 @@ namespace StarterAssets
             FlashlightSwitch();
             GroundedCheck();
             Stamina();
-            Move();
+            gameObject.GetComponent<PhotonView>().RPC("Move", RpcTarget.All, null);
             Prompt();
         }
 
@@ -319,6 +319,7 @@ namespace StarterAssets
             aimTarget.transform.position = new Vector3(aimReference.position.x, aimReference.position.y, aimReference.position.z);
         }
 
+        [PunRPC]
         private void Move()
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
