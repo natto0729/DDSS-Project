@@ -158,6 +158,7 @@ public class OVRGrabbable : MonoBehaviour
     [PunRPC]
     virtual public void GrabEndPlayer(Vector3 faulty, Vector3 faulty1)
     {
+        Physics.SyncTransforms();
         gameObject.GetComponent<CharacterController>().enabled = true;
         gameObject.GetComponent<Animator>().enabled = true;
         gameObject.GetComponent<ThirdPersonController>().enabled = true;
