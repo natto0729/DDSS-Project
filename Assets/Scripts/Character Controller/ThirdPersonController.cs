@@ -252,7 +252,7 @@ namespace StarterAssets
 
         private void Update()
         {
-            if (gameManager.renderTotal >= 100)
+            if (gameManager.renderTotal >= 100 && !XRSettings.enabled)
             {
                 PhotonNetwork.LeaveRoom();
                 SceneManager.LoadScene(5);
@@ -288,7 +288,7 @@ namespace StarterAssets
 
         public void Die()
         {
-            if(gameObject.GetComponent<VRRig>())
+            if(XRSettings.enabled)
             {
                 if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
                 {

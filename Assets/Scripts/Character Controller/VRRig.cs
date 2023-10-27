@@ -4,6 +4,7 @@ using Photon.Pun;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
 
 [System.Serializable]
 public class VRMap
@@ -48,7 +49,7 @@ public class VRRig : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if (gameManager.renderTotal >= 100)
+        if (gameManager.renderTotal >= 100 && XRSettings.enabled)
         {
             PhotonNetwork.LeaveRoom();
             SceneManager.LoadScene(7);
