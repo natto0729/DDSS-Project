@@ -48,18 +48,10 @@ public class VRRig : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        if (gameManager.renderTotal >= 100)
         {
-            if(gameManager.renderTotal < 100)
-            {
-                PhotonNetwork.LeaveRoom();
-                SceneManager.LoadScene(8);
-            }
-            else if(gameManager.renderTotal >= 100)
-            {
-                PhotonNetwork.LeaveRoom();
-                SceneManager.LoadScene(7);
-            }
+            PhotonNetwork.LeaveRoom();
+            SceneManager.LoadScene(5);
         }
         Prompt();
         if(OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))

@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public Door finalDoor3;
     public Door finalDoor4;
 
+    bool isVR = false;
+
     [PunRPC]
     void SpawnStuff()
     {
@@ -46,17 +48,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.renderTotal >= 100 && XRSettings.enabled)
-        {
-            PhotonNetwork.LeaveRoom();
-            SceneManager.LoadScene(5);
-        }
-        else if(gameManager.renderTotal >= 100 && !XRSettings.enabled)
-        {
-            PhotonNetwork.LeaveRoom();
-            SceneManager.LoadScene(7);
-        }
-        
+  
         if (PhotonNetwork.IsMasterClient && loadChar == false && testPlay == false)
         {
             gameObject.GetComponent<PhotonView>().RPC("SpawnStuff", RpcTarget.AllBuffered, null);

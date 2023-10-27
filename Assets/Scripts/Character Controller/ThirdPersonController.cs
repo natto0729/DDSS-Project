@@ -252,6 +252,11 @@ namespace StarterAssets
 
         private void Update()
         {
+            if (gameManager.renderTotal >= 100)
+            {
+                PhotonNetwork.LeaveRoom();
+                SceneManager.LoadScene(7);
+            }
             _hasAnimator = TryGetComponent(out _animator);
 
             GravityForce();
