@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using ExitGames.Client.Photon.StructWrapping;
 using UnityEngine.XR;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     private int numberOfComputers;
     bool loadChar = false;
     public bool testPlay = false;
+
+    private GameManager gameManager;
 
     public Door finalDoor1;
     public Door finalDoor2;
@@ -36,13 +39,19 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if(PhotonNetwork.IsMasterClient && loadChar == false && testPlay == false)
+        if (gameManager.renderTotal >= 100)
+        {
+            PhotonNetwork.LeaveRoom();
+            SceneManager.LoadScene("Winning Scene");
+        }
+        if (PhotonNetwork.IsMasterClient && loadChar == false && testPlay == false)
         {
             gameObject.GetComponent<PhotonView>().RPC("SpawnStuff", RpcTarget.AllBuffered, null);
             loadChar = true;

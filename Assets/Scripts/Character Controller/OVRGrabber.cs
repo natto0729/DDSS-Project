@@ -336,7 +336,7 @@ public class OVRGrabber : MonoBehaviour
             // choose to remove this line in favor of your own collision layer setup.
             gameObject.GetComponent<PhotonView>().RPC("SetPlayerIgnoreCollision",RpcTarget.All,m_grabbedObj.gameObject.name, true);
 
-            if (m_parentHeldObject)
+            if (m_parentHeldObject && !playerCheck)
             {
                 m_grabbedObj.transform.parent = transform;
             }

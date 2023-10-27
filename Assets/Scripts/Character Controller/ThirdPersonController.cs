@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Photon.Pun;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
@@ -258,7 +259,7 @@ namespace StarterAssets
             FlashlightSwitch();
             GroundedCheck();
             Stamina();
-            gameObject.GetComponent<PhotonView>().RPC("Move", RpcTarget.All, null);
+            Move();
             Prompt();
         }
 
@@ -274,6 +275,12 @@ namespace StarterAssets
             {
                 hit.gameObject.GetComponent<exit>().EndOfGame();
             }
+        }
+
+        public void Die()
+        {
+            PhotonNetwork.LeaveRoom();
+            SceneManager.LoadScene("GameOver");
         }
 
         private void AssignAnimationIDs()

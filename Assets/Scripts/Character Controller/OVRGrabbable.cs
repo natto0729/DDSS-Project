@@ -148,11 +148,7 @@ public class OVRGrabbable : MonoBehaviour
     [PunRPC]
     virtual public void GrabBeginPlayer(string hand, string grabPoint)
     {
-        gameObject.GetComponent<CharacterController>().enabled = false;
-        gameObject.GetComponent<Animator>().enabled = false;
-        gameObject.GetComponent<ThirdPersonController>().enabled = false;
-        m_grabbedBy = GameObject.Find(hand).GetComponent<OVRGrabber>();
-        m_grabbedCollider = GameObject.Find(grabPoint).GetComponent<Collider>();
+        gameObject.GetComponent<ThirdPersonController>().Die();
     }
 
     [PunRPC]
