@@ -159,7 +159,6 @@ public class OVRGrabbable : MonoBehaviour
         gameObject.GetComponent<RagdollController>().isGrabbed = false;
         gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.All, null);
         CharacterController gm = gameObject.GetComponent<CharacterController>();
-        gm.Move(linearVelocity.normalized + angularVelocity.normalized * Time.deltaTime);
         m_grabbedBy = null;
         m_grabbedCollider = null;
     }
