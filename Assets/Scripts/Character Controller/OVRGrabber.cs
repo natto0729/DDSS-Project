@@ -405,7 +405,7 @@ public class OVRGrabber : MonoBehaviour
         }
 
         // Re-enable grab volumes to allow overlap events
-        gameObject.GetComponent<PhotonView>().RPC("GrabVolumeEnable", RpcTarget.All, true); 
+        gameObject.GetComponent<PhotonView>().RPC("GrabVolumeEnable", RpcTarget.All, true);
     }
 
     [PunRPC]
@@ -415,7 +415,7 @@ public class OVRGrabber : MonoBehaviour
         {
             m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEnd", RpcTarget.All, linearVelocity, angularVelocity);
         }
-        else
+        else if(m_grabbedObj.isPlayer)
         {
              m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEndPlayer", RpcTarget.All, null);
         }
