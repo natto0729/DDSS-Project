@@ -2487,6 +2487,7 @@ GameObject:
   - component: {fileID: -4017050470309313181}
   - component: {fileID: 1758895915961989737}
   - component: {fileID: 83857763}
+  - component: {fileID: 5049096492526279280}
   m_Layer: 8
   m_Name: OpparPrefab
   m_TagString: Player
@@ -3005,10 +3006,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4416926081852918490}
   controller: {fileID: 4416926081852918491}
+  hips: {fileID: 379002232}
   rig: {fileID: 5008132377135610155}
   animator: {fileID: 6982812146204527121}
+  cameraRoot: {fileID: 8338988566280778634}
   mode: 0
   canSwitch: 1
+  isGrabbed: 0
+--- !u!114 &5049096492526279280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints:
+  - {fileID: 379002233}
+  - {fileID: 83857766}
+  - {fileID: 1885881703}
+  - {fileID: 364305933}
+  - {fileID: 356405191}
+  - {fileID: 369469593}
+  - {fileID: 776215436}
+  - {fileID: 776215436}
+  - {fileID: 945228788}
+  - {fileID: 4416926081852918491}
+  - {fileID: 1846073614}
+  - {fileID: 2111333307}
+  isPlayer: 1
 --- !u!1 &4791350137810008451
 GameObject:
   m_ObjectHideFlags: 0
