@@ -269,7 +269,7 @@ public class OVRGrabber : MonoBehaviour
         }
 
         // Disable grab volumes to prevent overlaps
-        GrabVolumeEnable(false);
+        gameObject.GetComponent<PhotonView>().RPC("GrabVolumeEnable", RpcTarget.All, false);
 
         if (closestGrabbable != null)
         {
@@ -398,7 +398,7 @@ public class OVRGrabber : MonoBehaviour
         }
 
         // Re-enable grab volumes to allow overlap events
-        GrabVolumeEnable(true);
+        gameObject.GetComponent<PhotonView>().RPC("GrabVolumeEnable", RpcTarget.All, false); 
     }
 
     [PunRPC]
@@ -416,6 +416,7 @@ public class OVRGrabber : MonoBehaviour
         m_grabbedObj = null;
     }
 
+    [PunRPC]
     protected virtual void GrabVolumeEnable(bool enabled)
     {
         if (m_grabVolumeEnabled == enabled)

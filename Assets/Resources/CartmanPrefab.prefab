@@ -3532,6 +3532,7 @@ MonoBehaviour:
   animator: {fileID: 6982812146204527121}
   mode: 0
   canSwitch: 1
+  isGrabbed: 0
 --- !u!114 &2963853974619043624
 MonoBehaviour:
   m_ObjectHideFlags: 0
