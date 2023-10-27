@@ -58,8 +58,11 @@ public class RagdollController : MonoBehaviour
     {
         if(isGrabbed)
         {
-            hips.isKinematic = true;
-            hips.useGravity = false;
+            foreach (Rigidbody rigid in limbsRigidBodies)
+            {
+                rigid.isKinematic = true;
+                rigid.useGravity = false;
+            }
         }
         hips.MovePosition(controller.transform.position);
         hips.MoveRotation(controller.transform.rotation);
