@@ -30,11 +30,19 @@ public class Computers : MonoBehaviour
     }
 
     [PunRPC]
-    public void SyncTime(int number, bool XRCheck)
+    public void SyncTime(int number, bool XRCheck, bool oppar, bool nerd)
     {
         Debug.Log(XRCheck);
         if(!XRCheck)
         {
+            if(oppar)
+            {
+                computers[number].GetComponent<Rendering>().isOppar = true;
+            }
+            if(nerd)
+            {
+                computers[number].GetComponent<Rendering>().isNerd = true;
+            }
             computers[number].GetComponent<Rendering>().enabled = true;
             computers[number].transform.GetChild(0).gameObject.SetActive(true);
             computers[number].transform.GetChild(1).gameObject.SetActive(true);
@@ -66,7 +74,7 @@ public class Computers : MonoBehaviour
         }   
     }
 
-    public void AddRenderingComputer(bool isVR)
+    public void AddRenderingComputer(bool isVR, bool isOppar, bool isNerd)
     {    
         rand = Random.Range(1,computers.Length);
         Debug.Log(rand);
@@ -78,11 +86,11 @@ public class Computers : MonoBehaviour
         saved = rand;
         if(isVR)
         {
-            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isVR); 
+            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isVR, false, false); 
         }
         else
         {
-            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isVR); 
+            photonViews.RPC("SyncTime", RpcTarget.AllBuffered, saved, isVR, isOppar, isNerd); 
         }
     }
 }

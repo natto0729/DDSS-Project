@@ -14,6 +14,8 @@ public class Rendering : MonoBehaviour
     public float renderValueIncrement;
     public float currentRender;
     public float maxRender;
+    public bool isNerd = false;
+    public bool isOppar =false;
 
     private bool isStopped = false;
 
@@ -43,6 +45,14 @@ public class Rendering : MonoBehaviour
 
     private void Start()
     {
+        if(isOppar)
+        {
+            renderTimeIncrement = 0.002166667f;
+        }
+        if (isNerd)
+        {
+            renderTimeIncrement = 0.008f;
+        }
         renderingPopUp = gameObject.transform.GetChild(1);
     }
 

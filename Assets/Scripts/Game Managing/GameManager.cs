@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     public Door finalDoor3;
     public Door finalDoor4;
 
+    public GameObject spawnPointStudents;
+    public GameObject spawnPointMonster;
+
     bool isVR = false;
 
     [PunRPC]
@@ -31,11 +34,11 @@ public class GameManager : MonoBehaviour
     {
         if(XRSettings.enabled)
         {
-            PhotonNetwork.Instantiate("OVRPlayerController Variant", Vector3.zero, Quaternion.identity);
+            PhotonNetwork.Instantiate("OVRPlayerController Variant", spawnPointMonster.transform.position, Quaternion.identity);
         }
         else if(!XRSettings.enabled)
         {
-            PhotonNetwork.Instantiate(characters[PhotonNetwork.LocalPlayer.CustomProperties["selected"].Get<int>()].name, Vector3.zero, Quaternion.identity);
+            PhotonNetwork.Instantiate(characters[PhotonNetwork.LocalPlayer.CustomProperties["selected"].Get<int>()].name, spawnPointStudents.transform.position, Quaternion.identity);
         }
     }
 

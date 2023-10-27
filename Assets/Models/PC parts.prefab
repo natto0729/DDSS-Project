@@ -1115,8 +1115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractablesParent: {fileID: 0}
   startRenderingDelay: 1
-  renderTimeIncrement: 2
-  renderValueIncrement: 2
+  renderTimeIncrement: 0.004166667
+  renderValueIncrement: 1
   currentRender: 0
   maxRender: 100
   isRendering: 0

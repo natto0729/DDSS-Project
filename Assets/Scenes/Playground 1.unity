@@ -8001,6 +8001,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 664456749670281567, guid: 3356fd051e8ad784dad1e30d6634651f, type: 3}
+--- !u!1 &424233236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 960187058, guid: 41cd46b90fb53604399086139471f6a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 135926599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &428870326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8469784364342044270, guid: eb1c782e241148d429d8a897e797f941,
@@ -8176,11 +8182,13 @@ MonoBehaviour:
   - {fileID: 4416926081852918481, guid: 8482ab14a1fcfe54781d316322620e8b, type: 3}
   - {fileID: 4416926081852918481, guid: 455476d55606e2a4cb882beffd0b8b1c, type: 3}
   - {fileID: 4416926081852918481, guid: 20f9421cc964c814caac443c4cee3305, type: 3}
-  testPlay: 1
+  testPlay: 0
   finalDoor1: {fileID: 1795793641}
   finalDoor2: {fileID: 1487955858}
   finalDoor3: {fileID: 1416486722}
   finalDoor4: {fileID: 1416486721}
+  spawnPointStudents: {fileID: 424233236}
+  spawnPointMonster: {fileID: 1248384325}
 --- !u!4 &437542006
 Transform:
   m_ObjectHideFlags: 0
@@ -25156,6 +25164,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1246574278}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1248384325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 960187058, guid: 41cd46b90fb53604399086139471f6a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1306645051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1255113406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26037,6 +26051,14 @@ PrefabInstance:
     - target: {fileID: 960187059, guid: 41cd46b90fb53604399086139471f6a8, type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 960187059, guid: 41cd46b90fb53604399086139471f6a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -83.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 960187059, guid: 41cd46b90fb53604399086139471f6a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 1078119101, guid: 41cd46b90fb53604399086139471f6a8, type: 3}
       propertyPath: InteractablesParent
@@ -30611,10 +30633,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 611518792}
     m_Modifications:
-    - target: {fileID: 960187059, guid: 41cd46b90fb53604399086139471f6a8, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 1078119101, guid: 41cd46b90fb53604399086139471f6a8, type: 3}
       propertyPath: InteractablesParent
       value: 
@@ -30683,8 +30701,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: PC parts (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1078119102, guid: 41cd46b90fb53604399086139471f6a8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41cd46b90fb53604399086139471f6a8, type: 3}
 --- !u!4 &1526430190 stripped
 Transform:
@@ -42326,7 +42343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameVersion: 0.0
-  testPlay: 1
+  testPlay: 0
   characters:
   - {fileID: 4416926081852918481, guid: 87d2b4bc0d0803f42b26c7824ff194e4, type: 3}
   - {fileID: 4416926081852918481, guid: 8482ab14a1fcfe54781d316322620e8b, type: 3}

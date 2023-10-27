@@ -3955,9 +3955,9 @@ MonoBehaviour:
   SprintSpeed: 4.5
   CrouchSpeed: 1
   maxStamina: 100
-  regenStaminaTime: 5
+  regenStaminaTime: 2
   staminaValueIncrement: 2
-  staminaTimeIncrement: 0.1
+  staminaTimeIncrement: 1
   staminaUseMultiplier: 5
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
@@ -4373,6 +4373,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isVR: 0
+  isOppar: 0
+  isNerd: 0
 --- !u!114 &4144430525044814021
 MonoBehaviour:
   m_ObjectHideFlags: 0

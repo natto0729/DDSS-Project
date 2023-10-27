@@ -3394,9 +3394,9 @@ MonoBehaviour:
   SprintSpeed: 4.5
   CrouchSpeed: 1
   maxStamina: 100
-  regenStaminaTime: 5
-  staminaValueIncrement: 2
-  staminaTimeIncrement: 0.1
+  regenStaminaTime: 2
+  staminaValueIncrement: 1
+  staminaTimeIncrement: 1
   staminaUseMultiplier: 5
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
@@ -3427,8 +3427,8 @@ MonoBehaviour:
   isLit: 0
   maxBattery: 100
   regenBatteryTime: 5
-  batteryValueIncrement: 2
-  batteryTimeIncrement: 0.1
+  batteryValueIncrement: 5
+  batteryTimeIncrement: 1
   batteryUseMultiplier: 5
   Grounded: 1
   GroundedOffset: -0.14
@@ -3812,6 +3812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isVR: 0
+  isOppar: 0
+  isNerd: 1
 --- !u!114 &1904400747
 MonoBehaviour:
   m_ObjectHideFlags: 0
