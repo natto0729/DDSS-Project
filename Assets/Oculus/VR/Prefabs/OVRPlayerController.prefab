@@ -450,6 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4da798508752f468959d0f77232585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isVR: 1
 --- !u!1 &100010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,7 +2164,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kevin VR
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8377515634817635983, guid: 76df27e3fc042a243abe484c16217109, type: 3}
+    - {fileID: 4970478580852229700, guid: 76df27e3fc042a243abe484c16217109, type: 3}
+    - {fileID: 7481677164603265352, guid: 76df27e3fc042a243abe484c16217109, type: 3}
+    - {fileID: 6844940949626521843, guid: 76df27e3fc042a243abe484c16217109, type: 3}
+    - {fileID: 323184398654965794, guid: 76df27e3fc042a243abe484c16217109, type: 3}
+    - {fileID: 4136708229631429191, guid: 76df27e3fc042a243abe484c16217109, type: 3}
+    - {fileID: 8987089053279476914, guid: 76df27e3fc042a243abe484c16217109, type: 3}
+    - {fileID: 911773828123629847, guid: 76df27e3fc042a243abe484c16217109, type: 3}
+    - {fileID: 5831763231620109886, guid: 76df27e3fc042a243abe484c16217109, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 76df27e3fc042a243abe484c16217109, type: 3}
 --- !u!4 &3239381090238768727 stripped
 Transform:

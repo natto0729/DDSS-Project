@@ -4746,28 +4746,17 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 2984712254430578902}
   - {fileID: 2699271426470454394}
-  - {fileID: 0}
   - {fileID: 945216690}
-  - {fileID: 0}
   - {fileID: 925563036}
-  - {fileID: 0}
   - {fileID: 775260006}
-  - {fileID: 0}
   - {fileID: 886674725}
-  - {fileID: 0}
   - {fileID: 2044916935}
-  - {fileID: 0}
   - {fileID: 1446854713}
   - {fileID: 1783321458199757920}
-  - {fileID: 0}
   - {fileID: 2044916932}
-  - {fileID: 0}
   - {fileID: 988052544}
-  - {fileID: 0}
   - {fileID: 1525743095}
-  - {fileID: 0}
   - {fileID: 192879588}
-  - {fileID: 0}
   - {fileID: 1803246130}
   sceneViewId: 0
   InstantiationId: 0
