@@ -51,7 +51,7 @@ public class VRRig : MonoBehaviourPunCallbacks
         if (gameManager.renderTotal >= 100)
         {
             PhotonNetwork.LeaveRoom();
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(7);
         }
         Prompt();
         if(OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))

@@ -255,7 +255,7 @@ namespace StarterAssets
             if (gameManager.renderTotal >= 100)
             {
                 PhotonNetwork.LeaveRoom();
-                SceneManager.LoadScene(7);
+                SceneManager.LoadScene(5);
             }
             _hasAnimator = TryGetComponent(out _animator);
 
@@ -288,20 +288,12 @@ namespace StarterAssets
 
         public void Die()
         {
-            if(XRSettings.enabled)
+            if(gameObject.GetComponent<VRRig>())
             {
                 if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
                 {
-                    if (gameManager.renderTotal < 100)
-                    {
-                        PhotonNetwork.LeaveRoom();
-                        SceneManager.LoadScene(8);
-                    }
-                    else if (gameManager.renderTotal >= 100)
-                    {
-                        PhotonNetwork.LeaveRoom();
-                        SceneManager.LoadScene(7);
-                    }
+                    PhotonNetwork.LeaveRoom();
+                    SceneManager.LoadScene(8);
                 }
             }
             else
