@@ -5216,9 +5216,9 @@ MonoBehaviour:
   player: {fileID: 4416926081852918490}
   controller: {fileID: 4416926081852918491}
   hips: {fileID: 2084954272}
-  rig: {fileID: 8338988566280778634}
+  rig: {fileID: 7929895370295885495}
   animator: {fileID: 6982812146204527121}
-  cameraRoot: {fileID: 0}
+  cameraRoot: {fileID: 8338988566280778634}
   mode: 0
   canSwitch: 1
   isGrabbed: 0
