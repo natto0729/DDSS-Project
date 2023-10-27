@@ -84,6 +84,8 @@ public class OVRGrabber : MonoBehaviour
     protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
     protected bool m_operatingWithoutOVRCameraRig = true;
 
+    private bool playerCheck;
+
     /// <summary>
     /// The currently grabbed object.
     /// </summary>
@@ -279,7 +281,8 @@ public class OVRGrabber : MonoBehaviour
             }
 
             m_grabbedObj = closestGrabbable;
-            if(!m_grabbedObj.isPlayer)
+            playerCheck = m_grabbedObj.isPlayer;
+            if(!playerCheck)
             {
                 m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabBegin", RpcTarget.All, this.gameObject.name, closestGrabbableCollider.gameObject.name);
             }
@@ -348,13 +351,13 @@ public class OVRGrabber : MonoBehaviour
             return;
         }
 
-        if(m_grabbedObj.isPlayer)
+        if(playerCheck)
         {
             CharacterController grabbedController = m_grabbedObj.gameObject.GetComponent<CharacterController>();
             Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
             grabbedController.Move(grabbablePosition);
         }
-        else if(!m_grabbedObj.isPlayer)
+        else if(!playerCheck)
         {
             Rigidbody grabbedRigidbody = m_grabbedObj.grabbedRigidbody;
             Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
@@ -411,11 +414,11 @@ public class OVRGrabber : MonoBehaviour
     [PunRPC]
     protected void GrabbableRelease(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        if(!m_grabbedObj.isPlayer)
+        if(!playerCheck)
         {
             m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEnd", RpcTarget.All, linearVelocity, angularVelocity);
         }
-        else if(m_grabbedObj.isPlayer)
+        else if(playerCheck)
         {
              m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEndPlayer", RpcTarget.All, null);
         }
