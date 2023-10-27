@@ -393,8 +393,15 @@ public class OVRGrabber : MonoBehaviour
             Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(m_controller);
             Vector3 angularVelocity =
                 trackingSpace.orientation * OVRInput.GetLocalControllerAngularVelocity(m_controller);
+            if(!m_grabbedObj.isPlayer)
+            {
+                gameObject.GetComponent<PhotonView>().RPC("GrabbableRelease", RpcTarget.All, linearVelocity, angularVelocity);
+            }
+            else if (m_grabbedObj.isPlayer)
+            {
+                gameObject.GetComponent<PhotonView>().RPC("GrabbableRelease", RpcTarget.All, Vector3.zero, Vector3.zero);
+            }
 
-            gameObject.GetComponent<PhotonView>().RPC("GrabbableRelease", RpcTarget.All, linearVelocity, angularVelocity);
         }
 
         // Re-enable grab volumes to allow overlap events
