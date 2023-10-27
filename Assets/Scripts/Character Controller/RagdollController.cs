@@ -46,7 +46,7 @@ public class RagdollController : MonoBehaviour
     }
 
     [PunRPC]
-    void GetRagdollBits()
+    public void GetRagdollBits()
     {
         ragDollColliders = rig.GetComponentsInChildren<Collider>();
         limbsRigidBodies = rig.GetComponentsInChildren<Rigidbody>();
