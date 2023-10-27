@@ -24,7 +24,7 @@ public class RagdollController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<PhotonView>().RPC("RagdollModeOff", RpcTarget.AllBuffered, null);
+        gameObject.GetComponent<PhotonView>().RPC("GetRagdollBits", RpcTarget.AllBuffered, null);
     }
 
     // Update is called once per frame
