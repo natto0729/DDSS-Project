@@ -47,11 +47,11 @@ public class Rendering : MonoBehaviour
     {
         if(isOppar)
         {
-            renderTimeIncrement = 0.002166667f;
+            renderValueIncrement = 0.2f;
         }
         if (isNerd)
         {
-            renderTimeIncrement = 0.008f;
+            renderValueIncrement = 0.6f;
         }
         renderingPopUp = gameObject.transform.GetChild(1);
     }
