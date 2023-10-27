@@ -31,7 +31,7 @@ public class RagdollController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (controller.enabled == false)
+        if (isGrabbed == true)
         {
             gameObject.GetComponent<PhotonView>().RPC("RagDollMove", RpcTarget.AllBuffered, null);
         }
