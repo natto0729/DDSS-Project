@@ -414,13 +414,13 @@ public class OVRGrabber : MonoBehaviour
     [PunRPC]
     protected void GrabbableRelease(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        if(!playerCheck)
+        if (playerCheck)
+        {
+            m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEndPlayer", RpcTarget.All, linearVelocity, angularVelocity);
+        }
+        if (!playerCheck)
         {
             m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEnd", RpcTarget.All, linearVelocity, angularVelocity);
-        }
-        if(playerCheck)
-        {
-             m_grabbedObj.gameObject.GetComponent<PhotonView>().RPC("GrabEndPlayer", RpcTarget.All, linearVelocity, angularVelocity);
         }
         if (m_parentHeldObject) m_grabbedObj.transform.parent = null;
         m_grabbedObj = null;
